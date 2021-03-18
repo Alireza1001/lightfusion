@@ -1,0 +1,177 @@
+iframe {
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    display: grid;
+    margin-top: 0;
+}
+main {
+    width: 100%!important;
+}
+h1 {
+    font-family:"Lato",Arial,sans-serif;
+}
+section#lf_contactus h2 {
+    font-size: 21px;
+}
+section#lf_contactus {
+    font-family:"Lato",Arial,sans-serif;
+    display: grid;
+    width: fit-content;
+    margin: 0 auto;
+    grid-auto-flow: column;
+    grid-column-gap: 5%;
+}
+section#lf_contactus .lf_medias .lf_items img {
+    width: 24px;
+    height: auto;
+    border-radius: 3px;
+}
+section#lf_contactus .lf_addresses {
+    width: fit-content;
+    display: grid;
+    grid-auto-flow: row;
+    height: fit-content;
+}
+section#lf_contactus .lf_medias .lf_items {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: fit-content;
+    grid-column-gap: 16px;
+    grid-row-gap: 7px;
+}
+section#ax_form {
+    margin-top: 0px;
+}
+section#lf_contactus .lf_addresses .lf_items .lf_item {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 3%;
+}
+section#lf_contactus .lf_addresses .lf_items {
+    display: grid;
+    grid-auto-flow: row;
+    grid-row-gap: 40px;
+    width: fit-content;
+}
+section#lf_contactus .lf_addresses .lf_items .lf_item svg:nth-child(3) {
+    width: 30px;
+    height: auto;
+    border-radius: 7px;
+    display: grid;
+}
+section#lf_contactus .lf_addresses .lf_items .lf_item address {
+    font-style: normal;
+    line-height: 20px;
+    font-size: 14px;
+    color: var(--txt1);
+}
+section#lf_contactus .lf_teles .lf_items .lf_item {
+    display: grid;
+    grid-auto-flow: column;
+    width: fit-content;
+    place-items: center;
+    grid-column-gap: 6%;
+}
+section#lf_contactus .lf_teles .lf_items svg {
+    width: 35px;
+    transform: translateY(-3px);
+}
+section#lf_contactus .lf_addresses .lf_items .lf_item > div svg {
+    width: 30px;
+    height: auto;
+    border-radius: 5px;
+}
+section#lf_contactus .lf_addresses .lf_items .lf_item > div {
+    display: grid;
+    grid-auto-flow: row;
+}
+section#lf_contactus .lf_teles .lf_items a {
+    color: var(--links_colors);
+    text-decoration: none;
+}
+h1, h2 {
+    font-weight: 100;
+    color: var(--txt1);
+}
+section#lf_contactus .lf_newsletter p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--txt1);
+}
+section#lf_contactus .lf_newsletter label {
+    color: var(--txt1);
+}
+section#lf_contactus .lf_teles .lf_items {
+    display: grid;
+    grid-row-gap: 30px;
+}
+section#lf_contactus .lf_newsletter form input {
+    border: none;
+    background-color: #d7cfb4;
+    font-size: 14px;
+    font-family:"Lato",Arial,sans-serif;
+    padding: 3%;
+    border-radius: 4px;
+    color: #000;
+    padding-right: 14%;
+    text-align: left;
+    width: 83%;
+    height: 26px;
+}
+section#lf_contactus .lf_newsletter form:hover button {
+    background-color: #66bb6a;
+}
+section#lf_contactus .lf_newsletter .ax_sub_item {
+    position: relative;
+}
+section#lf_contactus .lf_newsletter form button:hover {
+    background-color:#c72127;
+    color: #Fff;
+}
+section#lf_contactus .lf_newsletter form button {
+    background-color: #0000;
+    border: none;
+    font-family:"Lato",Arial,sans-serif;
+    position: absolute;
+    color: #000;
+    transition: all .3s;
+    cursor: pointer;
+    height: 100%;
+    border-radius: 4px;
+    width: 80px;
+}
+section#lf_contactus .lf_addresses .lf_items .lf_item > div a {
+    text-decoration: none;
+    color: var(--links_colors);
+}
+footer#ax_footer > .ax_items:nth-child(1) .ax_item.ax_minabout form {
+    display: none;
+}
+main > h1 {
+    width: 98%;
+    margin-right: auto;
+}
+section#lf_contactus .lf_newsletter form:nth-child(2) p {
+    text-align: center;
+    transform: translateY(10px);
+}
+
+@media(max-width: 768px) {
+    section#lf_contactus {
+        grid-auto-flow: unset;
+        width: fit-content;
+        grid-template-columns: auto auto;
+    }
+    iframe {
+        height: 200px;
+    }
+}
+
+
+@media(max-width: 425px) {
+    section#lf_contactus {
+        grid-template-columns: auto;
+        width: 80%;
+    }
+}
