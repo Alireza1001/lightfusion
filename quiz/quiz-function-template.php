@@ -3,57 +3,15 @@ function exercise_html( $post ) {
     $value = get_post_meta( $post->ID, '_exercise', true );
     if(strlen($value)<=0) $value = '[]';
 	?>
-	<style type="text/css">
-        p#lf_exe_submit, p#lf_exe_add, .lf_exercise_remove {
-            border: 1px solid;
-            width: fit-content;
-            padding: 3px 11px;
-            border-radius: 3px;
-            background-color: #f0f0f0;
-            cursor: pointer;
-        }
-        p#lf_exe_submit {
-            display: none;
-        }
-        div#lf_exe_buttons {
-            display: grid;
-            grid-auto-flow: column;
-            width: fit-content;
-            column-gap: 10px;
-        }
-        .lf_exercise_holder > div {
-            display: grid;
-            grid-template-columns: auto auto;
-        }
-        .lf_exercise_holder {
-            border-bottom: 2px solid #000;
-            border-radius: 3px;
-            padding: 3px 20px;
-            display: grid;
-            background-color: #f3f3f3;
-        }
-        #lf_exercise_wrapup {
-            display: grid;
-            row-gap: 24px;
-        }
-        .lf_exercise_holder > div p {
-            display: grid;
-            grid-auto-flow: column;
-            place-content: center;
-            place-items: center;
-        }
-        .lf_exercise_holder > p {
-            width: fit-content;
-            display: grid;
-            margin: 0;
-        }
-    </style>
+
+	<style type="text/css">p#lf_exe_submit, p#lf_exe_add, .lf_exercise_remove {border: 1px solid;width: fit-content;padding: 3px 11px;border-radius: 3px;background-color: #f0f0f0;cursor: pointer;}div#lf_exe_buttons {display: grid;grid-auto-flow: column;width: fit-content;column-gap: 10px;}.lf_exercise_holder > div {display: grid;grid-template-columns: auto auto;}.lf_exercise_holder {border-bottom: 2px solid #000;border-radius: 3px;padding: 3px 20px;display: grid;background-color: #f3f3f3;}#lf_exercise_wrapup {display: grid;row-gap: 24px;}.lf_exercise_holder > div p {display: grid;grid-auto-flow: column;place-content: center;place-items: center;}.lf_exercise_holder > p {width: fit-content;display: grid;margin: 0;}</style>
     <section id="lf_exercise_wrapup"></section>
 	<div id="lf_exe_buttons">
         <p id="lf_exe_add" data-last="-1">Add new question</p>
-        <p id="lf_exe_submit">Save the questions</p>
+        <p id="lf_exe_submit">Save the quiz</p>
     </div>
-    <input type="hidden" id="lf_exe_submit_field" name="exercise_n">
+
+    <input type="text" id="lf_exe_submit_field" name="exercise_n">
     
     <script>
         var load_icon = '<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="black" width="18px" height="18px"><g><rect fill="none" height="24" width="24"/></g><g><g><polygon opacity=".3" points="8,7.5 12,11.5 16,7.5 16,4 8,4"/><polygon opacity=".3" points="8,7.5 12,11.5 16,7.5 16,4 8,4"/><path d="M18,2H6v6l4,4l-3.99,4.01L6,22h12l-0.01-5.99L14,12l4-3.99V2z M16,16.5V20H8v-3.5l4-4L16,16.5z M16,7.5l-4,4l-4-4V4h8V7.5 z"/></g></g></svg>';
@@ -83,7 +41,7 @@ function exercise_html( $post ) {
 
         document.getElementById("lf_exe_add").addEventListener("click", ()=>{
             var code = document.getElementById("lf_exe_add").getAttribute("data-last");
-            if(lf_exercise_array[code]) {
+            if(lf_exercise_array[code] || lf_exercise_array.length == 0) {
                 lf_submitData_exercise();
                 if(code == -1) document.getElementById("lf_exercise_wrapup").innerHTML = '<div class="lf_exercise_holder"><p> Enter the question:</br> <textarea cols="30" class="lf_exercise_headtext" cols="30" placeholder="Question head"></textarea></p><p>Optioned texts:</p><div> <p><input name="ex_opts_correct_0" type="radio"/><textarea cols="30" class="lf_exercise_opt_text_0" type="text" placeholder="Question option text"></textarea></p><p><input name="ex_opts_correct_0" type="radio"/><textarea cols="30" class="lf_exercise_opt_text_0" type="text" placeholder="Question option text"></textarea></p><p><input name="ex_opts_correct_0" type="radio"/><textarea cols="30" class="lf_exercise_opt_text_0" type="text" placeholder="Question option text"></textarea></p><p><input name="ex_opts_correct_0" type="radio"/><textarea cols="30" class="lf_exercise_opt_text_0" type="text" placeholder="Question option text"></textarea></p></div><p>Hint:</br><textarea cols="30" class="lf_exercise_hint" placeholder="Hint"></textarea></p><p> Answer:</br><textarea cols="30" class="lf_exercise_ans" placeholder="Final answer"></textarea></p><p class="lf_exercise_remove" data-no="0">Remove this</p></div>';
                 code++;
@@ -106,18 +64,18 @@ function exercise_html( $post ) {
                     newcontentlist_exe+='<div class="lf_exercise_holder"><p> Enter the question:</br> <textarea cols="30" class="lf_exercise_headtext" cols="30" placeholder="question head"></textarea></p><p>Optioned texts:</p><div><p><input name="ex_opts_correct_'+code+'" type="radio"/><textarea cols="30" class="lf_exercise_opt_text_'+code+'" type="text" placeholder="Question option text"></textarea></p><p><input name="ex_opts_correct_'+code+'" type="radio"/><textarea cols="30" class="lf_exercise_opt_text_'+code+'" type="text" placeholder="Question option text"></textarea></p><p><input name="ex_opts_correct_'+code+'" type="radio"/><textarea cols="30" class="lf_exercise_opt_text_'+code+'" type="text" placeholder="Question option text"></textarea></p><p><input name="ex_opts_correct_'+code+'" type="radio"/><textarea cols="30" class="lf_exercise_opt_text_'+code+'" type="text" placeholder="Question option text"></textarea></p></div><p>Hint:</br><textarea cols="30" class="lf_exercise_hint" placeholder="Hint"></textarea></p><p> Answer:</br><textarea cols="30" class="lf_exercise_ans" placeholder="Final answer"></textarea></p><p class="lf_exercise_remove" data-no="'+code+'">Remove this</p></div>';
                     document.getElementById("lf_exercise_wrapup").innerHTML = newcontentlist_exe;
                 }
-                document.querySelectorAll('section#lf_exercise_wrapup textarea, section#lf_exercise_wrapup input[type="radio"]').forEach(item=>{
-                    item.addEventListener("change", ()=>{lf_submitData_exercise();});
-                });
+                // document.querySelectorAll('section#lf_exercise_wrapup textarea, section#lf_exercise_wrapup input[type="radio"]').forEach(item=>{
+                //     item.addEventListener("change", ()=>{lf_submitData_exercise();});
+                // });
             }else alert("The last field is empty");
         });
         
 
 
         document.getElementById("lf_exe_submit").addEventListener("click", ()=>{lf_submitData_exercise();});
-        document.querySelectorAll('section#lf_exercise_wrapup textarea, section#lf_exercise_wrapup input[type="radio"]').forEach(item=>{
-            item.addEventListener("change", ()=>{lf_submitData_exercise();});
-        });
+        // document.querySelectorAll('section#lf_exercise_wrapup textarea, section#lf_exercise_wrapup input[type="radio"]').forEach(item=>{
+        //     item.addEventListener("change", ()=>{lf_submitData_exercise();});
+        // });
         function lf_submitData_exercise() {
             document.getElementById("lf_exe_submit").innerHTML = load_icon;
             if(document.querySelector(".lf_exercise_holder") != null) {

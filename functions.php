@@ -172,8 +172,6 @@ function get_post_breadcrumb_blog2() {
 function add_responsive_class($content){
 	if(strlen($content) > 0) {
 		$useragentos = $_SERVER["HTTP_USER_AGENT"];
-		// if(strpos($useragentos, "mac") !== false || strpos($useragentos, "ipod") !== false || strpos($useragentos, "iphone") !== false) $generalimgexe=".jpg";
-		// else $generalimgexe=".webp";
 		$generalimgexe=".jpg";
 		$content = mb_convert_encoding($content, 'HTML-ENTITIES', "UTF-8");
 		$document = new DOMDocument();
