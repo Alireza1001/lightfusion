@@ -17,8 +17,6 @@
                 $alt = get_the_title($id);
                 $class = $attr['class'];
                 $useragentos = $_SERVER["HTTP_USER_AGENT"];
-                // if(strpos($useragentos, "mac") !== false || strpos($useragentos, "ipod") !== false || strpos($useragentos, "iphone") !== false) $generalimgexe=".jpg";
-                // else $generalimgexe=".webp";
                 $generalimgexe=".jpg";
                 $imgmainsrc = $src[0];
                 $baseimgsrc = substr($imgmainsrc, 0, strripos($imgmainsrc, '.'));
@@ -69,8 +67,6 @@
                                     $alt = get_the_title($id);
                                     $class = $attr['class'];
                                     $useragentos = $_SERVER["HTTP_USER_AGENT"];
-                                    // if(strpos($useragentos, "mac") !== false || strpos($useragentos, "ipod") !== false || strpos($useragentos, "iphone") !== false) $generalimgexe=".jpg";
-                                    // else $generalimgexe=".webp";
                                     $generalimgexe=".jpg";
                                     $imgmainsrc = $src[0];
                                     $baseimgsrc = substr($imgmainsrc, 0, strripos($imgmainsrc, '.'));
