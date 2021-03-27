@@ -14,6 +14,7 @@ section#lf_archive2 .lf_items .lf_item {
     background-color: var(--bg3);
     font-family: "Lato", Arial, sans-serif;
     padding: 6px;
+    border-radius: 5px;
 }
 section#lf_archive2 .lf_items .lf_item .lf_item_head_top {
     display: grid;
@@ -26,12 +27,15 @@ section#lf_archive2 .lf_items .lf_item .lf_item_head_top {
 section#lf_archive2 .lf_items .lf_item .lf_item_head_top p {
     margin: 0;
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 500;
+    letter-spacing: 0.03rem;
 }
 section#lf_archive2 .lf_items .lf_item .lf_item_head {
     padding: 3%;
     background-color: var(--bg1);
     padding-top: 0;
+    border-radius: 5px;
+    box-shadow: 0px 9px 8px -12px #000;
 }
 section#lf_archive2 .lf_items .lf_item .lf_item_head_top .lf_item_starrate {
     margin-left: 6px;
@@ -42,9 +46,10 @@ section#lf_archive2 .lf_items .lf_item .lf_item_head_top .lf_item_starrate {
 }
 section#lf_archive2 .lf_items .lf_item .lf_item_head_top .lf_item_starrate svg {
     margin-left: -6px;
+    width: 14px;
 }
 section#lf_archive2 .lf_items .lf_item .lf_item_head_top .lf_item_starrate svg, section#lf_archive2 .lf_items .lf_item .lf_item_head_top .lf_item_starrate svg g g path {
-    fill: var(--ax_confer_placeholder_focus);
+    fill: #888;
 }
 section#lf_archive2 .lf_items .lf_item .lf_item_poster_cover > img {
     width: 100%;
@@ -52,6 +57,8 @@ section#lf_archive2 .lf_items .lf_item .lf_item_poster_cover > img {
     position: relative;
     display: block;
     bottom: 4%;
+    height: 160px;
+    border-radius: 5px;
 }
 section#lf_archive2 .lf_items .lf_item .lf_item_poster_cover .lf_item_instructor > img {
     width: 30px;
@@ -67,12 +74,15 @@ section#lf_archive2 .lf_items .lf_item .lf_item_poster_cover .lf_item_instructor
     position: absolute;
     display: grid;
     grid-auto-flow: column;
-    background-image: linear-gradient( 360deg, #000000eb, #0000);
+    background-image: linear-gradient( 
+360deg
+, #000000eb, #0000);
     width: 94%;
     padding: 3%;
     bottom: 0;
     grid-template-columns: min-content;
     column-gap: 4px;
+    border-radius: 5px;
 }
 section#lf_archive2 .lf_items .lf_item .lf_item_poster_cover .lf_item_instructor p span {
     color: #ececec;
@@ -84,7 +94,7 @@ section#lf_archive2 .lf_items .lf_item .lf_item_poster_cover {
     position: relative;
 }
 section#lf_archive2 .lf_items .lf_item .lf_item_details p span {
-    font-size: 10px;
+    font-size: 12px;
 }
 section#lf_archive2 .lf_items .lf_item .lf_item_details {
     display: grid;
@@ -93,10 +103,14 @@ section#lf_archive2 .lf_items .lf_item .lf_item_details {
 section#lf_archive2 .lf_items .lf_item .lf_item_details p {
     display: grid;
     font-size: 14px;
-    margin: 6px 0;
+    margin: 6px auto;
+    text-align: center;
+    grid-auto-flow: column;
+    width: fit-content;
+    column-gap: 2px;
 }
 section#lf_archive2 .lf_items .lf_item button.lf_item_button {
-    background-color: #388e3c;
+    background-color: #1b97a1;
     border: none;
     color: #fff;
     font-weight: 400;

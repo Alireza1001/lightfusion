@@ -105,9 +105,8 @@
                             </div>
 
                             <div class="lf_item_details">
-                                <p><span>Type</span>Time Aloft</p>
-                                <p><span>Difficulity</span>Easy</p>
-                                <p><span>Time to Build</span>17 min</p>
+                                <p><span>Type:</span>Time Aloft</p>
+                                <p><span>Difficulity:</span>Easy</p>
                             </div>
 
                             <button class="lf_item_button">Build it Now</button>
