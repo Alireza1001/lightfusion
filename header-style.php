@@ -82,7 +82,7 @@ section#lf_archive2 .lf_items .lf_item .lf_item_poster_cover .lf_item_instructor
     bottom: 0;
     grid-template-columns: min-content;
     column-gap: 4px;
-    border-radius: 5px;
+    border-radius: 4px;
 }
 section#lf_archive2 .lf_items .lf_item .lf_item_poster_cover .lf_item_instructor p span {
     color: #ececec;
