@@ -51,6 +51,30 @@
             <section id="lf_weblog_intro">
                 <h1>Homapilot's <?php echo get_the_title(); ?></h1>
             </section>
+            <section class="lf_blog_item_filter" id="lf_weblog_filter_2">
+                <p>Type: </p>
+                <select id="lf_weblog_country_filter" name="lf_weblog_country_filter" >
+                    <option value=''>all</options>
+                    <option value='Distance'>Distance</options>
+                    <option value='Time Aloft'>Time Aloft</options>
+                    <option value='Acrobatic'>Acrobatic</options>
+                    <option value='Decorative'>Decorative</options>
+                </select>
+                <p>Difficulity: </p>
+                <select id="lf_weblog_type_filter" name="lf_weblog_type_filter" >
+                    <option value=''>all</options>
+                    <option value='Easy'>Easy</options>
+                    <option value='Medium'>Medium</options>
+                    <option value='Hard'>Hard</options>
+                    <option value='Advanced'>Advanced</options>
+                </select>
+                <p>Scissors: </p>
+                <select id="lf_weblog_type_filter" name="lf_weblog_type_filter" >
+                    <option value=''>Don’t care</options>
+                    <option value='yes-scissors'>Yes Scissors</options>
+                    <option value='no-scissors'>No Scissors</options>
+                </select>
+            </section>
             <section id="lf_archive2">
                 <div class="lf_items">
                     <?php 
@@ -58,6 +82,21 @@
                         if ( $lf_category_page->have_posts() ) : while ( $lf_category_page->have_posts() ) : $lf_category_page->the_post();
                         $user_id = get_the_author_meta( 'ID' ); ?>
                         <div class="lf_item">
+                            <?php 
+                                $categories = get_the_category();
+                                // $difficulityid = get_terms( 'category', array( 'name__like' => 'difficulity' ) )[0]->term_id;
+                                $typeid = get_terms( 'category', array( 'name__like' => 'type' ) )['term_id'];
+                                // $scissorsid = get_terms( 'category', array( 'name__like' => 'scissors' ) )[0]->term_id;
+
+                                // echo $difficulityid;
+                                echo $typeid;
+                                // echo $scissorsid;
+
+                                // echo get_terms( array( 'taxonomy' => 'category','parent' => $difficulityid) )[0]->name;
+                                echo get_terms( array( 'taxonomy' => 'category','parent' => $typeid) )[0]->name;
+                                // echo get_terms( array( 'taxonomy' => 'category','parent' => $scissorsid) )[0]->name;
+
+                            ?>
                             <div class="lf_item_head">
                                 <div class="lf_item_head_top">
                                     <p><?php echo get_the_title(); ?></p>
@@ -83,14 +122,20 @@
                                 <p><span>Type:</span>Time Aloft</p>
                                 <p><span>Difficulity:</span>Easy</p>
                             </div>
-
                             <a href="<?php the_permalink(); ?>" class="lf_item_button">Build it Now</a>
-
-
                         </div>
 
                     <?php endwhile; wp_reset_postdata(); endif; ?>
                 </div>
+            </section>
+            <section id="lf_posts_pagination">
+                <?php 
+                    $pagination = paginate_links(array(
+                        'prev_text'    => __('<'),
+                        'next_text'    => __('>'),
+                    ));
+                    echo "<nav>".$pagination."</nav>";
+                ?>
             </section>
         <?php } ?>
         

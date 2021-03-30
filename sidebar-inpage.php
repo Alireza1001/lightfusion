@@ -25,9 +25,32 @@
                 <option value='AirframesandSystems'>Airframes and Systems</options>
             </select>
         </section>
-    <?php }else if(is_page_template( 'page-category.php' )) {
-
-    }else{ ?>
+    <?php }else if(is_page_template( 'page-category2.php' )) { ?>
+        <section class="lf_blog_item_filter" id="lf_weblog_filter_1">
+            <p>Type: </p>
+            <select id="lf_weblog_country_filter" name="lf_weblog_country_filter" >
+                <option value=''>all</options>
+                <option value='Distance'>Distance</options>
+                <option value='Time Aloft'>Time Aloft</options>
+                <option value='Acrobatic'>Acrobatic</options>
+                <option value='Decorative'>Decorative</options>
+            </select>
+            <p>Difficulity: </p>
+            <select id="lf_weblog_type_filter" name="lf_weblog_type_filter" >
+                <option value=''>all</options>
+                <option value='Easy'>Easy</options>
+                <option value='Medium'>Medium</options>
+                <option value='Hard'>Hard</options>
+                <option value='Advanced'>Advanced</options>
+            </select>
+            <p>Scissors: </p>
+            <select id="lf_weblog_type_filter" name="lf_weblog_type_filter" >
+                <option value=''>Don’t care</options>
+                <option value='yes-scissors'>Yes Scissors</options>
+                <option value='no-scissors'>No Scissors</options>
+            </select>
+        </section>
+    <?php }else{ ?>
         <ul class="lf_landing_right_sub">
             <p id="lf_landing_leftside_second_content_list_guid3">
                 <span>Content List</span>

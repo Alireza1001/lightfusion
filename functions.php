@@ -18,7 +18,7 @@ function lf_add_style() {
 		wp_register_script('lf_category_script', get_template_directory_uri()."/assets/js/category.js", array(), true);
 		wp_enqueue_script('lf_category_script');
 		wp_enqueue_style('lf_weblog_style', get_template_directory_uri()."/assets/css/weblog.css");
-	}else if(is_home() || is_archive()) {
+	}else if(is_home() || is_archive() || is_page_template( 'page-category2.php' )) {
 		wp_enqueue_style('lf_weblog_style', get_template_directory_uri()."/assets/css/weblog.css");
 		wp_register_script('lf_weblog_script', get_template_directory_uri()."/assets/js/weblog.js", array(), true);
 		wp_enqueue_script('lf_weblog_script');
