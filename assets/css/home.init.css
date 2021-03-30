@@ -242,7 +242,7 @@ section#ax_hero_image .ax_tabs p.ax_item.ax_active svg, section#ax_hero_image .a
     }
 }
 /* services */
-@media (max-width: 425px) {
+@media (max-width: 768px) {
     section#ax_hero_image .ax_tabs .ax_item:not(.ax_active) svg {
         display: none;
     }
@@ -251,6 +251,9 @@ section#ax_hero_image .ax_tabs p.ax_item.ax_active svg, section#ax_hero_image .a
     }
     section#ax_hero_image .ax_tabs .ax_item svg {
         padding: 5px 0;
+    }
+    section#ax_hero_image .ax_tabs p.ax_item:not(.ax_active) span {
+        place-self: center;
     }
 }
 @media (max-width: 425px) {
