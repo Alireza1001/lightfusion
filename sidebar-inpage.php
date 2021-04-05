@@ -30,25 +30,25 @@
             <p>Type: </p>
             <select id="lf_weblog_country_filter" name="lf_weblog_country_filter" >
                 <option value=''>all</options>
-                <option value='Distance'>Distance</options>
-                <option value='Time Aloft'>Time Aloft</options>
-                <option value='Acrobatic'>Acrobatic</options>
-                <option value='Decorative'>Decorative</options>
+                <option value='distance'>Distance</options>
+                <option value='time Aloft'>Time Aloft</options>
+                <option value='acrobatic'>Acrobatic</options>
+                <option value='decorative'>Decorative</options>
             </select>
             <p>Difficulity: </p>
             <select id="lf_weblog_type_filter" name="lf_weblog_type_filter" >
                 <option value=''>all</options>
-                <option value='Easy'>Easy</options>
-                <option value='Medium'>Medium</options>
-                <option value='Hard'>Hard</options>
-                <option value='Advanced'>Advanced</options>
+                <option value='easy'>Easy</options>
+                <option value='medium'>Medium</options>
+                <option value='hard'>Hard</options>
+                <option value='advanced'>Advanced</options>
             </select>
-            <p>Scissors: </p>
+            <!-- <p>Scissors: </p>
             <select id="lf_weblog_type_filter" name="lf_weblog_type_filter" >
                 <option value=''>Don’t care</options>
                 <option value='yes-scissors'>Yes Scissors</options>
                 <option value='no-scissors'>No Scissors</options>
-            </select>
+            </select> -->
         </section>
     <?php }else{ ?>
         <ul class="lf_landing_right_sub">

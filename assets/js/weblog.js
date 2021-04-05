@@ -1,3 +1,7 @@
+
+
+
+
 document.getElementById("lf_weblog_country_filter").addEventListener("input", ()=>{lf_blog_filter(1);});
 document.getElementById("lf_weblog_type_filter").addEventListener("input", ()=>{lf_blog_filter(1);});
 document.getElementById("lf_weblog_country_filter2").addEventListener("input", ()=>{lf_blog_filter(0);});
@@ -8,16 +12,17 @@ if(window.location.hash) {
     lf_blog_filter(thehash);
 }
 function lf_blog_filter(dom) {
+    console.log("filter run");
     var res1, res2;
-    if(dom==1) {
+    if(dom) {
         var current_filter1 = document.getElementById("lf_weblog_country_filter").value;
         var current_filter2 = document.getElementById("lf_weblog_type_filter").value;
-    }else if(dom==0){
+    }else {
         var current_filter1 = document.getElementById("lf_weblog_country_filter2").value;
         var current_filter2 = document.getElementById("lf_weblog_type_filter2").value;
     }
 
-    document.querySelectorAll("section#lf_blog_items .lf_items .lf_item").forEach(item=>{
+    document.querySelectorAll("section#lf_blog_items .lf_items .lf_item, section#lf_archive2 .lf_items .lf_item").forEach(item=>{
         if(dom==1 || dom==0) {
             res1 = item.classList.contains(current_filter1);
             if(current_filter1=="") res1 = true;

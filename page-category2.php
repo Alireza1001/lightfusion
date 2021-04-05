@@ -53,50 +53,48 @@
             </section>
             <section class="lf_blog_item_filter" id="lf_weblog_filter_2">
                 <p>Type: </p>
-                <select id="lf_weblog_country_filter" name="lf_weblog_country_filter" >
+                <select id="lf_weblog_country_filter2" name="lf_weblog_country_filter" >
                     <option value=''>all</options>
-                    <option value='Distance'>Distance</options>
-                    <option value='Time Aloft'>Time Aloft</options>
-                    <option value='Acrobatic'>Acrobatic</options>
-                    <option value='Decorative'>Decorative</options>
+                    <option value='distance'>Distance</options>
+                    <option value='time Aloft'>Time Aloft</options>
+                    <option value='acrobatic'>Acrobatic</options>
+                    <option value='decorative'>Decorative</options>
                 </select>
                 <p>Difficulity: </p>
-                <select id="lf_weblog_type_filter" name="lf_weblog_type_filter" >
+                <select id="lf_weblog_type_filter2" name="lf_weblog_type_filter" >
                     <option value=''>all</options>
                     <option value='Easy'>Easy</options>
                     <option value='Medium'>Medium</options>
                     <option value='Hard'>Hard</options>
                     <option value='Advanced'>Advanced</options>
                 </select>
-                <p>Scissors: </p>
-                <select id="lf_weblog_type_filter" name="lf_weblog_type_filter" >
+                <!-- <p>Scissors: </p>
+                <select id="lf_weblog_type_filter2" name="lf_weblog_type_filter" >
                     <option value=''>Don’t care</options>
                     <option value='yes-scissors'>Yes Scissors</options>
                     <option value='no-scissors'>No Scissors</options>
-                </select>
+                </select> -->
             </section>
             <section id="lf_archive2">
                 <div class="lf_items">
                     <?php 
                         $pageid = get_the_id();$page_title = get_the_title();$lf_category_page = new WP_Query(array( 'category_name' => $page_title, 'posts_per_page'=>10));
                         if ( $lf_category_page->have_posts() ) : while ( $lf_category_page->have_posts() ) : $lf_category_page->the_post();
-                        $user_id = get_the_author_meta( 'ID' ); ?>
-                        <div class="lf_item">
-                            <?php 
-                                $categories = get_the_category();
-                                // $difficulityid = get_terms( 'category', array( 'name__like' => 'difficulity' ) )[0]->term_id;
-                                $typeid = get_terms( 'category', array( 'name__like' => 'type' ) )['term_id'];
-                                // $scissorsid = get_terms( 'category', array( 'name__like' => 'scissors' ) )[0]->term_id;
-
-                                // echo $difficulityid;
-                                echo $typeid;
-                                // echo $scissorsid;
-
-                                // echo get_terms( array( 'taxonomy' => 'category','parent' => $difficulityid) )[0]->name;
-                                echo get_terms( array( 'taxonomy' => 'category','parent' => $typeid) )[0]->name;
-                                // echo get_terms( array( 'taxonomy' => 'category','parent' => $scissorsid) )[0]->name;
-
-                            ?>
+                        $user_id = get_the_author_meta( 'ID' ); 
+                        
+                        $categories = [];
+                        foreach(get_terms( 'category', array( 'name__like' => 'type' )) as $item) $typeid = $item->term_id;
+                        foreach(get_terms( array( 'taxonomy' => 'category','parent' => $typeid) ) as $item) $typeid = $item->slug;
+                        array_push($categories, $typeid); 
+                        foreach(get_terms( 'category', array( 'name__like' => 'difficulity' )) as $item) $typeid = $item->term_id;
+                        foreach(get_terms( array( 'taxonomy' => 'category','parent' => $typeid) ) as $item) $typeid = $item->slug;
+                        array_push($categories, $typeid); 
+                        foreach(get_terms( 'category', array( 'name__like' => 'scissors' )) as $item) $typeid = $item->term_id;
+                        foreach(get_terms( array( 'taxonomy' => 'category','parent' => $typeid) ) as $item) $typeid = $item->slug;
+                        array_push($categories, $typeid); 
+                        
+                        ?>
+                        <div class="lf_item<?php foreach($categories as $item) echo ' '.$item; ?>">
                             <div class="lf_item_head">
                                 <div class="lf_item_head_top">
                                     <p><?php echo get_the_title(); ?></p>
@@ -119,8 +117,8 @@
                             </div>
 
                             <div class="lf_item_details">
-                                <p><span>Type:</span>Time Aloft</p>
-                                <p><span>Difficulity:</span>Easy</p>
+                                <p><span>Type:</span><?php echo $categories[0]; ?></p>
+                                <p><span>Difficulity:</span><?php echo $categories[1]; ?></p>
                             </div>
                             <a href="<?php the_permalink(); ?>" class="lf_item_button">Build it Now</a>
                         </div>
