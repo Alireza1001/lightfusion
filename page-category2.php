@@ -54,7 +54,7 @@
             <section class="lf_blog_item_filter" id="lf_weblog_filter_2">
                 <p>Type: </p>
                 <select id="lf_weblog_country_filter2" name="lf_weblog_country_filter" >
-                    <option value=''>all</options>
+                    <option value=''>All</options>
                     <option value='distance'>Distance</options>
                     <option value='time Aloft'>Time Aloft</options>
                     <option value='acrobatic'>Acrobatic</options>
@@ -62,11 +62,11 @@
                 </select>
                 <p>Difficulity: </p>
                 <select id="lf_weblog_type_filter2" name="lf_weblog_type_filter" >
-                    <option value=''>all</options>
-                    <option value='Easy'>Easy</options>
-                    <option value='Medium'>Medium</options>
-                    <option value='Hard'>Hard</options>
-                    <option value='Advanced'>Advanced</options>
+                    <option value=''>All</options>
+                    <option value='easy'>Easy</options>
+                    <option value='medium'>Medium</options>
+                    <option value='hard'>Hard</options>
+                    <option value='advanced'>Advanced</options>
                 </select>
                 <!-- <p>Scissors: </p>
                 <select id="lf_weblog_type_filter2" name="lf_weblog_type_filter" >
