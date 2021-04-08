@@ -1,5 +1,5 @@
 <?php if(false) { ?>
-<ul class="lf_head_share_btns">
+<!-- <ul class="lf_head_share_btns">
     <ul class="lf_share_status2"></ul>
     <li class="lf_share_event lf_media_whatsapp">
         <a aria-label="test" target="_blank" rel="noopener noreferrer" href="https://wa.me/?text=<?php echo get_the_permalink(); ?>">
@@ -35,7 +35,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z"/></svg>
     </li>
     <span class="lf_copyurl_tooltip" id="lf_copyurl_tooltip_m">Link copied</span>
-</ul>
+</ul> -->
 <?php } ?>
 <div id="lf_article_head">
     <div class="lf_breadcrumb">

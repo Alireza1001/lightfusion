@@ -157,12 +157,35 @@ function get_post_breadcrumb_blog2() {
 	foreach(get_the_category() as $category) array_push($breadcrumb, $category->name);
 	echo "<a href='/'>Home</a>";
 	$lf_cat_link_addup = 'href="/';
-    foreach($breadcrumb as $item) {
-        $lf_cat_link_addup = $lf_cat_link_addup.$item.'/';
-	    $lf_cat_link_addup = strtolower($lf_cat_link_addup);
-	    $lf_cat_link_addup = str_replace(" ","-",$lf_cat_link_addup);
-        echo ' > <a '.$lf_cat_link_addup.'">'.$item.'</a> ';
-    }
+	if(is_page_template( 'page-category2.php' )) {
+
+		$categories = [];
+		foreach(get_terms( 'category', array( 'name__like' => 'type' )) as $item) $typeid = $item->term_id;
+		foreach(get_terms( array( 'taxonomy' => 'category','parent' => $typeid) ) as $item) $typeid = $item->slug;
+		array_push($categories, $typeid); 
+		foreach(get_terms( 'category', array( 'name__like' => 'difficulity' )) as $item) $typeid = $item->term_id;
+		foreach(get_terms( array( 'taxonomy' => 'category','parent' => $typeid) ) as $item) $typeid = $item->slug;
+		array_push($categories, $typeid); 
+		foreach(get_terms( 'category', array( 'name__like' => 'scissors' )) as $item) $typeid = $item->term_id;
+		foreach(get_terms( array( 'taxonomy' => 'category','parent' => $typeid) ) as $item) $typeid = $item->slug;
+		array_push($categories, $typeid); 
+
+		// foreach($categories as $item) {
+		// 	$lf_cat_link_addup = $lf_cat_link_addup.$item.'/';
+		// 	$lf_cat_link_addup = strtolower($lf_cat_link_addup);
+		// 	$lf_cat_link_addup = str_replace(" ","-",$lf_cat_link_addup);
+		// 	echo ' > <a '.$lf_cat_link_addup.'">'.$item.'</a> ';
+		// }
+
+	}else{
+		$counts=0;
+		foreach($breadcrumb as $item) {
+			$lf_cat_link_addup = $lf_cat_link_addup.$item.'/';
+			$lf_cat_link_addup = strtolower($lf_cat_link_addup);
+			$lf_cat_link_addup = str_replace(" ","-",$lf_cat_link_addup);
+			echo ' > <a '.$lf_cat_link_addup.'">'.$item.'</a> ';
+		}
+	}
     if(!is_single()) echo ' > <a href="'.get_the_permalink().'">'.get_the_title().'</a> ';
 	else echo ' > <a href="'.get_the_permalink().'">Current post</a> ';
 }
@@ -546,7 +569,6 @@ function wporg_save_postdata( $post_id ) {
 }
 add_action( 'save_post', 'wporg_save_postdata' );
 add_action( 'add_meta_boxes', 'wporg_add_custom_box' );
-
 
 
 ?>
