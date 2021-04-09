@@ -54,7 +54,10 @@
             <section id="lf_blog_items">
                 <div class="lf_items">
                     <?php 
-                        $pageid = get_the_id();$page_title = get_the_title();$lf_category_page = new WP_Query(array( 'category_name' => $page_title, 'posts_per_page'=>10));
+                        $pageid = get_the_id();
+                        $page_title = str_replace(" ", "-", get_the_title());
+                        $page_title = strtolower($page_title);
+                        $lf_category_page = new WP_Query(array( 'category_name' => $page_title, 'posts_per_page'=>10));
                         if ( $lf_category_page->have_posts() ) : while ( $lf_category_page->have_posts() ) : $lf_category_page->the_post();
                         $user_id = get_the_author_meta( 'ID' ); ?>
 

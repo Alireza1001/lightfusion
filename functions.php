@@ -154,37 +154,32 @@ add_action( 'init', 'register_my_menus' );
 function get_post_breadcrumb_blog2() {
     global $post;
 	$breadcrumb = [];
-	foreach(get_the_category() as $category) array_push($breadcrumb, $category->name);
+	
 	echo "<a href='/'>Home</a>";
 	$lf_cat_link_addup = 'href="/';
-	if(is_page_template( 'page-category2.php' )) {
+
+
+	if(is_page_template( 'page-category2.php' )||is_page_template( 'single2.php' )) {
+
 
 		$categories = [];
-		foreach(get_terms( 'category', array( 'name__like' => 'type' )) as $item) $typeid = $item->term_id;
-		foreach(get_terms( array( 'taxonomy' => 'category','parent' => $typeid) ) as $item) $typeid = $item->slug;
-		array_push($categories, $typeid); 
-		foreach(get_terms( 'category', array( 'name__like' => 'difficulity' )) as $item) $typeid = $item->term_id;
-		foreach(get_terms( array( 'taxonomy' => 'category','parent' => $typeid) ) as $item) $typeid = $item->slug;
-		array_push($categories, $typeid); 
-		foreach(get_terms( 'category', array( 'name__like' => 'scissors' )) as $item) $typeid = $item->term_id;
-		foreach(get_terms( array( 'taxonomy' => 'category','parent' => $typeid) ) as $item) $typeid = $item->slug;
-		array_push($categories, $typeid); 
-
-		// foreach($categories as $item) {
-		// 	$lf_cat_link_addup = $lf_cat_link_addup.$item.'/';
-		// 	$lf_cat_link_addup = strtolower($lf_cat_link_addup);
-		// 	$lf_cat_link_addup = str_replace(" ","-",$lf_cat_link_addup);
-		// 	echo ' > <a '.$lf_cat_link_addup.'">'.$item.'</a> ';
-		// }
-
+		$themaincatparent = 0;
+		$themaincatparentslug = "";
+		foreach(get_the_category() as $item) if($item->parent == 0) {$themaincatparent = $item->term_id;$themaincatparentslug = $item->slug;echo ' > <a href="/'.$item->slug.'/">'.$item->name.'</a> ';}
+		foreach(get_the_category() as $item) if($item->parent == $themaincatparent) echo ' > <a href="/'.$themaincatparentslug.'/'.strtolower(str_replace(" ", "-", $item->name)).'/">'.$item->name.'</a> ';
+		print_r(get_the_category());
+		
 	}else{
-		$counts=0;
-		foreach($breadcrumb as $item) {
-			$lf_cat_link_addup = $lf_cat_link_addup.$item.'/';
-			$lf_cat_link_addup = strtolower($lf_cat_link_addup);
-			$lf_cat_link_addup = str_replace(" ","-",$lf_cat_link_addup);
-			echo ' > <a '.$lf_cat_link_addup.'">'.$item.'</a> ';
-		}
+		foreach(get_the_category() as $category) array_push($breadcrumb, $category->name);
+	}
+
+
+	$counts=0;
+	foreach($breadcrumb as $item) {
+		$lf_cat_link_addup = $lf_cat_link_addup.$item.'/';
+		$lf_cat_link_addup = strtolower($lf_cat_link_addup);
+		$lf_cat_link_addup = str_replace(" ","-",$lf_cat_link_addup);
+		echo ' > <a '.$lf_cat_link_addup.'">'.$item.'</a> ';
 	}
     if(!is_single()) echo ' > <a href="'.get_the_permalink().'">'.get_the_title().'</a> ';
 	else echo ' > <a href="'.get_the_permalink().'">Current post</a> ';
