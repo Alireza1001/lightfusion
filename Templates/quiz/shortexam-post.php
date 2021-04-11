@@ -48,7 +48,7 @@
                             else if(req == "opt") lf_exer_hightligh(this.responseText);
                         }
                     }
-                    lf_exer_req.open("GET", "<?php echo get_template_directory_uri(); ?>/quiz/short-exam.php?postid="+post_id+"&req="+req+"&no="+no+"", true);
+                    lf_exer_req.open("GET", "<?php echo get_template_directory_uri(); ?>/Templates/quiz/short-exam.php?postid="+post_id+"&req="+req+"&no="+no+"", true);
                     lf_exer_req.send();
                 }
                 

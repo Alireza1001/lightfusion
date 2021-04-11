@@ -195,7 +195,7 @@
             </ul>
             <ul class="lf_share_status"></ul>
         </div>
-            <?php get_template_part( 'quiz/shortexam-post' ); ?>
+            <?php get_template_part( 'Templates/quiz/shortexam-post' ); ?>
         </section>
         
         <?php nextPrev(); ?>

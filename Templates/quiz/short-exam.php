@@ -1,5 +1,5 @@
 <?php
-    require("../../../../wp-load.php");
+    require("../../../../../wp-load.php");
     
     $postid = $_GET['postid'];
     $request = $_GET['req'];

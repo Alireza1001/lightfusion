@@ -5,8 +5,7 @@
 */
 ?>
 
-<?php get_header(); ?>
-
+<?php get_header(); global $post; ?>
 <div id="lf_progressbar_cover"><span id="lf_progressbar"></span></div>
 <span id="lf_progressbar_num"></span>
 <section id="whole_page_wrapup">
@@ -15,6 +14,7 @@
         <?php get_template_part( 'nav-status' ); ?>
         <div id="lf_landing_main_poster">
             <?php the_post_thumbnail(); ?>
+            <img src="<?php echo wp_get_attachment_url(get_post_meta( $post->ID, '_multithumbmail', true )); ?>">
         </div>
         <div id="lf_landing_author_cover">
             <p><span aria-label="<?php echo get_the_date(); ?>" id="lf_landing_author_date"><?php echo get_the_date(); ?></span></p>
@@ -202,7 +202,7 @@
             </ul>
             <ul class="lf_share_status"></ul>
         </div>
-            <?php get_template_part( 'quiz/shortexam-post' ); ?>
+        <?php include('Templates/quiz/shortexam-post.php'); ?>
         </section>
         
         <?php nextPrev(); ?>
