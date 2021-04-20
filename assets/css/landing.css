@@ -1,3 +1,35 @@
+section#segment1 section#lf_landing_main_contexts {
+    display: flex;
+    flex-flow: wrap;
+    place-items: center;
+    place-content: center;
+    column-gap: 2%;
+}
+section#segment1 section#lf_landing_main_contexts figure img {
+    max-width: 100%;
+    width: 100%;
+}
+section#segment1 section#lf_landing_main_contexts figure {
+    margin: 0;
+    place-self: end;
+    position: relative;
+}
+section#lf_landing_main_contexts .wp-caption figcaption {
+    color: #e6e6e6;
+    margin: 0 auto;
+    padding: 7% 2%;
+    display: grid;
+    padding-bottom: 3%;
+    place-items: center;
+    border-radius: 1px;
+    width: 96%;
+    position: absolute;
+    bottom: 0;
+    background-image: linear-gradient(
+0deg
+, #000,#000000b5, #0000);
+}
+
 /*next prev*/
 section#lf_nextprev {
     padding: 0 4%;
@@ -476,16 +508,7 @@ section#lf_landing_main_contexts .wp-caption img {
     border-radius: 2px;
     height: auto;
 }
-section#lf_landing_main_contexts .wp-caption {
-    background-color: var(--bg3);
-    margin: 0 auto;
-    padding: 2%;
-    display: grid;
-    place-items: center;
-    box-shadow: 2px 5px 11px -4px #8c8c8c;
-    border-radius: 4px;
-    max-width: 100%;
-}
+
 section#lf_landing_main_contexts .paragraph.paragraph.paragraph-img {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -733,10 +756,6 @@ main#lf_landing #lf_landing_main_video_cover .lf_landing_main_video_btn_group bu
     transition: all .3s;
 }
 
-
-section#lf_landing_main_contexts .wp-caption figcaption {
-    color: var(--txt1);
-}
 section#lf_comments > div ol.commentlist {
     grid-row: 4;
 }

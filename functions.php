@@ -452,9 +452,17 @@ function wporg_add_custom_box() {
 
 		// multi thumbnail
         add_meta_box(
-            'multithumbmail',
-            'multi thumbmail',
-            'multithumbmail_html',
+            'second_thumbnail',
+            'second_thumbnail',
+            'second_thumbnail_html',
+            $screen
+        );
+
+		// download_print
+        add_meta_box(
+            'download_print',
+            'download_print',
+            'download_print_html',
             $screen
         );
         
@@ -497,6 +505,7 @@ function starrate_html( $post ) {
     $value = get_post_meta( $post->ID, '_starrate', true ); ?>
     <p>Starrate on this post is: <?php echo $value; ?> </p>
 <?php }
+
 
 require_once('Templates/multi-thumbnail/functions-template.php');
 
@@ -572,12 +581,21 @@ function wporg_save_postdata( $post_id ) {
     //     );
     // }
 
-	// multithumbmail
-    if ( array_key_exists( 'multithumbmail_n', $_POST ) ) {
+	// second_thumbnail
+    if ( array_key_exists( 'second_thumbnail_n', $_POST ) ) {
         update_post_meta(
             $post_id,
-            '_multithumbmail',
-            $_POST['multithumbmail_n']
+            '_second_thumbnail',
+            $_POST['second_thumbnail_n']
+        );
+    }
+
+	// download_print
+    if ( array_key_exists( 'download_print_n', $_POST ) ) {
+        update_post_meta(
+            $post_id,
+            '_download_print',
+            $_POST['download_print_n']
         );
     }
 

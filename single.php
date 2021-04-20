@@ -108,10 +108,10 @@
         </div>            
         <section id="lf_landing_main_contexts" class="lf_contentVisCtrl">
             <?php the_content(); ?>
-            <?php get_template_part( 'Templates/quiz/shortexam-post' ); ?>
         </section>
 
         <section class="lf_landing_main_contexts">
+            <?php get_template_part( 'Templates/quiz/shortexam-post' ); ?>
             <div class="lf_sharing">
                 <?php
                     $title= urlencode(get_the_title());
@@ -194,8 +194,8 @@
                             </p>
                         </li>
                     </div>
-                    <!-- <input aria-label="test" value="<?php echo "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>" class="lf_input_clip"/>
-                    <span class="lf_copyurl_tooltip" id="lf_copyurl_tooltip_main">Link copied!</span> -->
+                    <input aria-label="test" value="<?php echo "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>" class="lf_input_clip"/>
+                    <span class="lf_copyurl_tooltip" id="lf_copyurl_tooltip_main">Link copied!</span>
                 </ul>
                 <ul class="lf_share_status"></ul>
             </div>
