@@ -97,6 +97,9 @@
                         foreach(get_terms( 'category', array( 'name__like' => 'scissors' )) as $item) $typeid = $item->term_id;
                         foreach(get_terms( array( 'taxonomy' => 'category','parent' => $typeid) ) as $item) $typeid = $item->slug;
                         array_push($categories, $typeid); 
+                        foreach(get_terms( 'category', array( 'name__like' => 'tape' )) as $item) $typeid = $item->term_id;
+                        foreach(get_terms( array( 'taxonomy' => 'category','parent' => $typeid) ) as $item) $typeid = $item->slug;
+                        array_push($categories, $typeid); 
                         
                         ?>
                         <div class="lf_item<?php foreach($categories as $item) echo ' '.$item; ?>">

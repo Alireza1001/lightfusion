@@ -178,7 +178,7 @@ function replaceAll2(str, match, replacement){
     return str.replace(new RegExp(escapeRegExp(match), 'g'), ()=>replacement);
 }
 const ul_content_list = document.querySelectorAll(".lf_landing_right_sub");
-const lf_list_title = document.querySelectorAll("#lf_landing_main_contexts h2");
+const lf_list_title = document.querySelectorAll("#lf_landing_main_contexts h2, #lf_landing_main_contexts h3");
 const ul_li_content_list = document.querySelectorAll(".lf_landing_right_sub li");
 const lf_page_titles_a = document.querySelectorAll(".lf_page_titles_a");
 const lf_page_titles_a_txt = document.querySelectorAll(".lf_page_titles_a span");
@@ -192,7 +192,6 @@ var content_list_arr_underscore = [];
 for(i=0; i<lf_list_title.length; i++) {
     content_list_arr.push(lf_list_title[i].innerText);
     content_list_arr_underscore.push(replaceAll2(content_list_arr[i], ' ', '_'));
-    // content_list_top_arr.push(lf_list_title[i].offsetTop-300);
     lf_list_title[i].id = content_list_arr_underscore[i];
     lf_list_title[i].innerHTML += '<a href="#'+content_list_arr_underscore[i]+'"><img alt="main headings link" width="21" height="21" src="'+wp_dir_url+'/assets/icons/link.svg" /></a>';
     content_list_id_arr.push(lf_list_title[i].getAttribute("id"));
@@ -216,7 +215,9 @@ window.addEventListener("resize", ()=>{
 
 ul_content_list.forEach(item=>{
     for(i=0; i<content_list_arr.length; i++) {
-        item.innerHTML += '<li><a class="lf_page_titles_a" href="#'+content_list_arr_underscore[i]+'"><span>'+content_list_arr[i]+'</span></a></li>';
+        let secondlistclass = "";
+        if(lf_list_title[i].tagName == "H3") secondlistclass = "secondlistclass";
+        item.innerHTML += '<li class="'+secondlistclass+'"><a class="lf_page_titles_a" href="#'+content_list_arr_underscore[i]+'"><span>'+content_list_arr[i]+'</span></a></li>';
     }
 });
 
