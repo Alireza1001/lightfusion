@@ -183,11 +183,11 @@
                                 <img alt="rss" width="20px" height="20px" src="<?php echo $themdirect; ?>/assets/icons/rss.svg" />
                             </a>
                         </li>
-                        <li class="lf_share_event lf_media_print" id="lf_landing_print">
+                        <!-- <li class="lf_share_event lf_media_print" id="lf_landing_print">
                             <a aria-label="print" target="_blank" href="#">
                                 <img alt="print" width="20px" height="20px" src="<?php echo $themdirect; ?>/assets/icons/printer.svg" />
                             </a>
-                        </li>
+                        </li> -->
                         <li class="lf_share_event lf_media_url lf_d">
                             <p aria-label="url">
                                 <img alt="url" width="20px" height="20px" src="<?php echo $themdirect; ?>/assets/icons/copy.svg" />

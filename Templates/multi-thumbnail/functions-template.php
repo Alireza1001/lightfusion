@@ -144,7 +144,12 @@ function second_thumbnail_html( $post ) {
 
 <?php }
 
-
+function download_print_text_html( $post ) { 
+	$value = get_post_meta( $post->ID, '_download_print_text', true );
+	?>
+		<textarea class="download_print_text_n" name="download_print_text_n"><?php echo $value; ?></textarea>
+	<?php
+}
 
 
 function download_print_html( $post ) { 
@@ -160,7 +165,6 @@ function download_print_html( $post ) {
 			<?php
 				$theattachmentslistarr = [];
 				$download_printdom = '';
-
 				$args = array('post_type'=>'attachment' , 'post_mime_type'=>'application/pdf' , 'posts_per_page'=>-1);
 				foreach( get_posts( $args ) as $image) {
 					$imgmainsrc = wp_get_attachment_url( $image->ID );
@@ -192,7 +196,6 @@ function download_print_html( $post ) {
 				<embed src="<?php echo wp_get_attachment_url( $arrvalue[$i] ) ?>" class="displayattachment_preview">
 			<?php } ?>
 		</section>
-
 		<input name="download_print_n" class="download_print_n" value="" />
 		<script>
 			var download_print_json = <?php echo json_encode($theattachmentslistarr); ?>;
@@ -217,7 +220,9 @@ function download_print_html( $post ) {
 				download_print.classList.add('active');
 				document.body.classList.add('active');
 				document.querySelector('#download_print_cover .secondthumbnail_list').innerHTML += download_printdom;
-				if(download_print_lastactiveid) document.querySelector("#download_print_cover .secondthumbnail_list .thumbnaillistid_"+download_print_lastactiveid+"").classList.add("active");
+				if(download_print_lastactiveid) 
+					for(i=0; i<download_print_lastactiveid.length; i++)
+					document.querySelector("#download_print_cover .secondthumbnail_list .thumbnaillistid_"+download_print_lastactiveid[i]+"").classList.add("active");
 			});
 			document.querySelector("#download_print_cover .secondthumbnail_submit").addEventListener("click", ()=>{
 				download_print_lastactiveid = [];
@@ -238,5 +243,3 @@ function download_print_html( $post ) {
 		</script>
 	</section>
 <?php }
-
-

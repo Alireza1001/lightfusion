@@ -227,10 +227,6 @@ h2.lf_track_title.lf_gallery_h2 {
     transition: all .3s;
     transform: translateY(8px);
 }
-#lf_landing_main_contexts h2:hover img {
-    opacity: 1;
-    user-select: all;
-}
 h2.lf_track_title.lf_gallery_h2 img {
     width: 17px;
     place-self: center;
@@ -472,30 +468,23 @@ section#lf_landing_main_contexts p {
     width: fit-content;
     align-items: center;
 }
-#lf_landing_main_contexts h2:hover img {
+#lf_landing_main_contexts h2:hover img, #lf_landing_main_contexts h3:hover img {
     opacity: 1;
     user-select: all;
 }
-#lf_landing_main_contexts h2 img {
-    width: 3vw!important;
-    margin-right: 17%;
-    opacity: 0;
-    user-select: none;
-    cursor: pointer;
-    display: grid;
-}
+
 section#lf_landing_main_contexts .paragraph {
     font-size: 18px;
     line-height: 25px;
     font-weight: 100;
 }
-section#lf_landing_main_contexts img {
+section#lf_landing_main_contexts > img, section#lf_landing_main_contexts > p > img {
     border-radius: 2px;
     height: auto;
     display: grid;
     margin: 0 auto;
-    max-width: 60%;
-    width: 60%;
+    max-width: 80%;
+    width: 80%;
 }
 section#lf_landing_main_contexts .wp-caption p {
     font-size: 16px;
@@ -975,7 +964,18 @@ section#lf_popular_posts .lf_item:hover {
     }
 }
 
-
+aside#lf_landing_right ul.lf_landing_right_sub li.secondlistclass {
+    padding-left: 20px;
+    line-height: 9px;
+    margin: 4px 0;
+}
+aside#lf_landing_right ul.lf_landing_right_sub li.secondlistclass a {
+    font-size: 11px;
+}
+#lf_landing_main_contexts h3 img {
+    width: 2.2vw!important;
+    transform: translate(4px, 3px);
+}
 @media (max-width: 600px) {
     section#lf_landing_exercise .lf_item .lf_head {
         font-size: 14px;
@@ -989,7 +989,7 @@ section#lf_popular_posts .lf_item:hover {
     section#lf_landing_main_contexts p {
         line-height: 1.7;
     }
-    section#lf_landing_main_contexts img {
+    section#lf_landing_main_contexts > img, section#lf_landing_main_contexts > p > img {
         max-width: 70vw;
         width: 70vw;
     }
@@ -1224,4 +1224,12 @@ section#lf_popular_posts .lf_item:hover {
     .lf_share_event.lf_media_url.lf_d > p {
         margin: 0;
     }
+}
+#lf_landing_main_contexts h2 img, #lf_landing_main_contexts h3 img {
+    width: 3vw!important;
+    margin-right: 17%;
+    opacity: 0;
+    user-select: none;
+    cursor: pointer;
+    display: grid;
 }

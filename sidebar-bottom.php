@@ -45,17 +45,19 @@
 
 
 <?php 
-
+    $themainid = get_the_ID();
     $wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1));
     if ( $wpb_all_query->have_posts() ) :
         $the_starrate_arr = [];
         $i=0;
         $j=0;
         while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post();
+        if(get_the_ID() != $themainid) {
             $the_starrate_arr[$i][0] = get_the_ID();
             $the_starrate_arr[$i][1] = get_post_meta( $post->ID, '_starrate', true );
             $the_starrate_arr[$i][2] = get_comments_number();
             $i++;
+        }
         endwhile;
         wp_reset_postdata();
         for($i=0; $i<count($the_starrate_arr); $i++) {
