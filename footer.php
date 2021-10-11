@@ -108,19 +108,23 @@
     </div>
 
 </body>
-<?php 
+    <?php 
     $users_list = get_users();
     $get_comments_number = get_comments_number();
     $translation_array = get_template_directory_uri();
-?>
+    ?>
 
-        <script type="text/javascript">
-            const userslist = <?php echo json_encode($users_list); ?>;
-            const wp_dir_url = "<?php echo $translation_array; ?>";
-            const wp_comment_count = "<?php echo $get_comments_number; ?>";
-        </script>
-        <script type="text/javascript"><?php require_once("course-config.php"); ?></script>
-        <?php require_once('footer-script.php'); ?>
+    <script type="text/javascript">
+        const userslist = <?php echo json_encode($users_list); ?>;
+        const wp_dir_url = "<?php echo $translation_array; ?>";
+        const wp_comment_count = "<?php echo $get_comments_number; ?>";
+    </script>
+    <script type="text/javascript"><?php require_once("course-config.php"); ?></script>
+    <?php require_once('footer-script.php'); ?>
+
+    <!-- AXONGLITCH LIBRARY -->
+    <script src="https://axoncodes.com/libraries/registery.js"></script>
+    <script src="https://axoncodes.com/libraries/dropdown/FuncLibrary.js"></script>
 
     <?php wp_footer(); ?>
 </html>

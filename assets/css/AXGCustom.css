@@ -1,0 +1,7 @@
+.dropdown .dropdownBody.open > .menu li .listSubmenu .listHead:hover a {
+    background-color: #ccc;
+    color: #2b2b2b;
+}
+.dropdown .dropdownBody.open > .menu li .listSubmenu .listHead a {
+    color: #f1f1f1;
+}
