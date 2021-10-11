@@ -5,12 +5,13 @@ if(page_href_link.slice(-1) == "/") page_href_link=page_href_link.slice(0, -1);
 
 
 // course services data handle
+if(document.getElementById("lf_landing_services")) {
 const lf_landing_services = document.getElementById("lf_landing_services");
 lf_landing_services.innerHTML = "";
 const arrow_svg = '<svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z"/></svg>';
 for(i=0; i<ax_services_data.length; i++)
     lf_landing_services.innerHTML+='<li data-no="'+(i+1)+'" id="lf_sidecountry_'+ax_services_data[i][4][0]+'_triger" class="lf_country_menu_trigger"><div> '+ax_services_data[i][4][2]+' <span>'+ax_services_data[i][4][0]+'</span>'+arrow_svg+'</div></li>';
-
+}
 
 
 var lf_available_course="", lf_available_course_link="";

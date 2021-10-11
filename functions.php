@@ -168,11 +168,7 @@ function get_post_breadcrumb_blog2() {
 		foreach(get_the_category() as $item) if($item->parent == 0) {$themaincatparent = $item->term_id;$themaincatparentslug = $item->slug;echo ' > <a href="/'.$item->slug.'/">'.$item->name.'</a> ';}
 		foreach(get_the_category() as $item) if($item->parent == $themaincatparent) echo ' > <a href="/'.$themaincatparentslug.'/'.strtolower(str_replace(" ", "-", $item->name)).'/">'.$item->name.'</a> ';
 	
-	}else{
-
-		foreach(get_the_category() as $category) array_push($breadcrumb, $category->name);
-
-	}
+	}else foreach(get_the_category() as $category) array_push($breadcrumb, $category->name);
 
 
 	$counts=0;
