@@ -1,5 +1,8 @@
 <?php
 
+// AXON GLITCH FUNCTION
+require_once('inc/AXONGLITCH.php');
+
 // assets
 function lf_add_style() {
 	wp_enqueue_style('AXGCSS', get_template_directory_uri()."/assets/css/AXGCustom.css");
@@ -601,6 +604,7 @@ function wporg_save_postdata( $post_id ) {
     //         $post_id,
     //         '_download_print',
     //         $_POST['download_print_n']
+
     //     );
     // }
 
@@ -620,4 +624,5 @@ add_action( 'save_post', 'wporg_save_postdata' );
 add_action( 'add_meta_boxes', 'wporg_add_custom_box' );
 
 
+add_filter( 'big_image_size_threshold', '__return_false' );
 ?>

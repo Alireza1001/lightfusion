@@ -2,7 +2,7 @@
 <?php /* Template Name: Category */ ?>
 <section id="whole_page_wrapup">
 
-    <?php get_template_part( 'sidebar' ); 
+    <?php get_template_part( 'sidebar2' ); 
     $tempalte_dir = get_template_directory_uri();
     ?>
     <main style="padding-bottom: 30px;">
