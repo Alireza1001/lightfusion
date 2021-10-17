@@ -131,7 +131,7 @@ section#lf_landing_exercise .lf_item {
     margin-bottom: 20px;
 }
 section#lf_landing_exercise .lf_item .lf_head {
-    font-size: 17px;
+    font-size: var(--standard-text-fontSize);;
     margin: 9px 0;
     margin-top: 6px;
     background-color: var(--bg3);
@@ -142,7 +142,7 @@ section#lf_landing_exercise .lf_item .lf_head {
 
 section#lf_landing_exercise .lf_item .lf_des {
     margin: 0;
-    font-size: 17px;
+    font-size: var(--standard-text-fontSize);;
     border-radius: 2px;
     border-left: 2px solid var(--txt2);
     padding-left: 10px;
@@ -188,7 +188,7 @@ h2.lf_track_title.lf_gallery_h2 {
     height: 3px;
     background-color: var(--bg3);
     position: sticky;
-    top: 60px;
+    top: 70px;
     z-index: 999;
     left: 0;
     width: 100%;
@@ -207,25 +207,22 @@ h2.lf_track_title.lf_gallery_h2 {
 
 
 #lf_progressbar_num {
-    height: 11px;
     background-color: var(--ax_span_color);
-    position: sticky;
-    top: 48px;
+    position: fixed;
+    left: 49.5%;
     z-index: 9999999;
-    left: 0;
     font-family: "Lato", Arial, sans-serif;
     display: grid;
     width: fit-content;
+    height: auto;
     text-align: center;
-    font-size: 10px;
+    font-size: var(--midSmall-text-fontSize);
     color: #fff;
-    padding: 0px 3px;
-    padding-bottom: 2px;
+    padding: 0px 9px;
     border-radius: 2em;
     margin: 0 auto;
-    margin-top: -16px;
     transition: all .3s;
-    transform: translateY(8px);
+    transform: translateY(-10px);
 }
 h2.lf_track_title.lf_gallery_h2 img {
     width: 17px;
@@ -452,12 +449,12 @@ section#lf_landing_main_contexts {
 }
 section#lf_landing_main_contexts p {
     text-align: justify;
-    font-size: 16px;
-    line-height: 1.9;
+    font-size: var(--standard-button-fontSize);
+    line-height: 2vw;
     word-spacing: 0.03em;
 }
 #lf_landing_main_contexts h2 {
-    font-size: 29px;
+    font-size: var(--midLarge-text-fontSize);
     margin: 20px 0;
     font-weight: 400;
     color: var(--txt1);
@@ -483,7 +480,7 @@ section#lf_landing_main_contexts > img, section#lf_landing_main_contexts > p > i
     height: auto;
     display: grid;
     margin: 0 auto;
-    max-width: 80%;
+    max-width: 50%;
     width: 80%;
 }
 section#lf_landing_main_contexts .wp-caption p {
@@ -516,11 +513,13 @@ section#lf_landing_main_contexts ul {
     margin: 0;
 }
 section#lf_landing_main_contexts ul li {
-    font-size: 14px;
+    font-size: var(--standard-text-fontSize);
     padding: 7px 0;
     color: var(--ax_home_offer_p);
 }
-
+#lf_landing_main_contexts h3 {
+    font-size: var(--smallLarge-text-fontSize);
+}
 /*section#lf_landing_main_contexts strong::before {*/
 /*    display: block;*/
 /*    content: "";*/
@@ -964,14 +963,7 @@ section#lf_popular_posts .lf_item:hover {
     }
 }
 
-aside#lf_landing_right ul.lf_landing_right_sub li.secondlistclass {
-    padding-left: 20px;
-    line-height: 9px;
-    margin: 4px 0;
-}
-aside#lf_landing_right ul.lf_landing_right_sub li.secondlistclass a {
-    font-size: 11px;
-}
+
 #lf_landing_main_contexts h3 img {
     width: 2.2vw!important;
     transform: translate(4px, 3px);
@@ -987,7 +979,7 @@ aside#lf_landing_right ul.lf_landing_right_sub li.secondlistclass a {
         grid-template-columns: auto;
     }
     section#lf_landing_main_contexts p {
-        line-height: 1.7;
+        /* line-height: 1.7; */
     }
     section#lf_landing_main_contexts > img, section#lf_landing_main_contexts > p > img {
         max-width: 70vw;
@@ -1028,13 +1020,6 @@ aside#lf_landing_right ul.lf_landing_right_sub li.secondlistclass a {
     
     #lf_progressbar_cover {
         top: 50px;
-    }
-    #lf_progressbar_num {
-        margin: 0;
-        margin-right: auto;
-        top: 57px;
-        left: 7px;
-        display: none;
     }
 }
 
@@ -1105,7 +1090,7 @@ aside#lf_landing_right ul.lf_landing_right_sub li.secondlistclass a {
         font-size: 20px!important;
     }
     main#lf_landing #lf_landing_main_audio_cover #lf_landing_main_audio_btn_group p.lf_landing_main_audio_timer {
-        font-size: 17px;
+        font-size: var(--standard-text-fontSize);;
     }
     div#lf_audio_statics > div p {
         font-size: 19px!important;
@@ -1140,11 +1125,6 @@ aside#lf_landing_right ul.lf_landing_right_sub li.secondlistclass a {
     div#lf_sharing ul.lf_share_btns img {
         width: 34px;
     }
-    #lf_progressbar_num {
-        font-size: 23px!important;
-        height: fit-content!important;
-        padding: 2px 10px!important;
-    }
     
     main#lf_landing .lf_star_rating > p {
         font-size: 21px;
@@ -1170,16 +1150,12 @@ aside#lf_landing_right ul.lf_landing_right_sub li.secondlistclass a {
     #lf_articles_by_comment .lf_items_title {
         font-size: 20px;
     }
-    
-    div#lf_landing_after_main_title > p {
-        font-size: 27px;
-    }
     main p.paragraph {
         font-size: 30px!important;
         line-height: 1.3!important;
     }
     div#lf_landing_main_poster img {
-        height: 35vh;
+        /* height: 35vh; */
     }
     div#lf_contact a span {
         font-size: 28px!important;
@@ -1207,18 +1183,11 @@ aside#lf_landing_right ul.lf_landing_right_sub li.secondlistclass a {
     div#lf_landing_author_cover .lf_landing_author_details img#lf_landing_author_details_img {
         width: 140px;
     }
-    main#lf_landing .lf_star_rating {
-        height: fit-content;
-        transform: translateY(30px);
-    }
     button#lf_landing_main_video_play svg {
         width: 80px!important;
     }
     main#lf_landing {
         margin-top: 20px;
-    }
-    div#lf_landing_main_title_cover #lf_landing_main_title {
-        font-size: 68px;
     }
     
     .lf_share_event.lf_media_url.lf_d > p {

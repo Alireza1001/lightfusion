@@ -179,9 +179,11 @@ if(os_stat>=0) {
 
 // home icon in header
 const ax_main = document.getElementsByTagName("main");
-const ax_head_home = document.getElementById("ax_head_home");
-if(ax_main[0].id == "lf_home") {
-    ax_head_home.style.display = "none";
+if(document.getElementById("ax_head_home")) {
+    const ax_head_home = document.getElementById("ax_head_home");
+    if(ax_main[0].id == "lf_home") {
+        ax_head_home.style.display = "none";
+    }
 }
 
 //  menu button stting
@@ -211,15 +213,16 @@ function ax_nav() {
         tab_state=1;
     }
 }
-document.querySelector("header#axon_header .ax-nav-left .ax-menu-btn, section#ax-megaheader").addEventListener("click", ax_nav);
-document.getElementById("side_nav").addEventListener("click", ax_nav);
+if(document.querySelector("header#axon_header .ax-nav-left .ax-menu-btn, section#ax-megaheader")) document.querySelector("header#axon_header .ax-nav-left .ax-menu-btn, section#ax-megaheader").addEventListener("click", ax_nav);
+if(document.getElementById("side_nav"))document.getElementById("side_nav").addEventListener("click", ax_nav);
 
 
 
 
 // css root vars
 const ax_theme_switch_icon = document.getElementById("ax_theme_switch_icon");
-const ax_theme_switch_bg = document.getElementById("ax_theme_switch");
+var ax_theme_switch_bg;
+if(document.getElementById("ax_theme_switch")) ax_theme_switch_bg = document.getElementById("ax_theme_switch");
 
 root.style.setProperty('--ax_service_tab_bg', "#d0d0d0cc");
 root.style.setProperty('--ax_service_tab_active', "#fff");
@@ -231,7 +234,7 @@ root.style.setProperty('--ax_home_offer_bg_hover', "#e9e5d7");
 root.style.setProperty('--ax_confer_placeholder', "#afafaf");
 
 
-document.getElementById("ax_theme_switch").addEventListener("click", e => {
+if(document.getElementById("ax_theme_switch")) document.getElementById("ax_theme_switch").addEventListener("click", e => {
     if(ax_theme_state == 1){
         document.querySelectorAll("img").forEach(item=>{
             if(item.getAttribute("src").search("-dark.svg") >= 0) {
@@ -492,7 +495,7 @@ document.querySelector("#lf_inpage_notification svg").addEventListener("click", 
 
 
 // searchbox handle
-document.getElementById("ax_header_search_form").addEventListener("click", e=>{
+if(document.getElementById("ax_header_search_form"))document.getElementById("ax_header_search_form").addEventListener("click", e=>{
     e.preventDefault(); 
     document.getElementById("ax_header_search_form").classList.add("lf_active");
     document.getElementById("lf_searchform_res_cover").style.display = "block";
@@ -500,7 +503,7 @@ document.getElementById("ax_header_search_form").addEventListener("click", e=>{
         document.getElementById("lf_progressbar_num").style.opacity = 0;
 });
 document.getElementById("lf_naturalizer").addEventListener("click", ()=>{
-    document.getElementById("ax_header_search_form").classList.remove("lf_active");
+    if(document.getElementById("ax_header_search_form"))document.getElementById("ax_header_search_form").classList.remove("lf_active");
     document.getElementById("lf_searchform_res_cover").style.display = "none";
     if(document.getElementById("lf_progressbar_num"))
         document.getElementById("lf_progressbar_num").style.opacity = 1;

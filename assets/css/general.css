@@ -966,7 +966,7 @@ section#ax-megaheader nav#ax-main-nav > div > ul > li > ul > li > a {
     color: #ececec;
     text-decoration: none;
     font-family: "Lato", Arial, sans-serif;
-    font-size: 17px;
+    font-size: var(--standard-text-fontSize);;
     font-weight: 100;
     transition: all .3s;
     -webkit-transition: all .3s;
@@ -1077,7 +1077,7 @@ footer#ax_footer .ax_items .ax_item a {
 }
 footer#ax_footer .ax_items .ax_item .ax_footer_title {
     font-weight: 400;
-    font-size: 17px;
+    font-size: var(--standard-text-fontSize);;
 }
 footer#ax_footer .ax_items .ax_item.ax_address .ax_item .ax_add {
     display: grid;
@@ -1511,7 +1511,7 @@ div#lf_comments_list {
 footer#ax_footer > .ax_items:nth-child(1) .ax_item.ax_minabout form > p {
     color: var(--txt2);
     margin: 0;
-    font-size: 17px;
+    font-size: var(--standard-text-fontSize);;
 }
 footer#ax_footer > .ax_items .ax_item.ax_address .ax_items:nth-child(5) {
     display: none;

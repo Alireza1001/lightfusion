@@ -6,7 +6,7 @@
             <form action="/caspian" method="POST" id="ax_scubscribersinput">
                 <p>Sign up to our Newsletter</p>
                 <div>
-                    <label for="ax_sub_email">Newsletter paragrapth</label>
+                    <label for="ax_sub_email"></label>
                     <div class="ax_sub_item">
                         <button type="submit" title="newsletter" name="ax_sub_sibmit" id="axsubscribebtnn_email">Signup</button>
                         <input id="ax_sub_email" type="text" name="ax_sub_email"  required autocomplete placeholder="Email"/>
@@ -17,7 +17,7 @@
         <div class="ax_item ax_address" id="lf_footer_wkh">
             <div id="lf_footer_latestposts">
                 <?php 
-                $lf_latest_posts_footer = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>3));
+                $lf_latest_posts_footer = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>2));
                 if ( $lf_latest_posts_footer->have_posts() ) :
                 ?>
                 <p class="ax_footer_title">Latest Posts</p>

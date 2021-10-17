@@ -6,6 +6,7 @@ require_once('inc/AXONGLITCH.php');
 // assets
 function lf_add_style() {
 	wp_enqueue_style('AXGCSS', get_template_directory_uri()."/assets/css/AXGCustom.css");
+	// wp_enqueue_style('AXGfontsandvarsCSS', get_template_directory_uri()."/assets/css/font&vars.css");
 	if(is_front_page()) {
 		wp_enqueue_style('lf_home_init_style', get_template_directory_uri()."/assets/css/home.init.css");
 		wp_enqueue_style('lf_home_style', get_template_directory_uri()."/assets/css/home.css");

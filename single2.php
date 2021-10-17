@@ -9,7 +9,7 @@
 <div id="lf_progressbar_cover"><span id="lf_progressbar"></span></div>
 <span id="lf_progressbar_num"></span>
 <section id="whole_page_wrapup">
-    <?php get_template_part( 'sidebar' ); ?>
+    <?php get_template_part( 'sidebar2' ); ?>
     <main id="lf_landing">
         <?php get_template_part( 'nav-status' ); ?>
         <div id="lf_landing_main_poster">
@@ -182,7 +182,7 @@
                     <?php }} ?>
                 </ul>
                 <p style='
-                    font-size: 17px;
+                    font-size: var(--standard-text-fontSize);;
                     line-height: 1.9;
                     word-spacing: 0.03em;
                     text-align: center;

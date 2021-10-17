@@ -148,7 +148,7 @@ section#ax_services .ax_items {
     display: grid;
     grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
     padding: 40px 0vw;
-    width: 87%!important;
+    width: 74%!important;
     place-items: baseline center;
     margin: 0 auto;
     height: fit-content;
@@ -236,7 +236,7 @@ section#ax_services .ax_items .lf_soon {
 section#ax_services .ax_items .ax_item .ax_title {
     text-align: center;
     margin: 0;
-    font-size: 17px;
+    font-size: var(--standard-text-fontSize);;
     font-weight: 400;
     color: var(--txt1);
     font-family: auto;
@@ -248,7 +248,7 @@ section#ax_services .ax_items .ax_item .ax_title {
     padding: 0 5px;
 }
 section#ax_services .ax_items .ax_item .ax_title span {
-    font-size: 13px;
+    font-size: var(--midSmall-text-fontSize);
     background-color: var(--ax_service_sub);
     padding: 0 .5vw;
     padding-bottom: 2px;
@@ -400,6 +400,7 @@ section#ax_special .ax_items .ax_item a {
 }
 .ax_item.ax_btn_cover a {
     text-decoration: none;
+    display: grid;
 }
 section#ax_special .ax_items img {
     width: 100%;

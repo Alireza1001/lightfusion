@@ -20,7 +20,7 @@ section#lf_blog_items .lf_items > p {
     text-align: center;
     display: grid;
     grid-column: 1/3;
-    font-size: 17px;
+    font-size: var(--standard-text-fontSize);;
     margin: 110px 0;
 }
 div#lf_sharing ul.lf_share_btns li.lf_share_event.lf_media_rss {
@@ -82,7 +82,7 @@ section#lf_blog_items .lf_items .lf_item .lf_item_profile img {
 }
 section#lf_blog_items .lf_items .lf_item .lf_item_content {
     margin: 0 auto;
-    margin-top: -10px;
+    /* margin-top: -10px; */
     display: grid;
     grid-auto-flow: row;
     height: fit-content;
@@ -189,7 +189,7 @@ section#lf_posts_pagination a, section#lf_posts_pagination span {
     
     section#lf_blog_items .lf_items .lf_item .lf_item_profile div {
         place-self: baseline;
-        height: 40px;
+        height: 46px;
     }
 }
 @media (max-width: 600px) {
@@ -206,7 +206,7 @@ section#lf_posts_pagination a, section#lf_posts_pagination span {
         place-items: center;
     }
     section#lf_blog_items .lf_items .lf_item .lf_item_profile div {
-        height: 40px;
+        height: 46px;
     }
 }
 @media (min-width: 2560px) {
