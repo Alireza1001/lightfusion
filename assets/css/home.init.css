@@ -84,7 +84,7 @@ div#header_print_new {
 }
 #ax_headings .ax_heading_p {
     color: #e5ecf0;
-    font-size: var(--midSmall-text-fontSize)!important;
+    font-size: var(--standard-text-fontSize)!important;
     font-weight: 300;
     margin: 0;
     letter-spacing: 0px;
