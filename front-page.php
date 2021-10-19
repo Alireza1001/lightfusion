@@ -29,7 +29,7 @@
             <div id="ax_headings">
                 <div class="lf_txt">
                     <h1 class="ax_heading"><?php echo strtoupper($mainIntro['main_title']); ?></h1>
-                    <p class="ax_heading_p"><?php echo ['short_description']; ?></p>
+                    <p class="ax_heading_p"><?php echo $mainIntro['short_description']; ?></p>
                 </div>
             </div>
         <?php endif; ?>
