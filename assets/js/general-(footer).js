@@ -499,14 +499,14 @@ if(document.getElementById("ax_header_search_form"))document.getElementById("ax_
     e.preventDefault(); 
     document.getElementById("ax_header_search_form").classList.add("lf_active");
     document.getElementById("lf_searchform_res_cover").style.display = "block";
-    if(document.getElementById("lf_progressbar_num"))
-        document.getElementById("lf_progressbar_num").style.opacity = 0;
+    // if(document.getElementById("lf_progressbar_num"))
+    //     document.getElementById("lf_progressbar_num").style.opacity = 0;
 });
 document.getElementById("lf_naturalizer").addEventListener("click", ()=>{
     if(document.getElementById("ax_header_search_form"))document.getElementById("ax_header_search_form").classList.remove("lf_active");
     document.getElementById("lf_searchform_res_cover").style.display = "none";
-    if(document.getElementById("lf_progressbar_num"))
-        document.getElementById("lf_progressbar_num").style.opacity = 1;
+    // if(document.getElementById("lf_progressbar_num"))
+    //     document.getElementById("lf_progressbar_num").style.opacity = 1;
 });
 
 

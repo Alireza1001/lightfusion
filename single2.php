@@ -7,7 +7,7 @@
 
 <?php get_header(); global $post; ?>
 <div id="lf_progressbar_cover"><span id="lf_progressbar"></span></div>
-<span id="lf_progressbar_num"></span>
+<!-- <span id="lf_progressbar_num"></span> -->
 <section id="whole_page_wrapup">
     <?php get_template_part( 'sidebar2' ); ?>
     <main id="lf_landing">
@@ -239,7 +239,7 @@
                         </li>
                         <li class="lf_share_event lf_media_email">
                             <a aria-label="email" target="_blank" href="mailto:?subject=<?php echo $title; ?>&body=Check out this site <?php echo $url; ?>">
-                                <img alt="email" width="20px" height="20px" src="<?php echo $themdirect; ?>/assets/icons/gmail.svg" />
+                                <img alt="email" width="20px" height="20px" src="<?php echo $themdirect; ?>/assets/icons/email.svg" />
                             </a>
                         </li>
                         <li class="lf_share_event lf_media_twitter">

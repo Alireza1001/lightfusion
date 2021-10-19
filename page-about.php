@@ -23,73 +23,38 @@
             $imgsrcsetqueue = "$newimgsrcset1 300w, $newimgsrcset2 900w, $newimgsrcset3 1500w";
             echo '<img src="' . $newimgsrcset . '" alt="' . $alt . '" class="' . $class . '" srcset="'.$imgsrcsetqueue.'"/>';
         ?>
-        <h1>About Homa Pilot</h1>
+        <h1><?php the_title(); ?></h1>
     </section>
 
     <section id="lf_about_wwd">
         <p class="lf_head_p"><?php the_content(); ?></p>
     </section>
 
-    <section id="lf_about_socialmedia">
-        <h2 class="lf_head_title">Follow us</h2>
-        <p class="lf_head_p">Our social medias where you can find useful data and news and offers about Homapilot services</p>
-        <div class="lf_about_items">
-            <div class="lf_about_item">
-                <a aria-label="test" href="https://www.instagram.com/homapilot" target="_blank" class="ax_footer_btn">
-                    <img alt="test" width="22px" height="22px" src="<?php echo get_template_directory_uri(); ?>/assets/icons/instagram.svg" />
-                    <p class="lf_p">Instagram</p>
-                </a>
+    <?php
+        if( have_rows('social_medias', get_option( 'page_on_front' )) ): ?>
+        <section id="lf_about_socialmedia">
+            <h2 class="lf_head_title">Follow us</h2>
+            <p class="lf_head_p">Our social medias where you can find useful data and news and offers about our services</p>        <div class="lf_about_items">
+            <?php while( have_rows('social_medias', get_option( 'page_on_front' )) ) : the_row();
+                echo '
+                    <div class="lf_about_item">
+                        <a aria-label="test" 
+                        href="'.get_sub_field('link').'" 
+                        target="_blank" 
+                        class="ax_footer_btn">
+                            <img 
+                            alt="'.get_sub_field('name').'" 
+                            width="22px" 
+                            height="22px" 
+                            src="'.get_template_directory_uri().'/assets/icons/'.get_sub_field('name').'.svg" />
+                            <p class="lf_p">'.ucfirst(get_sub_field('name')).'</p>
+                        </a>
+                    </div>';
+            endwhile; ?>
             </div>
-            <div class="lf_about_item">
-                <a aria-label="test" href="https://www.facebook.com/homapilot/" target="_blank" class="ax_footer_btn">
-                    <img alt="test" width="22px" height="22px" src="<?php echo get_template_directory_uri(); ?>/assets/icons/facebook.svg" />
-                    <p class="lf_p">Facebook</p>
-                </a>
-            </div>
-            <div class="lf_about_item lf_active">
-                <a aria-label="test" href="https://twitter.com/homaPilot" target="_blank" class="ax_footer_btn">
-                    <img alt="test" width="22px" height="22px" src="<?php echo get_template_directory_uri(); ?>/assets/icons/twitter.svg" />
-                    <p class="lf_p">Twitter</p>
-                </a>
-            </div>
-            <div class="lf_about_item">
-                <a aria-label="test" href="https://www.linkedin.com/company/homapilot" target="_blank" class="ax_footer_btn">
-                    <img alt="test" width="22px" height="22px" src="<?php echo get_template_directory_uri(); ?>/assets/icons/linkedin.svg" />
-                    <p class="lf_p">LinkedIn</p>
-                </a>
-            </div>
-            <div class="lf_about_item">
-                <a aria-label="test" href="https://www.youtube.com/channel/UCp6GlZFBs0lRyrsXZa8hVGA/" target="_blank" class="ax_footer_btn">
-                    <img alt="test" width="22px" height="22px" src="<?php echo get_template_directory_uri(); ?>/assets/icons/youtube.svg" />
-                    <p class="lf_p">Youtube</p>
-                </a>
-            </div>
-            <div class="lf_about_item">
-                <a aria-label="test" href="https://www.pinterest.com/homapilot" target="_blank" class="ax_footer_btn">
-                    <img alt="test" width="22px" height="22px" src="<?php echo get_template_directory_uri(); ?>/assets/icons/pinterest.svg" />
-                    <p class="lf_p">Pinterest</p>
-                </a>
-            </div>
-            <div class="lf_about_item">
-                <a aria-label="test" href="https://vk.com/homapilot" target="_blank" class="ax_footer_btn">
-                    <img alt="test" width="22px" height="22px" src="<?php echo get_template_directory_uri(); ?>/assets/icons/vk.svg" />
-                    <p class="lf_p">VK</p>
-                </a>
-            </div>
-            <div class="lf_about_item">
-                <a aria-label="test" href="https://t.me/home_pilot" target="_blank" class="ax_footer_btn">
-                    <img alt="test" width="22px" height="22px" src="<?php echo get_template_directory_uri(); ?>/assets/icons/telegram.svg" />
-                    <p class="lf_p">Telegram</p>
-                </a>
-            </div>
-            <div class="lf_about_item">
-                <a aria-label="test" href="mailto:homapilot@gmail.com" target="_blank" class="ax_footer_btn">
-                    <img alt="test" width="22px" height="22px" src="<?php echo get_template_directory_uri(); ?>/assets/icons/gmail.svg" />
-                    <p class="lf_p">Email</p>
-                </a>
-            </div>
-        </div>
-    </section>
+        </section>
+    <?php endif; ?>
+        
 
 
 

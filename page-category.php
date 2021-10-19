@@ -32,12 +32,14 @@
                 <div id="ax_tabs_inside_cover"></div>
             </div>
         </section>
-        <div id="ax_headings">
-            <div class="lf_txt">
-                <h1 class="ax_heading">HOMA PILOT</h1>
-                <p class="ax_heading_p"></p>
+        <?php $mainIntro=get_field('main_intro', get_option( 'page_on_front' )); if( $mainIntro ): ?>
+            <div id="ax_headings">
+                <div class="lf_txt">
+                    <h1 class="ax_heading"><?php echo strtoupper($mainIntro['main_title']); ?></h1>
+                    <p class="ax_heading_p"><?php echo $mainIntro['short_description']; ?></p>
+                </div>
             </div>
-        </div>
+        <?php endif; ?>
         <p class="ax_heading_p"><?php echo get_the_content(); ?></p>
             <section id="ax_services">
                 <div id="lf_cats_sub"></div>
@@ -48,9 +50,11 @@
                 $post_slug = $post->post_name;
             ?>
         <?php }else{ ?>
-            <section id="lf_weblog_intro">
-                <h1>Homapilot's <?php echo get_the_title(); ?></h1>
-            </section>
+            <?php $intro=get_field('blog_intro', get_option( 'page_on_front' )); if( $intro ): ?>
+                <section id="lf_weblog_intro">
+                    <h1><?php echo $intro['title']; ?>'s <?php echo get_the_title(); ?></h1>
+                </section>
+            <?php endif; ?>
             <section id="lf_blog_items">
                 <div class="lf_items">
                     <?php 

@@ -1,3 +1,10 @@
+.lf_sharing ul.lf_share_btns li.lf_share_event.lf_media_url.lf_d {
+    position: absolute;
+    right: 7px;
+    bottom: 4px;
+}
+
+
 section#segment1 section#lf_landing_main_contexts {
     display: flex;
     flex-flow: wrap;
@@ -206,24 +213,6 @@ h2.lf_track_title.lf_gallery_h2 {
 }
 
 
-#lf_progressbar_num {
-    background-color: var(--ax_span_color);
-    position: fixed;
-    left: 49.5%;
-    z-index: 9999999;
-    font-family: "Lato", Arial, sans-serif;
-    display: grid;
-    width: fit-content;
-    height: auto;
-    text-align: center;
-    font-size: var(--midSmall-text-fontSize);
-    color: #fff;
-    padding: 0px 9px;
-    border-radius: 2em;
-    margin: 0 auto;
-    transition: all .3s;
-    transform: translateY(-10px);
-}
 h2.lf_track_title.lf_gallery_h2 img {
     width: 17px;
     place-self: center;
@@ -450,7 +439,7 @@ section#lf_landing_main_contexts {
 section#lf_landing_main_contexts p {
     text-align: justify;
     font-size: var(--standard-button-fontSize);
-    line-height: 2vw;
+    line-height: 1.4;
     word-spacing: 0.03em;
 }
 #lf_landing_main_contexts h2 {
@@ -979,7 +968,7 @@ section#lf_popular_posts .lf_item:hover {
         grid-template-columns: auto;
     }
     section#lf_landing_main_contexts p {
-        /* line-height: 1.7; */
+        line-height: 1.7;
     }
     section#lf_landing_main_contexts > img, section#lf_landing_main_contexts > p > img {
         max-width: 70vw;

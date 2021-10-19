@@ -158,7 +158,7 @@ window.addEventListener("beforeprint", ()=>{
     document.getElementById("ax_footer").classList.add("lf_print_mode");
     document.getElementById("axon_header").classList.add("lf_print_mode");
     document.getElementById("lf_progressbar_cover").classList.add("lf_print_mode");
-    document.getElementById("lf_progressbar_num").classList.add("lf_print_mode");
+    // document.getElementById("lf_progressbar_num").classList.add("lf_print_mode");
     // document.getElementById("lf_landing_right").classList.add("lf_print_mode");
     
 });
@@ -167,7 +167,7 @@ window.addEventListener("afterprint", ()=>{
     document.getElementById("ax_footer").classList.remove("lf_print_mode");
     document.getElementById("axon_header").classList.remove("lf_print_mode");
     document.getElementById("lf_progressbar_cover").classList.remove("lf_print_mode");
-    document.getElementById("lf_progressbar_num").classList.remove("lf_print_mode");
+    // document.getElementById("lf_progressbar_num").classList.remove("lf_print_mode");
     // document.getElementById("lf_landing_right").classList.remove("lf_print_mode");
 });
 

@@ -172,10 +172,10 @@ if (!defined('ABSPATH')) exit;
                 </div>
             </div>
             <div class="ax-nav-card" >
-                <a title="homapilot home" href="/" id="ax_head_home">
+                <a title="home" href="/" id="ax_head_home">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z"/></svg>
                 </a>
-                <a title="homapilot about" href="/about">
+                <a title="about" href="/about">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 5.9c1.16 0 2.1.94 2.1 2.1s-.94 2.1-2.1 2.1S9.9 9.16 9.9 8s.94-2.1 2.1-2.1m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z"/></svg>
                 </a>
                 <div id="ax_theme_switch">
@@ -184,7 +184,7 @@ if (!defined('ABSPATH')) exit;
                 <?php get_template_part( 'search' ); ?>
             </div>
             <div class="ax-menu-logo">
-                <a href="/" title="homapilot index">
+                <a href="/" title="index">
                     <img alt="logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo/Large size red.png" width="130" height="50" />
                 </a>
                 <div id="header_print_new"></div>

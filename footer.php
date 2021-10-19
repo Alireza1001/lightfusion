@@ -1,8 +1,10 @@
 <footer id="ax_footer">
     <div class="ax_items">
         <div class="ax_item ax_minabout">
-            <h2 class="ax_title">HOMA PILOT</h2>
-            <p class="ax_paragraph">Homa Pilot was founded in 2020 and the purpose of this complex is to provide digital aviation and piloting courses for free and online so that all students of piloting and aviation, as well as those interested in this industry, can easily access these courses from anywhere in the world.</p>
+            <?php $mainIntro=get_field('main_intro', get_option( 'page_on_front' )); if( $mainIntro ): ?>
+               <h2 class="ax_title"><?php echo $mainIntro['main_title']; ?></h2>
+               <p class="ax_paragraph"><?php echo $mainIntro['description']; ?></p>
+            <?php endif; ?>
             <form action="/caspian" method="POST" id="ax_scubscribersinput">
                 <p>Sign up to our Newsletter</p>
                 <div>
@@ -79,15 +81,24 @@
         </div>
         <div class="ax_item ax_follow">
             <div class="ax_items">
-                <a rel="noopener noreferrer" aria-label="instagram" href="https://www.instagram.com/homapilot/" target="_blank" class="ax_footer_btn"><img alt="instagram" width="22px" height="22px" src="<?php echo get_template_directory_uri(); ?>/assets/icons/instagram.svg" /></a>
-                <a rel="noopener noreferrer" aria-label="facebook" href="https://www.facebook.com/homapilot/" target="_blank" class="ax_footer_btn"><img alt="facebook" width="22px" height="22px" src="<?php echo get_template_directory_uri(); ?>/assets/icons/facebook.svg" /></a>
-                <a rel="noopener noreferrer" aria-label="twitter" href="https://twitter.com/HomaPilot" target="_blank" class="ax_footer_btn"><img alt="twitter" width="22px" height="22px" src="<?php echo get_template_directory_uri(); ?>/assets/icons/twitter.svg" /></a>
-                <a rel="noopener noreferrer" aria-label="linkedin" href="https://www.linkedin.com/company/homapilot" target="_blank" class="ax_footer_btn"><img alt="linkedin" width="22px" height="22px" src="<?php echo get_template_directory_uri(); ?>/assets/icons/linkedin.svg" /></a>
-                <a rel="noopener noreferrer" aria-label="youtube" href="https://www.youtube.com/channel/UCp6GlZFBs0lRyrsXZa8hVGA/" target="_blank" class="ax_footer_btn"><img alt="youtube" width="22px" height="22px" src="<?php echo get_template_directory_uri(); ?>/assets/icons/youtube.svg" /></a>
-                <a rel="noopener noreferrer" aria-label="telegram" href="https://t.me/homa_pilot" target="_blank" class="ax_footer_btn"><img alt="telegram" width="22px" height="22px" src="<?php echo get_template_directory_uri(); ?>/assets/icons/telegram.svg" /></a>
-                <a rel="noopener noreferrer" aria-label="pinterest" href="https://www.pinterest.com/homapilot" target="_blank" class="ax_footer_btn"><img alt="pinterest" width="22px" height="22px" src="<?php echo get_template_directory_uri(); ?>/assets/icons/pinterest.svg" /></a>
-                <a rel="noopener noreferrer" aria-label="vk" href="https://vk.com/homapilot" target="_blank" class="ax_footer_btn"><img alt="vk" width="22px" height="22px" src="<?php echo get_template_directory_uri(); ?>/assets/icons/vk.svg" /></a>
-                <a rel="noopener noreferrer" aria-label="mailto" href="mailto:homapilot@gmail.com" target="_blank" class="ax_footer_btn"><img alt="mailto" width="22px" height="22px" src="<?php echo get_template_directory_uri(); ?>/assets/icons/gmail.svg" /></a>
+                <?php
+                    if( have_rows('social_medias', get_option( 'page_on_front' )) ):
+                        while( have_rows('social_medias', get_option( 'page_on_front' )) ) : the_row();
+                            echo '
+                                <a rel="noopener noreferrer"
+                                 aria-label="'.get_sub_field('name').'"
+                                 href="'.get_sub_field('link').'" 
+                                 target="_blank" 
+                                 class="ax_footer_btn">
+                                <img 
+                                 alt="'.get_sub_field('name').'" 
+                                 width="22px" 
+                                 height="22px" 
+                                 src="'.get_template_directory_uri().'/assets/icons/'.get_sub_field('name').'.svg" /></a>';
+                        endwhile;
+                    else :
+                    endif;
+                ?>
             </div>
         </div>
     </div>

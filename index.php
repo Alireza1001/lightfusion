@@ -6,10 +6,12 @@
     <?php get_template_part( 'sidebar' ); ?>
     <main>
     <?php get_template_part( 'nav-status' ); ?>
-    <section id="lf_weblog_intro">
-        <h1>The Homa Pilot Blog</h1>
-        <p>All piloting courses including PPL, CPL, IR and ATPL are provided in Homa Pilot blog and you can easily access your desired course or level using the filter on this page.</p>
-    </section>
+     <?php $intro=get_field('blog_intro', get_option( 'page_on_front' )); if( $intro ): ?>
+         <section id="lf_weblog_intro">
+             <h1><?php echo $intro['title']; ?></h1>
+             <p><?php echo $intro['description']; ?></p>
+         </section>
+     <?php endif; ?>
     <section class="lf_blog_item_filter" id="lf_weblog_filter_2">
         <div>
             <p>Level filter: </p>

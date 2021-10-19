@@ -3,7 +3,7 @@
 section#whole_page_wrapup.lf_print_mode {
     grid-template-columns: 100vw!important;
 }
-section#whole_page_wrapup.lf_print_mode div#lf_scrolldown1, section#whole_page_wrapup.lf_print_mode ul#lf_landing_leftside_second_content_list2, section#whole_page_wrapup.lf_print_mode div#lf_article_head, section#whole_page_wrapup.lf_print_mode ul.lf_head_share_btns, section#whole_page_wrapup.lf_print_mode aside#lf_landing_left, #lf_progressbar_num.lf_print_mode, #lf_progressbar_cover.lf_print_mode, header#axon_header.lf_print_mode, section#whole_page_wrapup.lf_print_mode section.lf_secret_deals, section#whole_page_wrapup.lf_print_mode div#lf_subpages, section#whole_page_wrapup.lf_print_mode section#lf_landing_feedback, footer#ax_footer.lf_print_mode, section#whole_page_wrapup.lf_print_mode section#lf_comments {
+section#whole_page_wrapup.lf_print_mode div#lf_scrolldown1, section#whole_page_wrapup.lf_print_mode ul#lf_landing_leftside_second_content_list2, section#whole_page_wrapup.lf_print_mode div#lf_article_head, section#whole_page_wrapup.lf_print_mode ul.lf_head_share_btns, section#whole_page_wrapup.lf_print_mode aside#lf_landing_left, #lf_progressbar_cover.lf_print_mode, header#axon_header.lf_print_mode, section#whole_page_wrapup.lf_print_mode section.lf_secret_deals, section#whole_page_wrapup.lf_print_mode div#lf_subpages, section#whole_page_wrapup.lf_print_mode section#lf_landing_feedback, footer#ax_footer.lf_print_mode, section#whole_page_wrapup.lf_print_mode section#lf_comments {
     display: none!important;
 }
 section#whole_page_wrapup.lf_print_mode aside#lf_landing_left {

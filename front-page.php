@@ -8,7 +8,7 @@
                 else if(window.outerWidth>500) heroimgSize = "-medium";
                 else heroimgSize = "-small";
             </script>
-            <img alt="homa pilot hero image" id="ax_hero_img" 
+            <img alt="hero image" id="ax_hero_img" 
                 src="<?php echo get_template_directory_uri(); ?>/assets/images/heroImg/General.jpg" 
                 srcset="<?php echo get_template_directory_uri(); ?>/assets/images/heroImg/General-small.jpg 300w, <?php echo get_template_directory_uri(); ?>/assets/images/heroImg/General-medium.jpg 700w, <?php echo get_template_directory_uri(); ?>/assets/images/heroImg/General-large.jpg 1000w" 
                 loading="eager"/>
@@ -24,12 +24,15 @@
        
         </div>        
         </section>
-        <div id="ax_headings">
-            <div class="lf_txt">
-                <h1 class="ax_heading">HOMA PILOT</h1>
-                <p class="ax_heading_p"><strong>Online Free Flight Training Courses, Pilot Exams and CFI Tools</strong></p>
+
+        <?php $mainIntro=get_field('main_intro'); if( $mainIntro ): ?>
+            <div id="ax_headings">
+                <div class="lf_txt">
+                    <h1 class="ax_heading"><?php echo strtoupper($mainIntro['main_title']); ?></h1>
+                    <p class="ax_heading_p"><?php echo ['short_description']; ?></p>
+                </div>
             </div>
-        </div>
+        <?php endif; ?>
 
         <section id="ax_services">
             <div id="lf_cats_sub"><p id="lf_close"><span>scroll down for more</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"></path><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg></p><div data-status="none" data="Principles of Flight"><ul><li><a href="/general/main-structure-of-airplanes/">The main structure of airplanes</a></li></ul></div><div data-status="none" data="Meteorology"><ul><li><a href="/general/earth-atmosphere-composition-and-structure/">Earth Atmosphere Composition</a></li></ul></div><div data-status="none" data="{block}"><ul></ul></div><div data-status="none" data="{block}"><ul></ul></div><div data-status="none" data="{block}"><ul></ul></div><div data-status="none" data="{block}"><ul></ul></div><div data-status="none" data="{block}"><ul></ul></div><div data-status="none" data="{block}"><ul></ul></div><div data-status="none" data="{block}"><ul></ul></div><div data-status="none" data="{block}"><ul></ul></div><div data-status="none" data="{block}"><ul></ul></div><div data-status="none" data="{block}"><ul></ul></div><div data-status="none" data="{block}"><ul></ul></div><div data-status="none" data="{block}"><ul></ul></div></div>
