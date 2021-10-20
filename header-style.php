@@ -143,6 +143,7 @@ section#ax_hero_image .ax_tabs #ax_tabs_inside_cover {
     width: 70%;
 }
 section#ax_hero_image .ax_tabs {
+    display: grid;
     padding: 0px 3%;
     width: 94%;
     margin: 0 auto;

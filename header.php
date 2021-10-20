@@ -88,58 +88,7 @@ if (!defined('ABSPATH')) exit;
                 targetLocator="dropdown1"
                 subOpening="sub"
                 subTrigger="click"
-                options='<?php print_r(wordpressAXDropdownContent(wp_get_nav_menu_items('tutorials'))); ?>'></ax-elements>
-            <ax-elements 
-                mode="dropdown"
-                exit="true"
-                headTitle="Paper Airplanes"
-                headTitlecolor="#FFF4A3"
-                height="70"
-                color="#282A35"
-                colorHover="#fff"
-                activeBackground="#282A35"
-                headBackground="#0000"
-                headBackgroundHover="#04AA6D"
-                structure="mega singletab"
-                title="Paper Airplanes"
-                background="#282a36"
-                targetLocator="dropdown2"
-                subOpening="sub"
-                subTrigger="click"
-                options='<?php print_r(wordpressAXDropdownContent(wp_get_nav_menu_items('paper_airplanes'))); ?>'></ax-elements>
-            <ax-elements 
-                mode="dropdown"
-                exit="true"
-                headTitle="Videos"
-                headTitlecolor="#FFF4A3"
-                height="70"
-                color="#282A35"
-                colorHover="#fff"
-                activeBackground="#282A35"
-                headBackground="#0000"
-                headBackgroundHover="#04AA6D"
-                structure="mega singletab"
-                title="Videos"
-                background="#282a36"
-                targetLocator="dropdown3"
-                subOpening="sub"
-                subTrigger="click"
-                options='<?php print_r(wordpressAXDropdownContent(wp_get_nav_menu_items('videos'))); ?>'></ax-elements>
-            <ax-elements 
-                mode="dropdown"
-                headTitlecolor="#FFF4A3"
-                height="70"
-                color="#282A35"
-                colorHover="#fff"
-                activeBackground="#282A35"
-                headBackground="#0000"
-                headBackgroundHover="#04AA6D"
-                title="Contact"
-                background="#282a36"
-                targetLocator="dropdown4"
-                subOpening="sub"
-                subTrigger="click"
-                options='<?php print_r(wordpressAXDropdownContent(wp_get_nav_menu_items('contact'))); ?>'></ax-elements>
+                options='<?php print_r(wordpressAXDropdownContent(wp_get_nav_menu_items('headermenu'))); ?>'></ax-elements>
         </ax-elements>
     </header>
 

@@ -30,25 +30,14 @@
                     <div class="lf_item">
                         <a href="<?php the_permalink(); ?>">
                             <div class="lf_poster">
-                                <?php
-                                    $useragentos = $_SERVER["HTTP_USER_AGENT"];
-                                    // if(strpos($useragentos, "mac") !== false || strpos($useragentos, "ipod") !== false || strpos($useragentos, "iphone") !== false) $generalimgexe=".jpg";
-                                    // else $generalimgexe=".webp";
-                                    $generalimgexe=".jpg";
-                                    $imgmainsrc = get_the_post_thumbnail_url();
-                                    $baseimgsrc = substr($imgmainsrc, 0, strripos($imgmainsrc, '.'));
-                                    $exeimgsrc = substr($imgmainsrc, strripos($imgmainsrc, '.'));
-                                    $generalimgexe = $exeimgsrc;
-                                    $newimgsrcset = $baseimgsrc."-thumbnail".$generalimgexe;
-                                    if(strpos($newimgsrcset, "https") !== false) {
-                                        $imgmaintag = get_the_post_thumbnail();
-                                        $imgmaintag1 = substr($imgmaintag, 0, strpos($imgmaintag, 'src="')+5);
-                                        $imgmaintag11 = substr($imgmaintag, strpos($imgmaintag, 'src="')+5);
-                                        $imgmaintag2 = substr($imgmaintag11, strpos($imgmaintag11, '"'));
-                                        $imgmaintag = $imgmaintag1.$newimgsrcset.$imgmaintag2;
-                                        echo $imgmaintag;
-                                    }
-                                ?>
+                                
+                                <?php echo wordpressAXCustomImage(
+                                    get_the_post_thumbnail_url(), 
+                                    get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE), 
+                                    "", "", "lazy", "", "", 
+                                    ["thumbnail"]
+                                ); ?>
+
                             </div>
                             <div class="lf_context">
                                 <p class="lf_title"><?php echo get_the_title(); ?></p>

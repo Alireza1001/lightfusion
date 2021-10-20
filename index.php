@@ -49,7 +49,12 @@
                         $user_id = get_the_author_meta( 'ID' );
                         $theget_the_categorypost = '';
                         foreach((get_the_category()) as $category) $theget_the_categorypost .= '<a> <span>|</span> '. $category->name .'</a>';
-                        $imgmaintag = '';if(get_the_post_thumbnail()) {$id = get_post_thumbnail_id();$src = wp_get_attachment_image_src($id);$alt = get_the_title($id);$class = "";$useragentos = $_SERVER["HTTP_USER_AGENT"];$generalimgexe=".jpg";$imgmainsrc = $src[0];$baseimgsrc = substr($imgmainsrc, 0, strripos($imgmainsrc, '.'));$exeimgsrc = substr($imgmainsrc, strripos($imgmainsrc, '.'));$generalimgexe = $exeimgsrc;$newimgsrcset = $baseimgsrc.$exeimgsrc;$newimgsrcset1 = $baseimgsrc."-small".$generalimgexe;$newimgsrcset2 = $baseimgsrc."-medium".$generalimgexe;$newimgsrcset3 = $baseimgsrc."-large".$generalimgexe;$imgsrcsetqueue = "$newimgsrcset1 300w, $newimgsrcset2 900w, $newimgsrcset3 1500w";$imgmaintag = '<img src="' . $src[0] . '" alt="' . $alt . '" class="' . $class . '" srcset="'.$imgsrcsetqueue.'"/>';}
+                        $imgmaintag = wordpressAXCustomImage(
+                            get_the_post_thumbnail_url(), 
+                            get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE), 
+                            "", "", "lazy", "300", "86",
+                            ["small", "medium", "large"]
+                        );
                         echo '<div class="lf_item '.str_replace(" ", "", get_the_category()[0]->name).' '.str_replace(" ", "", get_the_category()[1]->name).'"><a href="'.get_the_permalink().'">'.$imgmaintag.'</a><div class="lf_item_profile"><div><img src="'.$tempalte_dir."/assets/images/authors/".$user_id.".jpg".'"/><p>By:<span>'.get_the_author() .'</span></p></div><p>'. get_the_date() .'</p></div><div class="lf_item_content"><h2><a href="'. get_the_permalink() .'">'. get_the_title() .'</a></h2><div class="lf_item_cat">'.$theget_the_categorypost.'</div><p>'. get_the_excerpt() .'</p></div><div class="lf_item_bottom"><a href="'. get_the_permalink() .'">read this article</a><p><img src="/wp-content/themes/lightfusion/assets/icons/comment-dark.svg" />'. get_comments_number() .'</p></div></div>';
                     endwhile;
                     wp_reset_postdata();

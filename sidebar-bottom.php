@@ -178,23 +178,12 @@
                 <a href="<?php the_permalink($the_starrate_arr[$i][0]); ?>" target="_blank">
                     <div class="ax_poster">
                         <?php
-                            $imgmaintag = '';
-                            if(get_the_post_thumbnail($the_starrate_arr[$i][0])) {
-                                $id = get_post_thumbnail_id($the_starrate_arr[$i][0]);
-                                $src = wp_get_attachment_image_src($id);
-                                $alt = get_the_title($id);
-                                $class = "";
-                                $useragentos = $_SERVER["HTTP_USER_AGENT"];
-                                $generalimgexe=".jpg";
-                                $imgmainsrc = $src[0];
-                                $baseimgsrc = substr($imgmainsrc, 0, strripos($imgmainsrc, '.'));
-                                $exeimgsrc = substr($imgmainsrc, strripos($imgmainsrc, '.'));
-                                $generalimgexe = $exeimgsrc;
-                                $newimgsrcset = $baseimgsrc.$exeimgsrc;
-                                $newimgsrcset1 = $baseimgsrc."-small".$generalimgexe;
-                                $imgmaintag = '<img src="' . $newimgsrcset1 . '" alt="' . $alt . '" class="' . $class . '"/>';
-                            }
-                            echo $imgmaintag;
+                            echo wordpressAXCustomImage(
+                                get_the_post_thumbnail_url($the_starrate_arr[$i][0]), 
+                                get_the_title($the_starrate_arr[$i][0]), 
+                                "", "", "lazy", "300", "86",
+                                ["small"]
+                            );
                         ?>
                     </div>
                     <div class="ax_context">

@@ -7,7 +7,14 @@
     <main id="lf_landing">
         <?php get_template_part( 'nav-status' ); ?>
         <div id="lf_landing_main_poster">
-            <?php the_post_thumbnail(); ?>
+            <?php 
+                echo wordpressAXCustomImage(
+                    get_the_post_thumbnail_url(), 
+                    get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE),
+                    "", "", "eager", "", "",
+                    ["small", "medium", "large"]
+                );
+            ?>
         </div>
         <div id="lf_landing_author_cover">
             <p><span aria-label="<?php echo get_the_date(); ?>" id="lf_landing_author_date"><?php echo get_the_date(); ?></span></p>

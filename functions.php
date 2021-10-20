@@ -236,13 +236,42 @@ function modify_post_thumbnail_html($html, $post_id, $post_thumbnail_id, $size, 
 		$newimgsrcset1 = $baseimgsrc."-small".$generalimgexe;
 		$newimgsrcset2 = $baseimgsrc."-medium".$generalimgexe;
 		$newimgsrcset3 = $baseimgsrc."-large".$generalimgexe;
+		$id = is_front_page()?"ax_hero_img":"";
+		$loading = is_front_page()?"eager":"lazy";
 		$imgsrcsetqueue = "$newimgsrcset1 300w, $newimgsrcset2 900w, $newimgsrcset3 1500w";
-		$html = '<img src="' . $src[0] . '" alt="' . $alt . '" class="' . $class . '" srcset="'.$imgsrcsetqueue.'"/>';
+		$html = '<img loading='.$loading.' id='.$id.' src="' . $src[0] . '" alt="' . $alt . '" class="' . $class . '" srcset="'.$imgsrcsetqueue.'"/>';
 	}
 	return $html;
 }
 add_filter('post_thumbnail_html', 'modify_post_thumbnail_html', 99, 5);
 
+
+// custom image tag
+function wordpressAXCustomImage($src, $alt, $id, $class, $loading, $width, $height, $sizes) {
+    $useragentos = $_SERVER["HTTP_USER_AGENT"];
+    $generalimgexe=".jpg";
+    $imgmainsrc = $src;
+    $baseimgsrc = substr($imgmainsrc, 0, strripos($imgmainsrc, '.'));
+    $exeimgsrc = substr($imgmainsrc, strripos($imgmainsrc, '.'));
+    $generalimgexe = $exeimgsrc;
+    $newimgsrcset = $baseimgsrc.$exeimgsrc;
+    $imgsrcsetqueue = "";
+    foreach ($sizes as $size) {
+        if($size == "thumbnail") $src= "$baseimgsrc-$size$generalimgexe";
+        elseif($size == "small") $imgsrcsetqueue.= "$baseimgsrc-$size$generalimgexe 300w,";
+        elseif($size == "medium") $imgsrcsetqueue.= "$baseimgsrc-$size$generalimgexe 900w,";
+        elseif($size == "large") $imgsrcsetqueue.= "$baseimgsrc-$size$generalimgexe 1500w,";
+    }
+    return 
+        "<img 
+            loading='$loading'
+            id='$id' 
+            src='$src'
+            alt='$alt'
+            class='$class'
+            srcset='$imgsrcsetqueue'
+        />";
+}
 
 // next/prev post link
 function nextPrev() {

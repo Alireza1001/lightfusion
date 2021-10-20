@@ -21,3 +21,4 @@ function wordpressAXDropdownContent($data) {
     foreach ($menuObj as $value) $menuObj2[] = $value;
     return json_encode($menuObj2);
 }
+

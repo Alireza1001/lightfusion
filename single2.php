@@ -14,9 +14,12 @@
         <?php get_template_part( 'nav-status' ); ?>
         <div id="lf_landing_main_poster">
             <?php 
-                the_post_thumbnail();
-                // $imgmaintag='';if(get_the_post_thumbnail()){$id=get_post_meta( $post->ID,'_second_thumbnail',true );$src=wp_get_attachment_image_src($id);$alt=get_the_title($id);$class="";$useragentos=$_SERVER["HTTP_USER_AGENT"];$generalimgexe=".jpg";$imgmainsrc = $src[0];$baseimgsrc = substr($imgmainsrc, 0, strripos($imgmainsrc, '.'));$exeimgsrc = substr($imgmainsrc, strripos($imgmainsrc, '.'));$generalimgexe = $exeimgsrc;$newimgsrcset = $baseimgsrc.$exeimgsrc;$newimgsrcset1 = $baseimgsrc."-small".$generalimgexe;$newimgsrcset2 = $baseimgsrc."-medium".$generalimgexe;$newimgsrcset3 = $baseimgsrc."-large".$generalimgexe;$imgsrcsetqueue = "$newimgsrcset1 300w, $newimgsrcset2 900w, $newimgsrcset3 1500w";$imgmaintag = '<img id="lf_multithumbnail_img" src="' . $src[0] . '" loading="eager" alt="' . $alt . '" class="' . $class . '" srcset="'.$imgsrcsetqueue.'"/>';}
-                //echo $imgmaintag;
+                echo wordpressAXCustomImage(
+                    get_the_post_thumbnail_url(), 
+                    get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE),
+                    "", "", "eager", "", "",
+                    ["small", "medium", "large"]
+                );
             ?>
         </div>
         <div id="lf_landing_author_cover">
