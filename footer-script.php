@@ -26,12 +26,12 @@
         
             }
         }
-        
+        let ax_theme_state=0;
         const ax_main=document.getElementsByTagName("main");
         if(document.getElementById("ax_head_home")) {const ax_head_home=document.getElementById("ax_head_home");
         if(ax_main[0].id=="lf_home"){ax_head_home.style.display="none";
         }} let root=document.documentElement;
-        let ax_theme_state=sessionStorage.getItem("darkmode_on");
+        ax_theme_state=sessionStorage.getItem("darkmode_on");
         var tab_state=1;
         const menu_bar_1=document.querySelectorAll("header#axon_header .ax-nav-left .ax-menu-btn span")[0];
         const menu_bar_2=document.querySelectorAll("header#axon_header .ax-nav-left .ax-menu-btn span")[1];

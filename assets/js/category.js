@@ -1,9 +1,9 @@
-for(i=0; i<ax_services_data.length; i++) {
-    if(ax_services_data[i][4][1] == page_slug) {
+for(i=0; i<categoryOrganizer.length; i++) {
+    if(categoryOrganizer[i][4][1] == page_slug) {
         var lf_service_taps_content = '';
-        lf_service_taps_content += '<p data="'+ax_services_data[i][4][0]+'" class="ax_item" id="'+ax_services_data[i][4][0]+'-tap">';
-        lf_service_taps_content += '<span>'+ax_services_data[i][4][0]+'</span>';
-        lf_service_taps_content += ax_services_data[i][4][2];
+        lf_service_taps_content += '<p data="'+categoryOrganizer[i][4][0]+'" class="ax_item" id="'+categoryOrganizer[i][4][0]+'-tap">';
+        lf_service_taps_content += '<span>'+categoryOrganizer[i][4][0]+'</span>';
+        lf_service_taps_content += categoryOrganizer[i][4][2];
         lf_service_taps_content += '</p>';
         document.getElementById("ax_tabs_inside_cover").innerHTML += lf_service_taps_content;
     }
@@ -32,24 +32,24 @@ lf_home_slider(document.querySelector("div#ax_tabs_inside_cover > p"));
 function lf_home_slider(item) {
     let help_text_per = 1;
     let scolldown_per = 1;
-    for(i=0; i<ax_services_data.length; i++) {
-        if(page_slug == ax_services_data[i][4][1]) {
+    for(i=0; i<categoryOrganizer.length; i++) {
+        if(page_slug == categoryOrganizer[i][4][1]) {
             document.getElementById("ax_services").classList.remove("lf_active");
             ax_services_sub.innerHTML = '';
             ax_services_item.innerHTML = "";
-            if(ax_services_data[i][0].length == 0) {
+            if(categoryOrganizer[i][0].length == 0) {
                 ax_services_item.innerHTML = '<p></p><p class="lf_soon">COMING SOON!</p><p></p>';
                 document.getElementById("ax_services").classList.remove("lf_active");
             }else{
-                ax_services_item.innerHTML += '<p class="lf_help">*Click on courses to check the '+ax_services_data[i][4][1]+' lessons</p>';
+                ax_services_item.innerHTML += '<p class="lf_help">*Click on courses to check the '+categoryOrganizer[i][4][1]+' lessons</p>';
                 var lf_available_course, lf_available_course_link;
-                for(k=0; k<(ax_services_data[i][2].length); k++){
+                for(k=0; k<(categoryOrganizer[i][2].length); k++){
                     lf_available_course = "";
-                    if(ax_services_data[i][0][k][0] == "{block}") lf_available_course = "lf_course_block";
+                    if(categoryOrganizer[i][0][k][0] == "{block}") lf_available_course = "lf_course_block";
                     var ax_services_sub_data = '';
-                    ax_services_sub_data += '<div data-status="none" data="'+ax_services_data[i][0][k][0]+'"><ul>';
-                    for(j=2; j<ax_services_data[i][0][k].length; j++) {
-                        ax_services_sub_data += '<li><a href="'+ax_services_data[i][0][k][j]+'">'+ax_services_data[i][0][k][++j]+'</a></li>';
+                    ax_services_sub_data += '<div data-status="none" data="'+categoryOrganizer[i][0][k][0]+'"><ul>';
+                    for(j=2; j<categoryOrganizer[i][0][k].length; j++) {
+                        ax_services_sub_data += '<li><a href="'+categoryOrganizer[i][0][k][j]+'">'+categoryOrganizer[i][0][k][++j]+'</a></li>';
                     }
                     ax_services_sub_data += '</ul>';
                     if(j>=14) {
@@ -59,12 +59,12 @@ function lf_home_slider(item) {
                     ax_services_sub_data += '</div>';
                     ax_services_sub.innerHTML += ax_services_sub_data;
                     lf_available_course_link = "";
-                    if(ax_services_data[i][0][k][0] != "{block}") lf_available_course_link = 'href="'+ax_services_data[i][0][k][1]+'"';
+                    if(categoryOrganizer[i][0][k][0] != "{block}") lf_available_course_link = 'href="'+categoryOrganizer[i][0][k][1]+'"';
                     ax_services_item.innerHTML += 
-                    '<div class="ax_item '+lf_available_course+'" data="'+ax_services_data[i][0][k][0]+'">'+
+                    '<div class="ax_item '+lf_available_course+'" data="'+categoryOrganizer[i][0][k][0]+'">'+
                         '<a '+lf_available_course_link+'>'+
-                            ax_services_data[i][1][k]+
-                            '<h2 class="ax_title">'+ax_services_data[i][2][k]+'</br><span>'+ax_services_data[i][4][1]+'</span></h2>'+
+                            categoryOrganizer[i][1][k]+
+                            '<h2 class="ax_title">'+categoryOrganizer[i][2][k]+'</br><span>'+categoryOrganizer[i][4][1]+'</span></h2>'+
                             '<p class="lf_item_help">View course page</p>'+
                         '</a>'+
                     '</div>';

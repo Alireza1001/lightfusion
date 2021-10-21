@@ -84,7 +84,7 @@ div#header_print_new {
 }
 #ax_headings .ax_heading_p {
     color: #e5ecf0;
-    font-size: var(--standard-text-fontSize)!important;
+    font-size: var(--smallLarge-text-fontSize)!important;
     font-weight: 300;
     margin: 0;
     letter-spacing: 0px;
@@ -132,7 +132,7 @@ section#ax_hero_image .ax_tabs p svg, section#ax_hero_image .ax_tabs p img {
 section#ax_hero_image .ax_tabs p.ax_item.ax_active span {
     display: none;
 }
-section#ax_hero_image .ax_tabs p.ax_item.ax_active svg, section#ax_hero_image .ax_tabs p.ax_item.ax_active img {
+section#ax_hero_image .ax_tabs p.ax_item.ax_active .head_tap_icon{
     transform: scale(1.5);
     place-self: center;
 }
@@ -154,7 +154,7 @@ section#ax_hero_image .ax_tabs p.ax_item.ax_active svg, section#ax_hero_image .a
     section#ax_hero_image .ax_tabs p svg, section#ax_hero_image .ax_tabs p img {
         width: 52px;
     }
-    section#ax_hero_image .ax_tabs p.ax_item.ax_active svg, section#ax_hero_image .ax_tabs p.ax_item.ax_active img {
+    section#ax_hero_image .ax_tabs p.ax_item.ax_active .head_tap_icon {
         transform: scale(1.5);
     }
 }

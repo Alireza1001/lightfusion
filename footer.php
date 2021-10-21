@@ -119,7 +119,13 @@
         const wp_dir_url = "<?php echo $translation_array; ?>";
         const wp_comment_count = "<?php echo $get_comments_number; ?>";
     </script>
-    <script type="text/javascript"><?php require_once("course-config.php"); ?></script>
+
+
+
+    <script type="text/javascript">
+        const categoryOrganizer = <?php echo json_encode(require_once("categoriesOrganizer.php")); ?>;
+        console.log(categoryOrganizer);
+    </script>
     <?php require_once('footer-script.php'); ?>
 
     <!-- AXONGLITCH LIBRARY -->

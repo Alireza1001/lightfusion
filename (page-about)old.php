@@ -88,12 +88,12 @@
 <script>
     var lf_about_counries_sub = "";
 window.addEventListener("load", ()=>{
-    for(i=0; i<ax_services_data.length; i++) {
+    for(i=0; i<categoryOrganizer.length; i++) {
         lf_about_counries_sub = "";
-        for(j=0; j<ax_services_data[i][2].length; j++) {
-            lf_about_counries_sub += '<li><a href="'+ax_services_data[i][0][j]+'">'+ax_services_data[i][2][j]+'</a><li>';
+        for(j=0; j<categoryOrganizer[i][2].length; j++) {
+            lf_about_counries_sub += '<li><a href="'+categoryOrganizer[i][0][j]+'">'+categoryOrganizer[i][2][j]+'</a><li>';
         }
-        document.getElementById("lf_country_list").innerHTML += '<div class="lf_item"><div><span>'+ax_services_data[i][4][1]+'<hr/>'+ax_services_data[i][4][0]+'</span>'+ax_services_data[i][4][2]+'</div><ul>'+lf_about_counries_sub+'</ul></div>';
+        document.getElementById("lf_country_list").innerHTML += '<div class="lf_item"><div><span>'+categoryOrganizer[i][4][1]+'<hr/>'+categoryOrganizer[i][4][0]+'</span>'+categoryOrganizer[i][4][2]+'</div><ul>'+lf_about_counries_sub+'</ul></div>';
     }
 });
 </script>
