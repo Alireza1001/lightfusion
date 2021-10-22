@@ -2,17 +2,36 @@
 <main id="lf_home">
     <section id="ax_hero_image">
 
-        <?php echo wordpressAXCustomImage(
-            get_the_post_thumbnail_url(),
-            get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE),
-            "ax_hero_img",
-            "", "eager", "", "",
-            ["small", "medium", "large"]
-        ); ?>
-        
-        <div class="ax_tabs">
-            <div id="ax_tabs_inside_cover"></div>
-        </div>        
+        <?php
+            $categoryOrganizerActivation = get_field('frontpage_category_section');
+            if($categoryOrganizerActivation) {
+                $categoryOrganizer = getCategoriesJson();
+                echo wordpressAXCustomImage(
+                    $categoryOrganizer[0]->image,
+                    get_field('main_intro')['main_title']?get_field('main_intro')['main_title']:"hero image",
+                    "ax_hero_img",
+                    "", "auto", "", "",
+                    ["small", "medium", "large"]
+                );
+            } else {
+                echo wordpressAXCustomImage(
+                    get_the_post_thumbnail_url(),
+                    get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE),
+                    "ax_hero_img",
+                    "", "auto", "", "",
+                    ["small", "medium", "large"]
+                );
+            }
+
+        ?>
+
+        <?php if($categoryOrganizerActivation): ?>
+            <script type="text/javascript"> const categoryOrganizer = <?php echo json_encode($categoryOrganizer); ?>;</script>
+            <div class="ax_tabs" home="<?php echo is_front_page(); ?>">
+                <div id="ax_tabs_inside_cover"><?php echo getHeadTabItemsHtml(); ?></div>
+            </div>
+        <?php endif; ?>
+
     </section>
 
     <?php $mainIntro=get_field('main_intro'); if( $mainIntro ): ?>
@@ -24,10 +43,13 @@
         </div>
     <?php endif; ?>
 
-    <section id="ax_services">
-        <div id="lf_cats_sub"></div>
-        <div class="ax_items"></div> 
-    </section>
+    <?php if($categoryOrganizerActivation): ?>
+        <section id="ax_services" home="<?php echo is_front_page(); ?>">
+            <div id="lf_cats_sub"></div>
+            <div class="ax_items"></div> 
+        </section>
+    <?php endif; ?>
+
     <?php 
         $wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>3));
         if ( $wpb_all_query->have_posts() ) :

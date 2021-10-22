@@ -120,12 +120,6 @@
         const wp_comment_count = "<?php echo $get_comments_number; ?>";
     </script>
 
-
-
-    <script type="text/javascript">
-        const categoryOrganizer = <?php echo json_encode(require_once("categoriesOrganizer.php")); ?>;
-        console.log(categoryOrganizer);
-    </script>
     <?php require_once('footer-script.php'); ?>
 
     <!-- AXONGLITCH LIBRARY -->

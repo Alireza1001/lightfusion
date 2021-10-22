@@ -256,9 +256,12 @@ section#ax_services .ax_items .ax_item .ax_title span {
     transition: all .3s;
 }
 section#ax_hero_image .ax_tabs p span {
-    font-size: 16px;
+    transform: translateY(-2px);
+    font-size: var(--standard-button-fontSize);
     color: var(--txt1);
     user-select: none;
+    place-content: center;
+    display: grid;
 }
 section#ax_services .ax_items .ax_item a {
     place-content: center;
@@ -279,7 +282,7 @@ div#lf_cats_sub {
 }
 @media (min-width: 601px) {
     div#lf_cats_sub {
-        height: 86%!important;
+        height: 86%;
     }
 }
 div#lf_cats_sub > div li {

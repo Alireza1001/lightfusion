@@ -6,11 +6,11 @@ if(page_href_link.slice(-1) == "/") page_href_link=page_href_link.slice(0, -1);
 
 // course services data handle
 if(document.getElementById("lf_landing_services")) {
-const lf_landing_services = document.getElementById("lf_landing_services");
-lf_landing_services.innerHTML = "";
-const arrow_svg = '<svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z"/></svg>';
-for(i=0; i<categoryOrganizer.length; i++)
-    lf_landing_services.innerHTML+='<li data-no="'+(i+1)+'" id="lf_sidecountry_'+categoryOrganizer[i][4][0]+'_triger" class="lf_country_menu_trigger"><div> '+categoryOrganizer[i][4][2]+' <span>'+categoryOrganizer[i][4][0]+'</span>'+arrow_svg+'</div></li>';
+    const lf_landing_services = document.getElementById("lf_landing_services");
+    lf_landing_services.innerHTML = "";
+    const arrow_svg = '<svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z"/></svg>';
+    for(i=0; i<categoryOrganizer.length; i++)
+        lf_landing_services.innerHTML+='<li data-no="'+(i+1)+'" id="lf_sidecountry_'+categoryOrganizer[i].title.toLowerCase().replaceAll(' ', '_')+'_triger" class="lf_country_menu_trigger"><div> <img src="'+categoryOrganizer[i].icon+'" /> <span>'+categoryOrganizer[i].title+'</span>'+arrow_svg+'</div></li>';
 }
 
 
@@ -18,16 +18,16 @@ var lf_available_course="", lf_available_course_link="";
 const lf_countrys_list_data_services = document.getElementById("lf_countrys_list_data_services");
 var lf_countrys_list_data_services_store;
 for(i=0; i<categoryOrganizer.length; i++) {
-    lf_countrys_list_data_services_store = '<ul id="lf_sidecountry_'+categoryOrganizer[i][4][0]+'_menu" class="lf_country_submenu"> <ul class="lf_country_submenu_sub">';
-    if(categoryOrganizer[i][0].length > 0)
-        for(j=0; j<categoryOrganizer[i][2].length; j++) {
+    lf_countrys_list_data_services_store = '<ul id="lf_sidecountry_'+categoryOrganizer[i].title.toLowerCase().replaceAll(' ', '_')+'_menu" class="lf_country_submenu"> <ul class="lf_country_submenu_sub">';
+    if(categoryOrganizer[i].content.length > 0)
+        for(j=0; j<categoryOrganizer[i].content.length; j++) {
             lf_available_course = "";
-            lf_available_course_link = 'href="'+categoryOrganizer[i][0][j][1]+'"';
-            if(categoryOrganizer[i][0][j][0] == "{block}"){
+            lf_available_course_link = 'href="'+categoryOrganizer[i].content[j].link+'"';
+            if(!categoryOrganizer[i].content[j].valid){
                 lf_available_course_link = 'href="/"';
                 lf_available_course = "lf_course_block";
             }
-            lf_countrys_list_data_services_store += '<li class="'+lf_available_course+'"><a aria-label="'+categoryOrganizer[i][0][j][0]+'" '+lf_available_course_link+'>'+categoryOrganizer[i][1][j]+'<h2 class="ax_title">'+categoryOrganizer[i][2][j]+'</h2></a></li>';
+            lf_countrys_list_data_services_store += '<li class="'+lf_available_course+'"><a aria-label="'+categoryOrganizer[i].content[j].title.toLowerCase().replaceAll(' ', '_')+'" '+lf_available_course_link+'>'+categoryOrganizer[i].content[j].icon+'<h2 class="ax_title">'+categoryOrganizer[i].content[j].title+'</h2></a></li>';
         }
     else 
         lf_countrys_list_data_services_store += '<li class="lf_coming_soon"><a><h2 class="ax_title">coming soon</h2></a></li>';

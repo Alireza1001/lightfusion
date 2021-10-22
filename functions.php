@@ -2,15 +2,15 @@
 
 // AXON GLITCH FUNCTION
 require_once('inc/AXONGLITCH.php');
+require_once('inc/categoriesOrganizer.php');
 
 // assets
 function lf_add_style() {
 	wp_enqueue_style('lf_AXGCSS', get_template_directory_uri()."/assets/css/AXGCustom.css");
-	// wp_enqueue_style('AXGfontsandvarsCSS', get_template_directory_uri()."/assets/css/font&vars.css");
 	if(is_front_page()) {
 		wp_enqueue_style('lf_home_init_style', get_template_directory_uri()."/assets/css/home.init.css");
 		wp_enqueue_style('lf_home_style', get_template_directory_uri()."/assets/css/home.css");
-		wp_register_script('lf_home_script', get_template_directory_uri()."/assets/js/home.js", array(), true);
+		wp_register_script('lf_home_script', get_template_directory_uri()."/assets/js/categoryTab.js", array(), true);
 		wp_enqueue_script('lf_home_script');
 	}else if(is_page_template( 'page-about.php' ) || is_page_template( 'page-contact.php' )) {
 		wp_enqueue_style('lf_about_style', get_template_directory_uri()."/assets/css/about.css");
@@ -20,7 +20,7 @@ function lf_add_style() {
 	    wp_enqueue_style('lf_home_init_style', get_template_directory_uri()."/assets/css/home.init.css");
 		wp_enqueue_style('lf_home_style', get_template_directory_uri()."/assets/css/home.css");
 		wp_enqueue_style('lf_category_style', get_template_directory_uri()."/assets/css/category.css");
-		wp_register_script('lf_category_script', get_template_directory_uri()."/assets/js/category.js", array(), true);
+		wp_register_script('lf_category_script', get_template_directory_uri()."/assets/js/categoryTab.js", array(), true);
 		wp_enqueue_script('lf_category_script');
 		wp_enqueue_style('lf_weblog_style', get_template_directory_uri()."/assets/css/weblog.css");
 	}else if(is_home() || is_archive() || is_page_template( 'page-category2.php' )) {
@@ -46,7 +46,7 @@ function lf_add_style() {
 add_filter('script_loader_tag', 'script_modify', 10, 3);
 function script_modify($tag, $handle, $src) {
 	if(strpos($handle, "lf") !== false) return '<script defer id="'.$handle.'-js" src="'.$src.'"></script>';
-	else if(strpos($handle, "lf_about_script") !== false || strpos($handle, "lf_contact_script") !== false) return '<script async id="'.$handle.'-js" src="'.$src.'"></script>';
+	else if(strpos($handle, "lf_about_script") !== false || strpos($handle, "lf_contact_script") !== false || strpos($handle, "lf_home_script") !== false) return '<script async id="'.$handle.'-js" src="'.$src.'"></script>';
 	else return $tag;
 }
 

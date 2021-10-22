@@ -110,13 +110,10 @@ section.lf_landing_main_contexts {
     div#lf_landing_main_title_cover {margin-bottom: 40px;}
     /* services */
 @media (max-width: 768px) {
-    section#ax_hero_image .ax_tabs .ax_item:not(.ax_active) svg {
+    section#ax_hero_image .ax_tabs .ax_item:not(.ax_active) .head_tap_icon {
         display: none;
     }
-    section#ax_hero_image .ax_tabs p span {
-        /* font-size: 14px!important; */
-    }
-    section#ax_hero_image .ax_tabs .ax_item svg {
+    section#ax_hero_image .ax_tabs .ax_item .head_tap_icon {
         padding: 5px 0;
     }
     section#ax_hero_image .ax_tabs p.ax_item:not(.ax_active) span {
@@ -128,13 +125,17 @@ section.lf_landing_main_contexts {
         width: 52px;
     }
     section#ax_hero_image .ax_tabs p.ax_item.ax_active .head_tap_icon {
-        transform: scale(1.5);
+        transform: scale(1)!important;
+        padding: 0;
     }
 }
 section#ax_hero_image .ax_tabs p span {
-    font-size: var(--standard-text-fontSize);
+    transform: translateY(-2px);
+    font-size: var(--standard-button-fontSize);
     color: var(--txt1);
     user-select: none;
+    place-content: center;
+    display: grid;
 }
 section#ax_hero_image .ax_tabs #ax_tabs_inside_cover {
     display: grid;
@@ -169,7 +170,7 @@ section#ax_hero_image .ax_tabs p {
     width: fit-content;
     column-gap: 5px;
     margin: 0 auto;
-    padding: max(1vw, 4px) 0px!important;
+    padding: max(0.6vw, 4px) 0px!important;
     font-size: 15px;
     border-top: 3px solid #fff0;
     border-bottom: 2px solid #0000;
@@ -183,18 +184,19 @@ section#ax_hero_image .ax_tabs p {
     -webkit-transition: all .3s;
 }
 section#ax_hero_image .ax_tabs p svg, section#ax_hero_image .ax_tabs p img {
-    width: 62px;
+    width: 32px;
     transition: all .3s;
     -webkit-transition: all .3s;
     place-self: center;
-    /* height: 17px; */
+    height: auto;
     position: relative;
 }
 section#ax_hero_image .ax_tabs p.ax_item.ax_active span {
     display: none;
 }
 section#ax_hero_image .ax_tabs p.ax_item.ax_active .head_tap_icon {
-    transform: scale(1.5);
+    transform: scale(1.3);
+    padding: 0;
     place-self: center;
 }
 section#ax_hero_image .ax_tabs p#ax_services_ca {
