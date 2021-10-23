@@ -30,6 +30,23 @@ if (!defined('ABSPATH')) exit;
     <meta name="theme-color" content="#4285f4">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     
+    <!-- categories -->
+    <script type="text/javascript" async> 
+        const categoryOrganizer = <?php echo json_encode(getCategoriesJson()); ?>;
+    </script>
+
+    <?php 
+        $users_list = get_users();
+        $get_comments_number = get_comments_number();
+        $translation_array = get_template_directory_uri();
+    ?>
+
+    <script type="text/javascript" async>
+        const userslist = <?php echo json_encode($users_list); ?>;
+        const wp_dir_url = "<?php echo $translation_array; ?>";
+        const wp_comment_count = "<?php echo $get_comments_number; ?>";
+    </script>
+    
     <!-- AXONGLITCH LIBRARY -->
     <!-- dropdown -->
     <link rel="stylesheet" href="https://axoncodes.com/libraries/dropdown/assets/css/style.css" />

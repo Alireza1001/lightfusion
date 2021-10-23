@@ -26,7 +26,6 @@
         ?>
 
         <?php if($categoryOrganizerActivation): ?>
-            <script type="text/javascript"> const categoryOrganizer = <?php echo json_encode($categoryOrganizer); ?>;</script>
             <div class="ax_tabs" home="<?php echo is_front_page(); ?>">
                 <div id="ax_tabs_inside_cover"><?php echo getHeadTabItemsHtml(); ?></div>
             </div>

@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 <?php /* Template Name: Category */ ?>
 <section id="whole_page_wrapup">
-<script type="text/javascript" async> const categoryOrganizer = <?php echo json_encode(getCategoriesJson()); ?>;</script>
     <?php get_template_part( 'sidebar2' ); 
     $tempalte_dir = get_template_directory_uri();
     ?>
@@ -11,6 +10,7 @@
         <script> var page_slug = "<?php echo $post_slug; ?>"; </script>
         <?php if(get_the_title($post->post_parent)==get_the_title()) { ?>
         <section id="ax_hero_image">
+            
             <?php echo wordpressAXCustomImage(
                 get_the_post_thumbnail_url(),
                 get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE),
@@ -18,25 +18,7 @@
                 "", "eager", "", "",
                 ["small", "medium", "large"]
             ); ?>
-            <?php
-                // $id = get_post_thumbnail_id();
-                // $src = wp_get_attachment_image_src($id, $size);
-                // $alt = get_the_title($id);
-                // $class = $attr['class'];
-                // $useragentos = $_SERVER["HTTP_USER_AGENT"];
-                // $generalimgexe=".jpg";
-                // $imgmainsrc = $src[0];
-                // $baseimgsrc = substr($imgmainsrc, 0, strripos($imgmainsrc, '.'));
-                // $exeimgsrc = substr($imgmainsrc, strripos($imgmainsrc, '.'));
-                // $newimgsrcset = $baseimgsrc.$generalimgexe;
-                // $newimgsrcset1 = $baseimgsrc."-small".$generalimgexe;
-                // $newimgsrcset2 = $baseimgsrc."-medium".$generalimgexe;
-                // $newimgsrcset3 = $baseimgsrc."-large".$generalimgexe;
-                // $imgsrcsetqueue = "$newimgsrcset1 300w, $newimgsrcset2 900w, $newimgsrcset3 1500w";
-                // echo '<img src="' . $newimgsrcset . '" alt="' . $alt . '" class="' . $class . '" srcset="'.$imgsrcsetqueue.'"/>';
-            ?>
 
-            
             <div class="ax_tabs" home="<?php echo is_front_page(); ?>"><div id="ax_tabs_inside_cover"></div></div>
 
         </section>

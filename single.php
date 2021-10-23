@@ -244,6 +244,7 @@
             if($row2["Rate"] > $bestrate) $bestrate = $row2["Rate"];
         }
         $sum = get_post_meta( $page_href, '_starrate', true );
+        if(strlen($sum)==0)$sum=0;
     ?>
     <script type="application/ld+json">
         {
@@ -251,11 +252,12 @@
             "@type": "CreativeWorkSeries",
             "name": "<?php echo get_the_title(); ?>",
             "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "<?php echo number_format($sum, 1, '.', '') ?>",
-            "bestRating": "<?php echo $bestrate; ?>",
-            "ratingCount": "<?php echo $starraters; ?>"
-        }}
+                "@type": "AggregateRating",
+                "ratingValue": "<?php echo number_format($sum, 1, '.', '') ?>",
+                "bestRating": "<?php echo $bestrate; ?>",
+                "ratingCount": "<?php echo $starraters; ?>"
+            }
+        }
     </script>
 <?php } ?>
 

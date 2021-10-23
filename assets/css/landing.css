@@ -464,7 +464,7 @@ section#lf_landing_main_contexts .paragraph {
     line-height: 25px;
     font-weight: 100;
 }
-section#lf_landing_main_contexts > img, section#lf_landing_main_contexts > p > img {
+section#lf_landing_main_contexts > img, section#lf_landing_main_contexts li img, section#lf_landing_main_contexts > p > img {
     border-radius: 2px;
     height: auto;
     display: grid;
@@ -970,7 +970,7 @@ section#lf_popular_posts .lf_item:hover {
     section#lf_landing_main_contexts p {
         line-height: 1.7;
     }
-    section#lf_landing_main_contexts > img, section#lf_landing_main_contexts > p > img {
+    section#lf_landing_main_contexts > img, section#lf_landing_main_contexts li img, section#lf_landing_main_contexts > p > img {
         max-width: 70vw;
         width: 70vw;
     }
