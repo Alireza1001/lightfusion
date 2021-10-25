@@ -21,7 +21,7 @@
                 $icon = get_field('tap_head_icon', "category_$category->term_id")['url'];
                 $active = $count==0?" ax_active":"";
                 $content .= "
-                <p data='news' class='ax_item$active' id='$name-tap'>
+                <p data='' class='ax_item$active' id='$name-tap'>
                     <span>$category->cat_name</span>
                     <img class='head_tap_icon' width='20' height='20' src='$icon'>
                 </p>";
@@ -34,7 +34,19 @@
     function getCategoriesJson() {
         $categoryOrganizer = array();
         $count=0;
-        foreach(get_categories(array('hide_empty' => FALSE)) as $category) {
+        $categories = get_categories(array('hide_empty' => FALSE));
+        for ($i=0; $i < count($categories); $i++) {
+            for ($j=$i; $j < count($categories); $j++) {
+                $MenuOrderI = get_field("order_index", "category_".$categories[$i]->term_id."")||0;
+                $MenuOrderJ = get_field("order_index", "category_".$categories[$j]->term_id."")||0;
+                if($MenuOrderI > $MenuOrderJ) {
+                    $temp = $categories[$i];
+                    $categories[$i] = $categories[$j];
+                    $categories[$j] = $temp;
+                }
+            }
+        }
+        foreach($categories as $category) {
             if ($category->category_parent == 0 && get_field('tap_head_item_activation', "category_$category->term_id")) {
                 $categoryOrganizer[$count] = new stdClass();
                 $categoryOrganizer[$count]->title = "$category->cat_name";
