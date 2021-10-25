@@ -18,6 +18,17 @@ function generateMenuTemplates($menuName) {
     subTrigger="click">';
         
     $menus = wp_get_nav_menus();
+    for ($i=0; $i < count($menus); $i++) {
+        for ($j=$i; $j < count($menus); $j++) {
+            $MenuOrderI = get_field("order_index", wp_get_nav_menu_object($menus[$i]->name))||0;
+            $MenuOrderJ = get_field("order_index", wp_get_nav_menu_object($menus[$j]->name))||0;
+            if($MenuOrderI > $MenuOrderJ) {
+                $temp = $menus[$i];
+                $menus[$i] = $menus[$j];
+                $menus[$j] = $temp;
+            }
+        }
+    }
     foreach ( $menus as $menu ) :
         $menuData = wp_get_nav_menu_object($menu->name);
         if(get_field("location_on_theme", $menuData) == $menuName && (get_field("show_on_empty", $menuData) || count(wp_get_nav_menu_items( $menuData )))) :
