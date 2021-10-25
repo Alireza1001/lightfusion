@@ -73,57 +73,23 @@ if (!defined('ABSPATH')) exit;
         alt="homa pilot logo"
         ></ax-elements>
 
-        <!-- dropdown -->
-        <ax-elements 
-            mode="dropdown"
-            headTitlecolor="#FFF4A3"
-            height="70"
-            color="#282A35"
-            colorHover="#fff"
-            activeBackground="#282A35"
-            headBackground="#0000"
-            headBackgroundHover="#04AA6D"
-            structure="dropdownGroup"
-            title="Menu"
-            background="#cbcbcb"
-            subOpening="sub"
-            subTrigger="click">
-            <ax-elements 
-                mode="dropdown"
-                exit="true"
-                headTitle="Tutorials"
-                headTitlecolor="#FFF4A3"
-                height="70"
-                color="#282A35"
-                colorHover="#fff"
-                activeBackground="#282A35"
-                headBackground="#0000"
-                headBackgroundHover="#04AA6D"
-                structure="mega singletab"
-                title="Tutorials"
-                background="#282a36"
-                targetLocator="dropdown1"
-                subOpening="sub"
-                subTrigger="click"
-                options='<?php print_r(wordpressAXDropdownContent(wp_get_nav_menu_items('headermenu'))); ?>'></ax-elements>
-        </ax-elements>
+        <!-- header dropdown -->
+        <?php echo generateMenuTemplates('header'); ?>
+        
     </header>
 
     <nav></nav>
 
     <ax-elements nomain="true">
-        <section class="dropdown mega" mode="mega" nomain="true">
-            <div class="dropdownTakeout" id="dropdown1"></div>
-        </section>
-        <section class="dropdown mega" mode="mega" nomain="true">
-            <div class="dropdownTakeout" id="dropdown2"></div>
-        </section>
-        <section class="dropdown mega" mode="mega" nomain="true">
-            <div class="dropdownTakeout" id="dropdown3"></div>
-        </section>
-        <section class="dropdown simple" mode="simple" nomain="true">
-            <div class="dropdownTakeout" id="dropdown4"></div>
-        </section>
+        <?php
+            $menus = wp_get_nav_menus();
+            foreach ( $menus as $menu ) :
+                $menuData = wp_get_nav_menu_object($menu->name);
+                if(get_field('location_on_theme', $menuData)) : ?>
+                    <section class="dropdown mega" mode="mega" nomain="true">
+                        <div class="dropdownTakeout" id="<?php echo strtolower(str_replace(" ", "_", get_field('headtitle', $menuData))); ?>_targetLocator"></div>
+                    </section>
+        <?php endif; endforeach; ?>
     </ax-elements>
 
 
