@@ -20,7 +20,7 @@ function generateMenuTemplates($menuName) {
     $menus = wp_get_nav_menus();
     foreach ( $menus as $menu ) :
         $menuData = wp_get_nav_menu_object($menu->name);
-        if(get_field("location_on_theme", $menuData) == $menuName) :
+        if(get_field("location_on_theme", $menuData) == $menuName && (get_field("show_on_empty", $menuData) || count(wp_get_nav_menu_items( $menuData )))) :
             $structureContent = "";
             foreach(get_field('structure', $menuData) as $structure) $structureContent .= "$structure ";
             $content .= "<ax-elements 
