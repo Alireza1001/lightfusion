@@ -3,7 +3,19 @@
     function getHeadTabItemsHtml() {
         $count=0;
         $content = '';
-        foreach(get_categories(array('hide_empty' => FALSE)) as $category) {
+        $categories = get_categories(array('hide_empty' => FALSE));
+        for ($i=0; $i < count($categories); $i++) {
+            for ($j=$i; $j < count($categories); $j++) {
+                $MenuOrderI = get_field("order_index", "category_".$categories[$i]->term_id."")||0;
+                $MenuOrderJ = get_field("order_index", "category_".$categories[$j]->term_id."")||0;
+                if($MenuOrderI > $MenuOrderJ) {
+                    $temp = $categories[$i];
+                    $categories[$i] = $categories[$j];
+                    $categories[$j] = $temp;
+                }
+            }
+        }
+        foreach($categories as $category) {
             if ($category->category_parent == 0 && get_field('tap_head_item_activation', "category_$category->term_id")) {
                 $name = strtolower(str_replace(" ", "_", $category->cat_name));
                 $icon = get_field('tap_head_icon', "category_$category->term_id")['url'];
