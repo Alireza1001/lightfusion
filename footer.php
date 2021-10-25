@@ -112,8 +112,8 @@
 <?php require_once('footer-script.php'); ?>
 
 <!-- AXONGLITCH LIBRARY -->
-<script src="https://axoncodes.com/libraries/registery-sample.js"></script>
-<script src="https://axoncodes.com/libraries/dropdown/FuncLibrary-sample.js"></script>
+<script src="https://axoncodes.com/libraries/registery.js"></script>
+<script src="https://axoncodes.com/libraries/dropdown/FuncLibrary.js"></script>
 <?php wp_footer(); ?>
 
 </html>
