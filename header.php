@@ -66,12 +66,17 @@ if (!defined('ABSPATH')) exit;
 
     <header>
         <!-- logo -->
-        <ax-elements
-        mode="logo" 
-        src="<?php echo get_template_directory_uri(); ?>/assets/images/logo/Large size red.png"
-        link="/"
-        alt="homa pilot logo"
-        ></ax-elements>
+        <?php if ( function_exists( 'the_custom_logo' ) ) {
+            $custom_logo_id = get_theme_mod( 'custom_logo' );
+            $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+        ?>
+            <ax-elements
+            mode="logo" 
+            src="<?php echo esc_url( $logo[0] ); ?>"
+            link="/"
+            alt="<?php echo  get_bloginfo( 'name' ); ?>"
+            ></ax-elements>
+        <?php } ?>
 
         <!-- header dropdown -->
         <?php echo generateMenuTemplates('header'); ?>

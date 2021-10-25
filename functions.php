@@ -66,7 +66,7 @@ add_theme_support( 'title-tag' );
 add_post_type_support( 'page', 'excerpt' );
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
-
+add_theme_support( 'custom-logo' );
 
 // disable Gutenberg
 add_filter('use_block_editor_for_post', '__return_false', 10);
