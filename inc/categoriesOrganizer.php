@@ -18,7 +18,7 @@
         foreach($categories as $category) {
             if ($category->category_parent == 0 && get_field('tap_head_item_activation', "category_$category->term_id")) {
                 $name = strtolower(str_replace(" ", "_", $category->cat_name));
-                $icon = get_field('tap_head_icon', "category_$category->term_id")['url'];
+                $icon = get_field('tap_head_icon', "category_$category->term_id")['url'] || null;
                 $active = $count==0?" ax_active":"";
                 $content .= "
                 <p data='' class='ax_item$active' id='$name-tap'>
@@ -48,11 +48,13 @@
         }
         foreach($categories as $category) {
             if ($category->category_parent == 0 && get_field('tap_head_item_activation', "category_$category->term_id")) {
+                $icon = get_field('tap_head_icon', "category_$category->term_id");
+                $image = get_field('tap_head_image', "category_$category->term_id");
                 $categoryOrganizer[$count] = new stdClass();
                 $categoryOrganizer[$count]->title = "$category->cat_name";
                 $categoryOrganizer[$count]->link = "/$category->slug";
-                $categoryOrganizer[$count]->icon = get_field('tap_head_icon', "category_$category->term_id")['url'];
-                $categoryOrganizer[$count]->image = get_field('tap_head_image', "category_$category->term_id")['url'];
+                $categoryOrganizer[$count]->icon = $icon?$icon['url']:null;
+                $categoryOrganizer[$count]->image = $image?$image['url']:null;
                 $categoryOrganizer[$count]->content = getListOfCoursesByCatId($category);
                 $count++;
             }
@@ -64,12 +66,13 @@
         $count=0;
         foreach(get_categories(array('hide_empty' => FALSE)) as $category) {
             if ($category->category_parent == $catData->term_id) {
+                $icon = get_field('tap_head_icon', "category_$category->term_id");
                 $arr[$count] = new stdClass();
                 $arr[$count]->title = "$category->cat_name";
                 $arr[$count]->link = "/$catData->slug/$category->slug";
                 $arr[$count]->valid = get_category($catData->term_id)->count>0?true:false;
                 $arr[$count]->hide = get_field('hide_in_home', "category_$category->term_id");
-                $arr[$count]->icon = get_field('tap_head_icon', "category_$category->term_id")['url'];
+                $arr[$count]->icon = $icon?$icon['url']:null;
                 $arr[$count]->content = getListOfLessonsByCatId($category);
                 $count++;
             }
