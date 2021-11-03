@@ -184,11 +184,12 @@ section#ax_hero_image .ax_tabs p {
     -webkit-transition: all .3s;
 }
 section#ax_hero_image .ax_tabs p svg, section#ax_hero_image .ax_tabs p img {
-    width: 32px;
+    width: 48px;
     transition: all .3s;
     -webkit-transition: all .3s;
     place-self: center;
     height: auto;
+    max-height: 28px;
     position: relative;
 }
 section#ax_hero_image .ax_tabs p.ax_item.ax_active span {
