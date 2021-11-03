@@ -70,7 +70,7 @@
                 $arr[$count] = new stdClass();
                 $arr[$count]->title = "$category->cat_name";
                 $arr[$count]->link = "/$catData->slug/$category->slug";
-                $arr[$count]->valid = get_category($catData->term_id)->count>0?true:false;
+                $arr[$count]->valid = get_category($category->term_id)->count>0?true:false;
                 $arr[$count]->hide = get_field('hide_in_home', "category_$category->term_id");
                 $arr[$count]->icon = $icon?$icon['url']:null;
                 $arr[$count]->content = getListOfLessonsByCatId($category);
