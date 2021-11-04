@@ -90,8 +90,18 @@ if (!defined('ABSPATH')) exit;
             $menus = wp_get_nav_menus();
             foreach ( $menus as $menu ) :
                 $menuData = wp_get_nav_menu_object($menu->name);
-                if(get_field('location_on_theme', $menuData)) : ?>
-                    <section class="dropdown mega" mode="mega" nomain="true">
+                if(get_field('location_on_theme', $menuData)) : 
+                    $structureContent = "";
+                    $structuredata = get_field('structure', $menuData);
+                    $count=0;
+                    foreach ($structuredata as $structure) {
+                        $count++;
+                        $structureContent .= $count == count($structuredata)
+                        ? "$structure"
+                        : "$structure ";
+                    }
+                ?>
+                    <section class="dropdown <?php echo $structureContent ?>" mode="<?php echo $structureContent ?>" nomain="true">
                         <div class="dropdownTakeout" id="<?php echo strtolower(str_replace(" ", "_", get_field('headtitle', $menuData))); ?>_targetLocator"></div>
                     </section>
         <?php endif; endforeach; ?>
