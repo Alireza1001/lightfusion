@@ -59,7 +59,15 @@
 
                         <div class="lf_item">
                             <a href="<?php the_permalink(); ?>">
-                                <?php $id = get_post_thumbnail_id();$src = wp_get_attachment_image_src($id, $size);$alt = get_the_title($id);$class = $attr['class'];$useragentos = $_SERVER["HTTP_USER_AGENT"];$generalimgexe=".jpg";$imgmainsrc = $src[0];$baseimgsrc = substr($imgmainsrc, 0, strripos($imgmainsrc, '.'));$exeimgsrc = substr($imgmainsrc, strripos($imgmainsrc, '.'));$newimgsrcset = $baseimgsrc.$generalimgexe;$newimgsrcset1 = $baseimgsrc."-small".$generalimgexe;$newimgsrcset2 = $baseimgsrc."-medium".$generalimgexe;$newimgsrcset3 = $baseimgsrc."-large".$generalimgexe;$imgsrcsetqueue = "$newimgsrcset1 300w, $newimgsrcset2 900w, $newimgsrcset3 1500w";echo '<img src="' . $newimgsrcset . '" alt="' . $alt . '" class="' . $class . '" srcset="'.$imgsrcsetqueue.'"/>';?>
+                                <?php 
+                                    echo wordpressAXCustomImage(
+                                        get_the_post_thumbnail_url(),
+                                        get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE),
+                                        "",
+                                        "", "auto", "", "",
+                                        ["small", "medium"]
+                                    ); 
+                                ?>
                             </a>
                             <div class="lf_item_profile">
                                 <div>
