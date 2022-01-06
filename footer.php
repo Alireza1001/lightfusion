@@ -92,9 +92,9 @@
         </div>
     </div>
 </footer>
-    <div id="ax_socket">
+    <!-- <div id="ax_socket">
         <p>© 2020–2022 HomaPilot. Made with <img alt="axoncodes" width="22px" height="22px" src="<?php echo get_template_directory_uri(); ?>/assets/icons/heart.svg" /> at <a aria-label="axoncodes" rel="noopener noreferrer" href="https://axoncodes.com">AxonCodes</a></p>
-    </div>
+    </div> -->
 </main>
 
     <div id="ax_scroll_top">

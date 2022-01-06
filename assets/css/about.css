@@ -28,38 +28,6 @@ section#lf_about_page_intro h1 {
     top: 28%;
     font-weight:100;
 }
-div#lf_scrolldown1 svg:nth-child(3) {
-    animation-name: scolldown3;
-    animation-iteration-count: infinite;
-    transform: rotate(90deg) translateX(-12px);
-}
-div#lf_scrolldown1 svg:nth-child(2) {
-    animation-name: scolldown2;
-    animation-iteration-count: infinite;
-    transform: rotate(90deg) translateX(-5px);
-}
-div#lf_scrolldown1 svg {
-    width: 29px;
-    height: auto;
-    margin: 0 auto;
-    transition: all .3s;
-    animation-name: scolldown1;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
-    transform: rotate(90deg);
-    opacity: 0;
-    fill: var(--txt1);
-}
-div#lf_scrolldown1 {
-    width: 33px;
-    height: 52px;
-    display: grid;
-    place-self: center;
-    margin: 20px auto;
-    border-radius: 4em;
-    padding: 8px 0;
-    border: 4px solid #0000;
-}
 section#lf_about_wwd .lf_about_items .lf_about_item {
     overflow: hidden;
     height: 300px;

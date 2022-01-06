@@ -52,6 +52,8 @@ if (!defined('ABSPATH')) exit;
     <link rel="stylesheet" href="https://axoncodes.com/libraries/dropdown/assets/css/style.css" />
     <!-- logo -->
     <link rel="stylesheet" href="https://axoncodes.com/libraries/logo/assets/css/style.css" />
+    <!-- scrolldownAnimation -->
+    <link rel="stylesheet" href="https://axoncodes.com/libraries/scrolldownAnimation/assets/css/style.css" />
     <!-- custom -->
     <link rel="stylesheet" href="https://axoncodes.com/libraries/assets/css/custom.css" />
     <link rel="stylesheet" href="https://axoncodes.com/libraries/assets/css/fontVars.css" />
