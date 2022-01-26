@@ -57,7 +57,7 @@ if (!defined('ABSPATH')) exit;
     <!-- custom -->
     <link rel="stylesheet" href="https://axoncodes.com/libraries/assets/css/custom.css" />
     <link rel="stylesheet" href="https://axoncodes.com/libraries/assets/css/fontVars.css" />
-    
+
     <!-- wp_head -->
     <?php wp_head(); ?>
 
