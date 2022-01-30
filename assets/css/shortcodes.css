@@ -61,6 +61,7 @@ section.lf_content_htmltags {
   border-top-width: 0;
   box-shadow: 5px 3px 7px -3px #5d5d5db0;
   background-color: var(--lf_editor_border);
+  display: grid;
 }
 section.lf_content_htmltags > h3 {
   background-color: var(--lf_editor_border);
@@ -78,6 +79,7 @@ section.lf_content_htmltags section.lf_content_htmltags_inner {
   color: #fff;
   font-size: 15px;
   letter-spacing: 0.3px;
+  overflow: scroll;
 }
 section.lf_content_htmltags_inner .lf_content_htmltags_tag {
   color: #8cb;

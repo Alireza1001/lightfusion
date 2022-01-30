@@ -620,11 +620,9 @@ ul#lf_landing_bottom_tags li {
 }
 ul#lf_landing_bottom_tags {
     list-style: none;
-    display: grid;
+    display: flex;
     padding: 0 4%;
-    grid-auto-flow: column;
-    width: fit-content;
-    margin-right: 3%;
+    flex-wrap: wrap;
 }
 
 
