@@ -422,7 +422,6 @@ div#lf_landing_author_cover > p {
 /* main title */
 .head_title_seprator > p {
     font-size: 13px;
-    display: grid;
     margin: 0;
     height: fit-content;
 }
