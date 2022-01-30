@@ -6,7 +6,6 @@
 </ul>
 <div class="lf_sharing">
     <ul class="lf_share_btns">
-        <p>Share</p>
         <div>
         <?php
             $title= urlencode(get_the_title());
