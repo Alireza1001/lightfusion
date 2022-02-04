@@ -57,8 +57,6 @@ if (!defined('ABSPATH')) exit;
     <?php require_once('header-style.php'); ?>
 </head>
 <body class="home" id="axoncodes" <?php body_class(); ?>>
-    <script> var logo_stat = navigator.appVersion.indexOf("Mac OS"); </script>
-
     <header>
         <?php 
             axg_headerLogo(get_theme_mod( 'custom_logo' )); // logo
