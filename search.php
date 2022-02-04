@@ -7,51 +7,17 @@
         <label for="ax_isearch">search</label>
         <input id="ax_isearch" placeholder="search..." type="search" name="ax_isearch" pattern="[^'\x22]+"/>
     </form>
-    <?php
-        $search_name_arr = [];
-        $search_link_arr = [];
-    ?>
-    <?php
-        $wpb_all_query = new WP_Query(array('post_type'=>'page', 'post_status'=>'publish', 'posts_per_page'=>-1));
-        if ( $wpb_all_query->have_posts() ) :
-        while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post();
-        array_push($search_name_arr, get_the_title());
-        array_push($search_link_arr, get_the_permalink());
-        endwhile;
-        wp_reset_postdata();
-        else :
-        endif;
-        $wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1));
-        if ( $wpb_all_query->have_posts() ) :
-        while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post();
-        array_push($search_name_arr, get_the_title());
-        array_push($search_link_arr, get_the_permalink());
-        endwhile;
-        wp_reset_postdata();
-        else :
-        endif;
-    ?>
-    <script>
-        var all_posts_names = <?php echo '["' . implode('", "', $search_name_arr) . '"]' ?>;
-        var all_posts_links = <?php echo '["' . implode('", "', $search_link_arr) . '"]' ?>;
-    </script>
+
+		
     <div id="lf_searchform_res_cover">
         <ul id="lf_searchform_res"></ul>
-        <script>
-            const search_box = document.getElementById("ax_isearch");
-            const lf_searchform_res = document.getElementById("lf_searchform_res");
-            search_box.addEventListener("input", ()=>{
-                if((search_box.value).length <= 0) {
-                    lf_searchform_res.innerHTML = '';
-                }else{
-                    lf_searchform_res.innerHTML = '';
-                    for(i=0; i<all_posts_names.length; i++) {
-                        if((all_posts_names[i].toLowerCase().search(search_box.value.toLowerCase())) >= 0 ) {
-                            lf_searchform_res.innerHTML += '<li><a href="'+all_posts_links[i]+'">'+all_posts_names[i]+'</a></li>';
-                        }
-                    }
-                }
-            });
-        </script>
     </div>
 </div>
+
+<!-- Search scripts -->
+<?php require_once('inc/searchScripts/script.php'); ?>
+<script>
+	var all_posts_names = <?php echo '["' . implode('", "', $search_name_arr) . '"]' ?>;
+	var all_posts_links = <?php echo '["' . implode('", "', $search_link_arr) . '"]' ?>;
+	<?php require_once('inc/searchScripts/script.js'); ?>
+</script>
