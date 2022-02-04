@@ -40,7 +40,7 @@ section#lf_landing_main_contexts .wp-caption figcaption {
 /*next prev*/
 section#lf_nextprev {
     padding: 0 4%;
-    font-family: "Lato", Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
     color: var(--txt1);
     line-height: 1.4;
 }
@@ -108,7 +108,7 @@ section#lf_landing_exercise > h2 {
     user-select: none;
 }
 section#lf_landing_exercise {
-    font-family: "Lato", Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
     color: var(--txt1);
     display: grid;
     margin: 30px 0;
@@ -183,7 +183,7 @@ h2.lf_track_title.lf_gallery_h2 {
     margin-top: 0px!important;
     padding-top: 0px!important;
     transform: translate(0px, 120px);
-    font-family: "Lato", Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
     color: var(--txt1);
     display: grid;
     grid-auto-flow: column;
@@ -349,7 +349,7 @@ div#lf_subpages .lf_items a {
     background-color: #efefef;
     width: 100%;
     border-radius: 5px;
-    font-family: "Lato", Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
     padding: 50px 0;
     position: relative;
     cursor: pointer;
@@ -384,7 +384,7 @@ div#lf_subpages .lf_items a button.lf_item_btn {
     border: 2px solid #fff;
     background-color: #0000;
     color: #fff;
-    font-family: "Lato", Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
     font-size: 15px;
     width: 170px;
     padding: 11px 20px;
@@ -403,7 +403,7 @@ div#lf_subpages .lf_items a:hover img.lf_item_bg {
 }
 div#lf_subpages .lf_subpages_title {
     margin: 0 0 20px 0;
-    font-family: "Lato", Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
     font-size: 20px;
     place-self: center;
     width: 100%;
@@ -432,7 +432,7 @@ div#lf_audio_statics button {
 /* main context */
 section#lf_landing_main_contexts {
     padding: 0 4%;
-    font-family: "Lato", Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
     color: var(--txt1);
     line-height: 1.4;
 }
@@ -610,7 +610,7 @@ div#lf_faq .lf_items_right p img {
 
 ul#lf_landing_bottom_tags li a {
     font-size: 13px;
-    font-family: "Lato", Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
 }
 ul#lf_landing_bottom_tags li {
     padding: 0 5px!important
@@ -760,7 +760,7 @@ header#axon_header .ax-menu-logo.lf_print_mode_section_head_logo img {
 
 .lf_print_mode_section_head_logo div#header_print_new {
     grid-auto-flow: column;
-    font-family: "Lato", Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
     width: fit-content;
 }
 .lf_print_mode_section_head_logo div#header_print_new p {
@@ -780,7 +780,7 @@ header#axon_header .ax-menu-logo.lf_print_mode_section_head_logo img {
     height: unset;
 }
 .lf_print_mode_section_head_logo div#header_print_new p#waterfal {
-    font-family: "Lato", Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
     font-size: 100px;
     font-weight: 900;
     position: fixed;
@@ -793,7 +793,7 @@ header#axon_header .ax-menu-logo.lf_print_mode_section_head_logo img {
 
 /* popular posts */
 section#lf_popular_posts {
-    font-family: "Lato", Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
     width: 95%;
     margin: 0 auto;
 }

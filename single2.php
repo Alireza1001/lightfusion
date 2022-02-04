@@ -189,7 +189,7 @@
                     line-height: 1.9;
                     word-spacing: 0.03em;
                     text-align: center;
-                    font-family: "Lato", Arial, sans-serif;
+                    font-family: "Inter", Arial, sans-serif;
                 '><?php echo get_post_meta( $post->ID, '_download_print_text', true ); ?></p>
                 <?php
                 $i=0;

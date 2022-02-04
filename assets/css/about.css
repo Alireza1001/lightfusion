@@ -15,7 +15,7 @@ section#lf_about_page_intro img {
 }
 section#lf_about_page_intro h1 {
     font-size: 7vw;
-    font-family:"Lato",Arial,sans-serif;
+    font-family:"Inter",Arial,sans-serif;
     margin: 0;
     text-align: center;
     color: var(--page_titles);
@@ -87,14 +87,14 @@ section#lf_about_wwd .lf_about_items .lf_about_item:hover .lf_poster_cover, sect
 
 /* wwd */
 section#lf_about_wwd .lf_head_title {
-    font-family:"Lato",Arial,sans-serif;
+    font-family:"Inter",Arial,sans-serif;
     font-size: 30px;
     margin: 0;
     text-align: center;
     color: var(--txt1);
 }
 section#lf_about_wwd .lf_head_p {
-    font-family:"Lato",Arial,sans-serif;
+    font-family:"Inter",Arial,sans-serif;
     text-align: center;
     color: var(--txt2);
     width: 40%;
@@ -106,7 +106,7 @@ section#lf_about_wwd .lf_head_p {
 section#lf_about_wwd .lf_about_items {
     display: grid;
     grid-auto-flow: column;
-    font-family:"Lato",Arial,sans-serif;
+    font-family:"Inter",Arial,sans-serif;
     background-color: #2d2d2d;
     border-radius: 5px;
     overflow: hidden;
@@ -138,7 +138,7 @@ section#lf_about_wwd {
     width: 94%;
     margin: 0 auto;
     color: var(--txt1);
-    font-family: "Lato", Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
 }
 section#lf_about_wwd .lf_about_items a {
     text-decoration: none;
@@ -154,7 +154,7 @@ section#lf_about_wwd .lf_about_items a {
 section#lf_about_quick_address {
     display: grid;
     grid-template-columns: 30% 70%;
-    font-family:"Lato",Arial,sans-serif;
+    font-family:"Inter",Arial,sans-serif;
     width: 94%;
     margin: 0 auto;
     margin-top: 60px;
@@ -214,7 +214,7 @@ section#lf_about_socialmedia .lf_head_title {
 section#lf_about_socialmedia {
     display: grid;
     grid-auto-flow: row;
-    font-family:"Lato",Arial,sans-serif;
+    font-family:"Inter",Arial,sans-serif;
     margin-top: 30px;
     margin-bottom: 40px;
 }
@@ -287,7 +287,7 @@ section#lf_about_socialmedia .lf_about_items .lf_about_item:hover .lf_p {
 section#lf_about_joinus {
     display: grid;
     grid-template-columns: 51% 47%;
-    font-family:"Lato",Arial,sans-serif;
+    font-family:"Inter",Arial,sans-serif;
     width: 94%;
     margin: 0 auto;
     margin-top: 150px;
@@ -419,7 +419,7 @@ section#lf_about_joinus .lf_about_items form button{
     height: 30px;
     transform: translate(-6px, 6px)!important;
     padding: 0;
-    font-family:"Lato",Arial,sans-serif;
+    font-family:"Inter",Arial,sans-serif;
     color: #000;
     cursor: pointer;
 }
@@ -456,11 +456,11 @@ section#lf_about_joinus form#lf_joinus_form input:not([type="file"]), section#lf
     height: 30px;
     padding: 0 8px;
     border-radius: 2px;
-    font-family:"Lato",Arial,sans-serif;
+    font-family:"Inter",Arial,sans-serif;
     background-color: var(--ax_confer_input);
 }
 section#lf_about_joinus form#lf_joinus_form input {
-    font-family:"Lato",Arial,sans-serif;
+    font-family:"Inter",Arial,sans-serif;
 }
 
 

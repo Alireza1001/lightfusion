@@ -34,6 +34,7 @@ if (!defined('ABSPATH')) exit;
         $translation_array = get_template_directory_uri();
     ?>
 
+
     <script type="text/javascript" async>
         const userslist = <?php echo json_encode($users_list); ?>;
         const wp_dir_url = "<?php echo $translation_array; ?>";
@@ -47,10 +48,14 @@ if (!defined('ABSPATH')) exit;
     <link rel="stylesheet" href="https://axoncodes.com/libraries/logo/assets/css/style.css" />
     <!-- scrolldownAnimation -->
     <link rel="stylesheet" href="https://axoncodes.com/libraries/scrolldownAnimation/assets/css/style.css" />
-    <!-- custom -->
-    <link rel="stylesheet" href="https://axoncodes.com/libraries/assets/css/custom.css" />
+    <!-- fontVars -->
     <link rel="stylesheet" href="https://axoncodes.com/libraries/assets/css/fontVars.css" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
     <!-- wp_head -->
     <?php wp_head(); ?>
 

@@ -9,13 +9,13 @@ main {
     width: 100%!important;
 }
 h1 {
-    font-family:"Lato",Arial,sans-serif;
+    font-family:"Inter",Arial,sans-serif;
 }
 section#lf_contactus h2 {
     font-size: 21px;
 }
 section#lf_contactus {
-    font-family:"Lato",Arial,sans-serif;
+    font-family:"Inter",Arial,sans-serif;
     display: grid;
     width: fit-content;
     margin: 0 auto;
@@ -110,7 +110,7 @@ section#lf_contactus .lf_newsletter form input {
     border: none;
     background-color: #d7cfb4;
     font-size: 14px;
-    font-family:"Lato",Arial,sans-serif;
+    font-family:"Inter",Arial,sans-serif;
     padding: 3%;
     border-radius: 4px;
     color: #000;
@@ -132,7 +132,7 @@ section#lf_contactus .lf_newsletter form button:hover {
 section#lf_contactus .lf_newsletter form button {
     background-color: #0000;
     border: none;
-    font-family:"Lato",Arial,sans-serif;
+    font-family:"Inter",Arial,sans-serif;
     position: absolute;
     color: #000;
     transition: all .3s;
