@@ -80,3 +80,20 @@ function wordpressAXDropdownContent($data) {
     return $menuObj2;
 }
 
+
+function axg_headerLogo($custom_logo_id) {
+  if ( function_exists( 'the_custom_logo' ) ) {
+    $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+    $src = esc_url( $logo[0] );
+    $alt = get_bloginfo( 'name' );
+    return '
+      <ax-elements
+      mode="logo" 
+      src="'.$src.'"
+      link="/"
+      alt="'.$alt.'"
+      ></ax-elements>
+    ';
+  }
+}
+
