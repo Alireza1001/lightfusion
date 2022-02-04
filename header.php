@@ -58,7 +58,7 @@ if (!defined('ABSPATH')) exit;
 </head>
 <body class="home" id="axoncodes" <?php body_class(); ?>>
     <header>
-        <?php 
+        <?php
             axg_headerLogo(get_theme_mod( 'custom_logo' )); // logo
             generateMenuTemplates('header'); // header dropdown 
         ?>
