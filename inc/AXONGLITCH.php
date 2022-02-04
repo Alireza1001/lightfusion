@@ -80,6 +80,35 @@ function wordpressAXDropdownContent($data) {
     return $menuObj2;
 }
 
+function axg_dropdownsbody($menus) {
+  $content = '<ax-elements nomain="true">';
+
+  foreach ( $menus as $menu ) {
+    $menuData = wp_get_nav_menu_object($menu->name);
+    if(get_field('location_on_theme', $menuData)) {
+      $structureContent = '';
+      $structuredata = get_field('structure', $menuData);
+      $count=0;
+      foreach ($structuredata as $structure) {
+        $count++;
+        $structureContent .= $count == count($structuredata)
+        ? "$structure"
+        : "$structure ";
+      }
+
+      $id = strtolower(str_replace(' ', '_', get_field('headtitle', $menuData)));
+      $id .= '_targetLocator';
+      $content .= "
+        <section class='dropdown $structureContent' mode='$structureContent' nomain='true'>
+          <div class='dropdownTakeout' id='$id'></div>
+        </section>
+      ";
+    }
+  }
+  $content .= '</ax-elements>';
+  echo $content;
+}
+
 
 function axg_headerLogo($custom_logo_id) {
   if ( function_exists( 'the_custom_logo' ) ) {
@@ -97,3 +126,4 @@ function axg_headerLogo($custom_logo_id) {
   }
 }
 
+?>

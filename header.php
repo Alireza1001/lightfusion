@@ -68,30 +68,8 @@ if (!defined('ABSPATH')) exit;
 
     <nav></nav>
 
-    <ax-elements nomain="true">
-        <?php
-            $menus = wp_get_nav_menus();
-            foreach ( $menus as $menu ) :
-                $menuData = wp_get_nav_menu_object($menu->name);
-                if(get_field('location_on_theme', $menuData)) : 
-                    $structureContent = "";
-                    $structuredata = get_field('structure', $menuData);
-                    $count=0;
-                    foreach ($structuredata as $structure) {
-                        $count++;
-                        $structureContent .= $count == count($structuredata)
-                        ? "$structure"
-                        : "$structure ";
-                    }
-                ?>
-                    <section class="dropdown <?php echo $structureContent ?>" mode="<?php echo $structureContent ?>" nomain="true">
-                        <div class="dropdownTakeout" id="<?php echo strtolower(str_replace(" ", "_", get_field('headtitle', $menuData))); ?>_targetLocator"></div>
-                    </section>
-        <?php endif; endforeach; ?>
-    </ax-elements>
+    <?php axg_dropdownsbody(wp_get_nav_menus()); ?>
 
-
-    
     <?php if(false) { ?>
         <header id="axon_header">
             <div class="ax-nav-left" tabindex="0">
