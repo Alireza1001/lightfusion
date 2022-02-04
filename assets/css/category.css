@@ -23,7 +23,7 @@ section#lf_page_head img {
 }
 section#lf_page_head .lf_item.lf_active h1 {
     font-size: 80px;
-    font-family: "Lato", Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
     color: #fff;
     text-align: center;
     width: 100%;
@@ -55,13 +55,13 @@ section#lf_page_head .lf_item.lf_active p span {
 }
 section#lf_page_head .lf_item.lf_active p {
     width: 100%;
-    font-family: "Lato", Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
     font-size: 18px;
     text-align: center;
     margin: 0;
 }
 p.ax_heading_p {
-    font-family: "Lato", Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
     color: var(--txt1);
     font-size: 15px;
     width: 90%;
@@ -77,7 +77,7 @@ section#lf_page_head .lf_items {
 section#lf_page_head .lf_items .lf_item strong a {
     color: #fff;
     position: relative;
-    font-family: "Lato", Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
     font-size: 20px;
     text-decoration: none;
 }
@@ -141,7 +141,7 @@ aside#lf_landing_left {
     font-size: 19px;
     font-weight: 500;
     color: var(--txt1);
-    font-family: "Lato", Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
     letter-spacing: -1px;
     margin-top: 19px;
     letter-spacing: -0.03em;
@@ -169,7 +169,7 @@ section#lf_page_head > a {
     color: #fff;
     background-color: var(--ax_btn_bg);
     text-decoration: none;
-    font-family: "Lato", Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
     padding: .5% 1%;
     border-radius: 4px;
     transition: all .3s;
@@ -257,7 +257,7 @@ section#lf_page_head .lf_items .lf_item.lf_active strong a {
         color: #fff;
         background-color: var(--ax_btn_bg);
         text-decoration: none;
-        font-family: "Lato", Arial, sans-serif;
+        font-family: "Inter", Arial, sans-serif;
         padding: 1.5% 1%;
         border-radius: 4px;
         transition: all .3s;

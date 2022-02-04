@@ -1,4 +1,4 @@
-const search_box = document.getElementById("ax_isearch");
+search_box = document.getElementById("axg_isearch");
 const lf_searchform_res = document.getElementById("lf_searchform_res");
 search_box.addEventListener("input", () => {
   if((search_box.value).length <= 0) {
