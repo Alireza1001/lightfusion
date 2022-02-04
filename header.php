@@ -60,6 +60,7 @@ if (!defined('ABSPATH')) exit;
     <header>
         <?php
             axg_headerLogo(get_theme_mod( 'custom_logo' )); // logo
+            get_template_part( 'search' );
             generateMenuTemplates('header'); // header dropdown 
         ?>
     </header>
