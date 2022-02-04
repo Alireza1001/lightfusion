@@ -60,10 +60,10 @@ if (!defined('ABSPATH')) exit;
     <script> var logo_stat = navigator.appVersion.indexOf("Mac OS"); </script>
 
     <header>
-        <!-- logo -->
-        <?php echo axg_headerLogo(get_theme_mod( 'custom_logo' )); ?>
-        <!-- header dropdown -->
-        <?php echo generateMenuTemplates('header'); ?>
+        <?php 
+            axg_headerLogo(get_theme_mod( 'custom_logo' )); // logo
+            generateMenuTemplates('header'); // header dropdown 
+        ?>
     </header>
 
     <nav></nav>

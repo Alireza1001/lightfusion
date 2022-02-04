@@ -55,7 +55,7 @@ function generateMenuTemplates($menuName) {
         endif; endforeach;
     $content .= '</ax-elements>';
 
-    return $content;
+    echo $content;
 }
 
 // handler menu items to export a json in format of required in AXG library
@@ -86,7 +86,7 @@ function axg_headerLogo($custom_logo_id) {
     $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
     $src = esc_url( $logo[0] );
     $alt = get_bloginfo( 'name' );
-    return '
+    echo '
       <ax-elements
       mode="logo" 
       src="'.$src.'"
