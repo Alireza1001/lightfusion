@@ -105,6 +105,10 @@
   transform:scale(1.4);
 }
 
+#axg_searchbar.axg_active {
+  z-index: 2;
+}
+
 @media(max-width: 600px) {
   #axg_searchbar.axg_active #axg_searchform_res_cover {
     width: 100vw;
@@ -158,12 +162,6 @@
 
   #axg_searchform_button {
     padding: 10px;
-  }
-}
-
-@media (min-width: 1440px) {
-  #axg_searchform_button svg {
-    width:27px;
-    margin-right:10px;
+    transform: translate(-1px, 0px);
   }
 }
