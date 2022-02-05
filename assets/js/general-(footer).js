@@ -502,7 +502,7 @@ if(document.getElementById("axg_searchform"))document.getElementById("axg_search
     // if(document.getElementById("lf_progressbar_num"))
     //     document.getElementById("lf_progressbar_num").style.opacity = 0;
 });
-document.getElementById("lf_naturalizer").addEventListener("click", ()=>{
+document.getElementById("axg_naturalizer").addEventListener("click", ()=>{
     if(document.getElementById("axg_searchform"))document.getElementById("axg_searchform").classList.remove("axg_active");
     document.getElementById("axg_searchform_res_cover").style.display = "none";
     // if(document.getElementById("lf_progressbar_num"))

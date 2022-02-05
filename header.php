@@ -107,4 +107,4 @@ if (!defined('ABSPATH')) exit;
         </section>
     <?php } ?>
     
-<div id="lf_naturalizer" style="display: none"></div>
+<div id="axg_naturalizer"></div>

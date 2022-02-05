@@ -152,21 +152,24 @@
         document.querySelector("#lf_inpage_notification span").style.maxWidth=0+"%";
         clearInterval(inpage_notif_inter_setting);
         });
-        if(document.getElementById("axg_searchform"))document.getElementById("axg_searchform").addEventListener("click",e=>{e.preventDefault();
-        if(document.getElementById("axg_searchbar"))document.getElementById("axg_searchbar").classList.add("axg_active");
-        document.getElementById("axg_searchform_res_cover").style.display="block";
-        
-        // if(document.getElementById("lf_progressbar_num")) document.getElementById("lf_progressbar_num").style.opacity=0;
-        document.getElementById("lf_naturalizer").style.zIndex = "100";
-        });
-        document.getElementById("lf_naturalizer").style.width = "100vw";
-        document.getElementById("lf_naturalizer").style.height = "100vh";
-        document.getElementById("lf_naturalizer").style.position = "fixed";
-        /*document.getElementById("lf_naturalizer").style.zIndex = "0";
-        */document.getElementById("lf_naturalizer").addEventListener("click",()=>{document.getElementById("axg_searchform").classList.remove("axg_active");
+
+        if (document.getElementById("axg_searchform")) {
+					document.getElementById("axg_searchform").addEventListener("click", e => {
+						e.preventDefault();
+        		if (document.getElementById("axg_searchbar")) document.getElementById("axg_searchbar").classList.add("axg_active");
+        		document.getElementById("axg_searchform_res_cover").style.display="block";
+						// if(document.getElementById("lf_progressbar_num")) document.getElementById("lf_progressbar_num").style.opacity=0;
+						document.getElementById("axg_naturalizer").style.zIndex = "100";
+        	});
+				}
+        document.getElementById("axg_naturalizer").style.width = "100vw";
+        document.getElementById("axg_naturalizer").style.height = "100vh";
+        document.getElementById("axg_naturalizer").style.position = "fixed";
+        /*document.getElementById("axg_naturalizer").style.zIndex = "0";
+        */document.getElementById("axg_naturalizer").addEventListener("click",()=>{document.getElementById("axg_searchform").classList.remove("axg_active");
         document.getElementById("axg_searchform_res_cover").style.display="none";
         // if(document.getElementById("lf_progressbar_num")) document.getElementById("lf_progressbar_num").style.opacity=1;
-        /*document.getElementById("lf_naturalizer").style.zIndex = "0";
+        /*document.getElementById("axg_naturalizer").style.zIndex = "0";
         */});
         if(document.querySelector("section.lf_secret_deals")){document.querySelector("section.lf_secret_deals img.lf_secret_deals_close").addEventListener("click",()=>{document.querySelector("section.lf_secret_deals").classList.add("lf_closed");
         var seacretdeals_close_reqer=new XMLHttpRequest();

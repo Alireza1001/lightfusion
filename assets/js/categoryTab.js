@@ -136,7 +136,7 @@ if(document.getElementById("ax_tabs_inside_cover")) {
                 }
             });
         });
-        document.getElementById("lf_naturalizer").addEventListener("click", ()=>{
+        document.getElementById("axg_naturalizer").addEventListener("click", ()=>{
             document.getElementById('lf_cats_sub').style.height = "0px";
             document.getElementById('lf_cats_sub').style.width = "0px";
             document.getElementById("ax_services").classList.remove("axg_active");
