@@ -6,6 +6,6 @@ header {
     top: 0;
     height: auto;
     z-index: 999999;
-    background-color: #fff;
+    background-color: var(--bg3);
     justify-content: space-between;
 }

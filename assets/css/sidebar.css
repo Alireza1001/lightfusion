@@ -1,12 +1,4 @@
-:root {
-    --lf_country_li_hover: #e1e1e1;
-    --lf_country_li_active: #b1b1b1;
-}
-
-
-
-
-div#lf_sharing ul.lf_share_status li img {
+#lf_sharing ul.lf_share_status li img {
     transform: translateY(5px);
 }
 main {
@@ -144,7 +136,7 @@ ul#lf_landing_services > li > div {
 section#whole_page_wrapup {
     padding-bottom: 40px;
 }
-main div#lf_article_head .lf_breadcrumb a {
+main #lf_article_head .lf_breadcrumb a {
     color: var(--links_colors);
     text-decoration: none;
 }
@@ -168,13 +160,13 @@ main div#lf_article_head .lf_breadcrumb a {
 #lf_articles_by_comment .lf_items {
     width: 100%;
 }
-div#lf_contact a svg {
+#lf_contact a svg {
     transform: translateY(3px);
     fill: var(--txt1);
     display: grid;
     place-self: center;
 }
-div#lf_contact a {
+#lf_contact a {
     padding: 7px 0px;
     font-family: sans-serif;
     display: grid;
@@ -186,28 +178,28 @@ div#lf_contact a {
     color: var(--links_colors);
     text-decoration: none;
 }
-div#lf_contact a:hover {
+#lf_contact a:hover {
     background-color: var(--lf_country_li_hover);
 }
-div#lf_contact a:active {
+#lf_contact a:active {
     background-color: var(--lf_country_li_active);
 }
-div#lf_contact {
+#lf_contact {
     display: grid;
     place-items: baseline;
     width: 100%;
 }
-div#lf_leftmenu_btn {
+#lf_leftmenu_btn {
     display: none;
 }
-div#lf_leftmenu_btn span {
+#lf_leftmenu_btn span {
     width: 24px;
     height: 2px;
     background-color: var(--txt1);
     /* border-radius: 2em; */
     transform: translateX(33%);
 }
-div#lf_leftmenu_btn {
+#lf_leftmenu_btn {
     width: 100%;
     height: 15px;
     position: relative;
@@ -300,7 +292,7 @@ aside#lf_landing_left {
     z-index: 60;
     /* overflow: hidden; */
 }
-main div#lf_article_head {
+main #lf_article_head {
     background-color: var(--bg1);
 }
 
@@ -421,7 +413,7 @@ ul.lf_country_submenu .lf_country_submenu_sub > li > a h2 span {
 section#lf_blog_items .lf_items .lf_item a:nth-child(1) span {
     display: none;
 }
-div#lf_contact a span {
+#lf_contact a span {
     direction: rtl;
     display: grid;
     place-self: baseline;
@@ -472,7 +464,7 @@ aside#lf_landing_left {
 main p {
     color: var(--txt1);
 }
-div#lf_sharing ul.lf_share_btns > p {
+#lf_sharing ul.lf_share_btns > p {
     grid-column: 1/4;
     grid-row: 1;
     font-family: system-ui;
@@ -481,7 +473,7 @@ div#lf_sharing ul.lf_share_btns > p {
     color: var(--txt1);
     text-align: left;
 }
-div#lf_sharing ul.lf_share_btns > div {
+#lf_sharing ul.lf_share_btns > div {
     display: grid;
     grid-template-columns: auto auto auto auto;
     grid-row: 2;
@@ -490,18 +482,18 @@ div#lf_sharing ul.lf_share_btns > div {
     width: fit-content;
     place-self: center;
 }
-div#lf_sharing ul.lf_share_status > p {
+#lf_sharing ul.lf_share_status > p {
     margin: 0;
     font-family: system-ui;
     font-size: 10px;
     color: var(--txt1);
 }
-div#lf_sharing {
+#lf_sharing {
     display: grid;
     grid-auto-flow: row;
     justify-items: center;
 }
-div#lf_sharing ul.lf_share_btns {
+#lf_sharing ul.lf_share_btns {
     display: grid;
     list-style: none;
     width: 100%;
@@ -510,17 +502,17 @@ div#lf_sharing ul.lf_share_btns {
     padding: 0;
     margin: 15% 0;
 }
-div#lf_sharing ul.lf_share_btns li:hover {
+#lf_sharing ul.lf_share_btns li:hover {
     background-color: #b9b9b9;
 }
-div#lf_sharing ul.lf_share_btns li {
+#lf_sharing ul.lf_share_btns li {
     /* padding: 0.5vw;
     background-color: #dedede; */
     border-radius: 15%;
     transition: all .3s;
     cursor: pointer;
 }
-div#lf_sharing ul.lf_share_btns img {
+#lf_sharing ul.lf_share_btns img {
     width: 18px;
     height: auto;
     display: grid;
@@ -529,18 +521,18 @@ div#lf_sharing ul.lf_share_btns img {
     padding: 1px;
 }
 
-div#lf_sharing ul.lf_share_status li span {
+#lf_sharing ul.lf_share_status li span {
     font-family: sans-serif;
     font-size: 14px;
     color: var(--txt1);
 }
-div#lf_sharing ul.lf_share_status li svg {
+#lf_sharing ul.lf_share_status li svg {
     width: 20px;
     height: auto;
     margin-right: 15%;
     fill: var(--txt1);
 }
-div#lf_sharing ul.lf_share_status {
+#lf_sharing ul.lf_share_status {
     display: grid;
     list-style: none;
     height: fit-content;
@@ -553,10 +545,10 @@ div#lf_sharing ul.lf_share_status {
     transform: translateX(3px);
     margin: 0 auto;
 }
-div#lf_sharing ul.lf_share_btns li.lf_share_event.lf_media_rss {
+#lf_sharing ul.lf_share_btns li.lf_share_event.lf_media_rss {
     display: none;
 }
-div#lf_sharing ul.lf_share_btns > input {
+#lf_sharing ul.lf_share_btns > input {
     grid-row: 3;
     width: 80%;
     font-size: 10px;
@@ -688,7 +680,7 @@ main .lf_star_rating svg {
     height: auto;
     fill: var(--txt1);
 }
-main div#lf_article_head .lf_breadcrumb {
+main #lf_article_head .lf_breadcrumb {
     font-family: system-ui;
     font-size: 13px;
     color: #5c5c5c;
@@ -697,7 +689,7 @@ main div#lf_article_head .lf_breadcrumb {
 main .lf_star_rating.lf_star_rating0 {
     justify-self: end;
 }
-main div#lf_article_head {
+main #lf_article_head {
     display: grid;
     grid-auto-flow: column;
     padding: 0 4%;
@@ -814,7 +806,7 @@ section#lf_landing_feedback .lf_feedback_s {
     place-items: center;
     display: grid;
 }
-section#lf_landing_feedback > div#lf_feedback_q > div p#lf_feedback_q_final_txt {
+section#lf_landing_feedback > #lf_feedback_q > div p#lf_feedback_q_final_txt {
     transform: translateY(3px);
 }
 section#lf_landing_feedback .lf_feedback_s .lf_star_rating svg {
@@ -825,28 +817,28 @@ section#lf_landing_feedback #lf_feedback_q_set2 {
     display: grid;
     grid-auto-flow: row;
 }
-section#lf_landing_feedback > div#lf_feedback_q > div {
+section#lf_landing_feedback > #lf_feedback_q > div {
     transition: all .3s;
     max-height: 600px;
     overflow: hidden;
 }
-section#lf_landing_feedback > div#lf_feedback_q .lf_feedback_collapse {
+section#lf_landing_feedback > #lf_feedback_q .lf_feedback_collapse {
     max-height: 0;
 }
 section#lf_landing_feedback .lf_feedback_s p.lf_star_system_tooltip {
     transform: translate(0px, 33px);
 }
-div#lf_sharing ul.lf_share_btns li.lf_share_event.lf_media_url p {
+#lf_sharing ul.lf_share_btns li.lf_share_event.lf_media_url p {
     margin: 0;
 }
 
-div#lf_sharing ul.lf_share_btns li.lf_share_event.lf_media_url {
+#lf_sharing ul.lf_share_btns li.lf_share_event.lf_media_url {
     grid-row: 4;
     grid-column: 3;
     position: absolute;
     transform: translate(-14px, -22px);
 }
-div#lf_sharing ul.lf_share_btns li.lf_share_event.lf_media_url img {
+#lf_sharing ul.lf_share_btns li.lf_share_event.lf_media_url img {
     width: 17px;
 }
 main svg.lf_star_system polygon {
@@ -901,7 +893,7 @@ section#lf_landing_feedback .lf_feedback_collapse {
     padding: 0!important;
 }
 
-div#lf_sharing ul.lf_share_status > div {
+#lf_sharing ul.lf_share_status > div {
     display: grid;
     grid-auto-flow: column;
     grid-column-gap: 8px;
@@ -913,30 +905,30 @@ div#lf_sharing ul.lf_share_status > div {
     aside#lf_landing_left {
         top: 90px;
     }
-    header#axon_header .ax-nav-left .ax-menu-btn .ax-menu-btn-line {
+    #axon_header .ax-nav-left .ax-menu-btn .ax-menu-btn-line {
         grid-row-gap: 3px;
     }
-    header#axon_header .ax-nav-left .ax-menu-btn .ax-menu-btn-line span {
+    #axon_header .ax-nav-left .ax-menu-btn .ax-menu-btn-line span {
         height: 3px;
         width: 110%;
     }
-    header#axon_header .ax-nav-left .ax-menu-btn {
+    #axon_header .ax-nav-left .ax-menu-btn {
         width: 40px;
         height: 40px;
     }
-    header#axon_header .ax-nav-card a svg {
+    #axon_header .ax-nav-card a svg {
         width: 38px;
     }
-    div#lf_sharing ul.lf_share_status > div img {
+    #lf_sharing ul.lf_share_status > div img {
         width: 31px;
         height: auto;
         transform: translateY(5px);
     }
-    div#lf_sharing ul.lf_share_btns > input {
+    #lf_sharing ul.lf_share_btns > input {
         height: 46px;
         font-size: 24px;
     }
-    div#ax_header_search button svg {
+    #axg_searchbar button svg {
         width: 27px;
         margin-right: 10px;
     }
@@ -948,10 +940,10 @@ div#lf_sharing ul.lf_share_status > div {
         width: 78px;
         height: 43px;
     }
-    div#lf_sharing ul.lf_share_btns > div {
+    #lf_sharing ul.lf_share_btns > div {
         grid-template-columns: auto auto auto auto auto auto;
     }
-    div#lf_sharing ul.lf_share_btns img {
+    #lf_sharing ul.lf_share_btns img {
         width: 38px;
     }
     #lf_country_services .lf_items .lf_item svg {
@@ -997,7 +989,7 @@ div#lf_sharing ul.lf_share_status > div {
     #lf_articles_by_comment .lf_item_title {
         font-size: 23px;
     }
-    div#lf_contact a svg {
+    #lf_contact a svg {
         width: 32px!important;
         height: auto;
     }
@@ -1011,7 +1003,7 @@ div#lf_sharing ul.lf_share_status > div {
         font-size: 30px!important;
         line-height: 1.4!important;
     }
-    div#lf_contact a {
+    #lf_contact a {
         grid-template-columns: 25px 200px;
         grid-column-gap: 20px;
     }
@@ -1048,15 +1040,15 @@ div#lf_sharing ul.lf_share_status > div {
     ul.lf_share_status li.lf_starrating_status ul.lf_right li > div {
         height: 7px;
     }
-    div#lf_sharing ul.lf_share_btns li.lf_share_event.lf_media_url {
+    #lf_sharing ul.lf_share_btns li.lf_share_event.lf_media_url {
         grid-column: 4;
         grid-row: 3;
         transform: translate(-34px, 7px);
     }
-    div#lf_sharing ul.lf_share_btns li.lf_share_event.lf_media_url img {
+    #lf_sharing ul.lf_share_btns li.lf_share_event.lf_media_url img {
         width: 32px;
     }
-    div#lf_sharing ul.lf_share_btns li.lf_share_event.lf_media_url > p {
+    #lf_sharing ul.lf_share_btns li.lf_share_event.lf_media_url > p {
         margin: 0;
     }
 }
@@ -1080,7 +1072,7 @@ div#lf_sharing ul.lf_share_status > div {
 
 
 @media (min-width: 1025px) {
-    div#lf_leftmenu_btn {
+    #lf_leftmenu_btn {
         display: none;
     }
 }
@@ -1089,7 +1081,7 @@ div#lf_sharing ul.lf_share_status > div {
     transform: translateX(63%) translateY(3px);
 }
 @media (max-width: 1024px) {
-    div#lf_contact a span {
+    #lf_contact a span {
         place-self: baseline;
         padding-left: 10px;
     }
@@ -1150,7 +1142,7 @@ div#lf_sharing ul.lf_share_status > div {
     ul#lf_landing_services > li > div svg.flag {
         width: 26px;
     }
-    div#lf_contact a {
+    #lf_contact a {
         grid-template-columns: 20% 80%;
         place-content: baseline;
         place-items: center;
@@ -1158,16 +1150,16 @@ div#lf_sharing ul.lf_share_status > div {
         padding: 3px 0px;
         color: #000;
     }
-    div#lf_contact a svg {
+    #lf_contact a svg {
         transform: translate(10px, 0px);
         width: 17px;
         height: auto;
     }
-    div#lf_contact a svg {
+    #lf_contact a svg {
         transform: translateY(0px);
         width: 16px;
     }
-    div#lf_contact {
+    #lf_contact {
         margin: 8px auto;
     }
     #lf_landing_leftside_second_content_list2 {
@@ -1227,7 +1219,7 @@ div#lf_sharing ul.lf_share_status > div {
         transform: rotate(90deg) translate(5px, -3px);
     }
     /* main tags top */
-    main div#lf_article_head .lf_breadcrumb {
+    main #lf_article_head .lf_breadcrumb {
         font-size: 11px;
     }
     main .lf_star_rating {
@@ -1307,7 +1299,7 @@ aside#lf_landing_left .lf_landing_left_sub > hr {
     }
     
     
-    div#lf_contact {
+    #lf_contact {
         display: none;
     }
     
@@ -1381,7 +1373,7 @@ aside#lf_landing_left .lf_landing_left_sub > hr {
     ul#lf_landing_services > li > div {
         padding-left: 1%;
     }
-    div#lf_leftmenu_btn span {
+    #lf_leftmenu_btn span {
         width: 26px;
     }
 }
@@ -1400,7 +1392,7 @@ aside#lf_landing_left .lf_landing_left_sub > hr {
 
 
 @media (max-width: 425px) {
-    header#axon_header .ax-menu-logo a svg {
+    #axon_header .ax-menu-logo a svg {
         width: 106px;
         height: 36px;
         margin-right: auto;

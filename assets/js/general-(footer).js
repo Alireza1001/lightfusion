@@ -191,9 +191,9 @@ let root = document.documentElement;
 let ax_theme_state = 1;
 
 var tab_state = 1;
-const menu_bar_1 = document.querySelectorAll("header#axon_header .ax-nav-left .ax-menu-btn span")[0];
-const menu_bar_2 = document.querySelectorAll("header#axon_header .ax-nav-left .ax-menu-btn span")[1];    
-const menu_bar_3 = document.querySelectorAll("header#axon_header .ax-nav-left .ax-menu-btn span")[2];    
+const menu_bar_1 = document.querySelectorAll("#axon_header .ax-nav-left .ax-menu-btn span")[0];
+const menu_bar_2 = document.querySelectorAll("#axon_header .ax-nav-left .ax-menu-btn span")[1];    
+const menu_bar_3 = document.querySelectorAll("#axon_header .ax-nav-left .ax-menu-btn span")[2];    
 const submegamenu = document.querySelector("section#ax-megaheader");
 const submegamenu_searchbox2 = document.querySelector("section#ax-megaheader nav#ax-main-nav");
 function ax_nav() {
@@ -213,7 +213,7 @@ function ax_nav() {
         tab_state=1;
     }
 }
-if(document.querySelector("header#axon_header .ax-nav-left .ax-menu-btn, section#ax-megaheader")) document.querySelector("header#axon_header .ax-nav-left .ax-menu-btn, section#ax-megaheader").addEventListener("click", ax_nav);
+if(document.querySelector("#axon_header .ax-nav-left .ax-menu-btn, section#ax-megaheader")) document.querySelector("#axon_header .ax-nav-left .ax-menu-btn, section#ax-megaheader").addEventListener("click", ax_nav);
 if(document.getElementById("side_nav"))document.getElementById("side_nav").addEventListener("click", ax_nav);
 
 
@@ -495,16 +495,16 @@ document.querySelector("#lf_inpage_notification svg").addEventListener("click", 
 
 
 // searchbox handle
-if(document.getElementById("ax_header_search_form"))document.getElementById("ax_header_search_form").addEventListener("click", e=>{
+if(document.getElementById("axg_searchform"))document.getElementById("axg_searchform").addEventListener("click", e=>{
     e.preventDefault(); 
-    document.getElementById("ax_header_search_form").classList.add("lf_active");
-    document.getElementById("lf_searchform_res_cover").style.display = "block";
+    document.getElementById("axg_searchform").classList.add("lf_active");
+    document.getElementById("axg_searchform_res_cover").style.display = "block";
     // if(document.getElementById("lf_progressbar_num"))
     //     document.getElementById("lf_progressbar_num").style.opacity = 0;
 });
 document.getElementById("lf_naturalizer").addEventListener("click", ()=>{
-    if(document.getElementById("ax_header_search_form"))document.getElementById("ax_header_search_form").classList.remove("lf_active");
-    document.getElementById("lf_searchform_res_cover").style.display = "none";
+    if(document.getElementById("axg_searchform"))document.getElementById("axg_searchform").classList.remove("lf_active");
+    document.getElementById("axg_searchform_res_cover").style.display = "none";
     // if(document.getElementById("lf_progressbar_num"))
     //     document.getElementById("lf_progressbar_num").style.opacity = 1;
 });

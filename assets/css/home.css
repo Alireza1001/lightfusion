@@ -35,7 +35,7 @@ section#ax_services .ax_items .lf_loading_item {
 }
 
 
-div#lf_cats_sub p#lf_close {
+#lf_cats_sub p#lf_close {
     margin: 6px 0;
     font-family: 'Lato';
     font-size: 14px;
@@ -47,7 +47,7 @@ div#lf_cats_sub p#lf_close {
     margin: 0;
     padding: 5px 0;
 }
-div#lf_cats_sub p#lf_close svg {
+#lf_cats_sub p#lf_close svg {
     right: 3px;
     padding: 0px;
     position: absolute;
@@ -56,14 +56,14 @@ div#lf_cats_sub p#lf_close svg {
 
 /* second use */
 
-div#lf_cats_sub > div li:hover {
+#lf_cats_sub > div li:hover {
     background-color: #9f1a1a;
 }
-div#lf_cats_sub > div li:focus {
+#lf_cats_sub > div li:focus {
     outline: none;
     background-color: #891414;
 }
-div#lf_cats_sub > div li:nth-child(1) {
+#lf_cats_sub > div li:nth-child(1) {
     border-top: none;
 }
 
@@ -78,27 +78,27 @@ section#ax_services.lf_active {
     grid-template-columns: 24% 74%!important;
     column-gap: 2%;
 }
-div#lf_cats_sub p#lf_close span {
+#lf_cats_sub p#lf_close span {
     display: none;
 }
 @media (max-width: 600px) {
-    div#lf_cats_sub p#lf_close span {
+    #lf_cats_sub p#lf_close span {
         display: block;
     }
     section#ax_services .ax_items .ax_item p.lf_item_help {
         padding: 4px 7px!important;
         font-size: 11px;
     }
-    div#lf_cats_sub > div a {
+    #lf_cats_sub > div a {
         font-size: 15px!important;
     }
-    div#lf_cats_sub > div > ul li {
+    #lf_cats_sub > div > ul li {
         width: 89%;
         box-shadow: none;
         padding: 0 10px;
         border-radius: 2px;
     }
-    div#lf_cats_sub > div > ul {
+    #lf_cats_sub > div > ul {
         margin-top: 30px;
         height: fit-content!important;
         column-gap: 4px;
@@ -108,14 +108,14 @@ div#lf_cats_sub p#lf_close span {
         display: grid!important;
         place-items: center;
     }
-    div#lf_cats_sub > div {
+    #lf_cats_sub > div {
         grid-template-columns: auto;
         padding-top: 0!important;
     }
-    div#lf_cats_sub > div > div {
+    #lf_cats_sub > div > div {
         display: none;
     }
-    div#lf_cats_sub > div[data-status="clicked"] {
+    #lf_cats_sub > div[data-status="clicked"] {
         position: relative;
         top: unset;
         overflow: scroll!important;
@@ -126,7 +126,7 @@ div#lf_cats_sub p#lf_close span {
     section#ax_services .ax_items {
         grid-template-columns: 33% 33% 33%!important;
     }
-    div#lf_cats_sub {
+    #lf_cats_sub {
         position: fixed!important;
         z-index: 99181;
         height: 0;
@@ -172,7 +172,7 @@ section#ax_services .ax_items .ax_item p.lf_item_help {
 section#ax_services.lf_active > .ax_items {
     width: 90%;
 }
-div#lf_cats_sub, div#lf_cats_sub * {
+#lf_cats_sub, #lf_cats_sub * {
     scroll-behavior: smooth;
 }
 section#ax_services .ax_items .ax_item.active a svg, section#ax_services .ax_items .ax_item.active a img {
@@ -269,7 +269,7 @@ section#ax_services .ax_items .ax_item a {
     text-decoration: none;
     padding: 7px 0;
 }
-div#lf_cats_sub {
+#lf_cats_sub {
     display: grid;
     position: relative;
     background-color: #787878;
@@ -281,11 +281,11 @@ div#lf_cats_sub {
     transition: all .6s ease-in-out;
 }
 @media (min-width: 601px) {
-    div#lf_cats_sub {
+    #lf_cats_sub {
         height: 86%;
     }
 }
-div#lf_cats_sub > div li {
+#lf_cats_sub > div li {
     background-color: #B71C1C;
     position: relative;
     display: grid;
@@ -294,7 +294,7 @@ div#lf_cats_sub > div li {
     box-shadow: -15px 5px 0 #9f1a1a;
     height: fit-content;
 }
-div#lf_cats_sub > div a {
+#lf_cats_sub > div a {
     text-decoration: none;
     color: #fff;
     font-family: "Inter", Arial, sans-serif;
@@ -302,7 +302,7 @@ div#lf_cats_sub > div a {
     width: 100%;
     text-align: center;
 }
-div#lf_cats_sub > div {
+#lf_cats_sub > div {
     list-style: none;
     position: absolute;
     width: 87%;
@@ -314,14 +314,14 @@ div#lf_cats_sub > div {
     border-radius: 5px;
     padding-top: 10px;
 }
-div#lf_cats_sub > div[data-status="hover"] {
+#lf_cats_sub > div[data-status="hover"] {
     opacity: .5!important;
     position:sticky;position:-webkit-sticky;
     top: 80px;
     width: 93%;
     height: fit-content!important;
 }
-div#lf_cats_sub > div[data-status="clicked"] {
+#lf_cats_sub > div[data-status="clicked"] {
     opacity: 1!important;
     border-radius: 5px;
     position:sticky;position:-webkit-sticky;
@@ -329,7 +329,7 @@ div#lf_cats_sub > div[data-status="clicked"] {
     width: 93%;
     height: 100%!important;
 }
-div#lf_cats_sub > div ul {
+#lf_cats_sub > div ul {
     overflow-y: scroll;
     padding: 0;
     display: flex;
@@ -338,22 +338,22 @@ div#lf_cats_sub > div ul {
     flex-flow: column;
     overflow-x: hidden;
 }
-section#ax_services div#lf_scrolldown1 {
+section#ax_services #lf_scrolldown1 {
     position: relative;
     top: -18px;
 }
-div#lf_cats_sub > div ul::-webkit-scrollbar {
+#lf_cats_sub > div ul::-webkit-scrollbar {
     background-color: #0000;
     width: 5px;
 }
-div#lf_cats_sub > div ul::-webkit-scrollbar-thumb {
+#lf_cats_sub > div ul::-webkit-scrollbar-thumb {
     background-color: #414141;
     border-radius: 2em;
 }
-div#lf_cats_sub > div ul::-webkit-scrollbar-track {
+#lf_cats_sub > div ul::-webkit-scrollbar-track {
     background-color: #0000;
 }
-div#lf_cats_sub *::-webkit-scrollbar, div#lf_cats_sub::-webkit-scrollbar {
+#lf_cats_sub *::-webkit-scrollbar, #lf_cats_sub::-webkit-scrollbar {
     width: 0;
 }
 /* specia offer */

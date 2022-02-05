@@ -4,7 +4,7 @@ function exercise_html( $post ) {
     if(strlen($value)<=0) $value = '[]';
 	?>
 
-	<style type="text/css">p#lf_exe_submit, p#lf_exe_add, .lf_exercise_remove {border: 1px solid;width: fit-content;padding: 3px 11px;border-radius: 3px;background-color: #f0f0f0;cursor: pointer;}div#lf_exe_buttons {display: grid;grid-auto-flow: column;width: fit-content;column-gap: 10px;}.lf_exercise_holder > div {display: grid;grid-template-columns: auto auto;}.lf_exercise_holder {border-bottom: 2px solid #000;border-radius: 3px;padding: 3px 20px;display: grid;background-color: #f3f3f3;}#lf_exercise_wrapup {display: grid;row-gap: 24px;}.lf_exercise_holder > div p {display: grid;grid-auto-flow: column;place-content: center;place-items: center;}.lf_exercise_holder > p {width: fit-content;display: grid;margin: 0;}</style>
+	<style type="text/css">p#lf_exe_submit, p#lf_exe_add, .lf_exercise_remove {border: 1px solid;width: fit-content;padding: 3px 11px;border-radius: 3px;background-color: #f0f0f0;cursor: pointer;}#lf_exe_buttons {display: grid;grid-auto-flow: column;width: fit-content;column-gap: 10px;}.lf_exercise_holder > div {display: grid;grid-template-columns: auto auto;}.lf_exercise_holder {border-bottom: 2px solid #000;border-radius: 3px;padding: 3px 20px;display: grid;background-color: #f3f3f3;}#lf_exercise_wrapup {display: grid;row-gap: 24px;}.lf_exercise_holder > div p {display: grid;grid-auto-flow: column;place-content: center;place-items: center;}.lf_exercise_holder > p {width: fit-content;display: grid;margin: 0;}</style>
     <section id="lf_exercise_wrapup"></section>
 	<div id="lf_exe_buttons">
         <p id="lf_exe_add" data-last="-1">Add new question</p>

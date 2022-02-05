@@ -1,5 +1,5 @@
 <script type="text/javascript">
-        if(document.querySelector('div#lf_landing_main_title_cover #lf_landing_main_title svg')) {
+        if(document.querySelector('#lf_landing_main_title_cover #lf_landing_main_title svg')) {
             if(navigator.share) {
                 const shareData = {
                     title: "<?php get_the_title();
@@ -10,7 +10,7 @@
          ?>",
                 }
                 
-                const btn = document.querySelector('div#lf_landing_main_title_cover #lf_landing_main_title svg');
+                const btn = document.querySelector('#lf_landing_main_title_cover #lf_landing_main_title svg');
         
                 
                 btn.addEventListener('click', async () => {
@@ -33,9 +33,9 @@
         }} let root=document.documentElement;
         ax_theme_state=sessionStorage.getItem("darkmode_on");
         var tab_state=1;
-        const menu_bar_1=document.querySelectorAll("header#axon_header .ax-nav-left .ax-menu-btn span")[0];
-        const menu_bar_2=document.querySelectorAll("header#axon_header .ax-nav-left .ax-menu-btn span")[1];
-        const menu_bar_3=document.querySelectorAll("header#axon_header .ax-nav-left .ax-menu-btn span")[2];
+        const menu_bar_1=document.querySelectorAll("#axon_header .ax-nav-left .ax-menu-btn span")[0];
+        const menu_bar_2=document.querySelectorAll("#axon_header .ax-nav-left .ax-menu-btn span")[1];
+        const menu_bar_3=document.querySelectorAll("#axon_header .ax-nav-left .ax-menu-btn span")[2];
         const submegamenu=document.querySelector("section#ax-megaheader");
         const submegamenu_searchbox2=document.querySelector("section#ax-megaheader nav#ax-main-nav");
         function ax_nav(){if(tab_state==1){submegamenu.style.maxHeight="150%";
@@ -50,7 +50,7 @@
         menu_bar_3.style.opacity="1";
         submegamenu.style.background="transparent";
         tab_state=1;
-        }} if(document.querySelector("header#axon_header .ax-nav-left .ax-menu-btn, section#ax-megaheader")) document.querySelector("header#axon_header .ax-nav-left .ax-menu-btn, section#ax-megaheader").addEventListener("click",ax_nav);
+        }} if(document.querySelector("#axon_header .ax-nav-left .ax-menu-btn, section#ax-megaheader")) document.querySelector("#axon_header .ax-nav-left .ax-menu-btn, section#ax-megaheader").addEventListener("click",ax_nav);
         if(document.getElementById("side_nav"))document.getElementById("side_nav").addEventListener("click",ax_nav);
         // const ax_theme_switch_icon=document.getElementById("ax_theme_switch_icon");
         // var ax_theme_switch_bg;
@@ -152,9 +152,9 @@
         document.querySelector("#lf_inpage_notification span").style.maxWidth=0+"%";
         clearInterval(inpage_notif_inter_setting);
         });
-        if(document.getElementById("ax_header_search_form"))document.getElementById("ax_header_search_form").addEventListener("click",e=>{e.preventDefault();
-        if(document.getElementById("ax_header_search_form"))document.getElementById("ax_header_search_form").classList.add("lf_active");
-        document.getElementById("lf_searchform_res_cover").style.display="block";
+        if(document.getElementById("axg_searchform"))document.getElementById("axg_searchform").addEventListener("click",e=>{e.preventDefault();
+        if(document.getElementById("axg_searchbar"))document.getElementById("axg_searchbar").classList.add("axg_active");
+        document.getElementById("axg_searchform_res_cover").style.display="block";
         
         // if(document.getElementById("lf_progressbar_num")) document.getElementById("lf_progressbar_num").style.opacity=0;
         document.getElementById("lf_naturalizer").style.zIndex = "100";
@@ -163,8 +163,8 @@
         document.getElementById("lf_naturalizer").style.height = "100vh";
         document.getElementById("lf_naturalizer").style.position = "fixed";
         /*document.getElementById("lf_naturalizer").style.zIndex = "0";
-        */document.getElementById("lf_naturalizer").addEventListener("click",()=>{document.getElementById("ax_header_search_form").classList.remove("lf_active");
-        document.getElementById("lf_searchform_res_cover").style.display="none";
+        */document.getElementById("lf_naturalizer").addEventListener("click",()=>{document.getElementById("axg_searchform").classList.remove("lf_active");
+        document.getElementById("axg_searchform_res_cover").style.display="none";
         // if(document.getElementById("lf_progressbar_num")) document.getElementById("lf_progressbar_num").style.opacity=1;
         /*document.getElementById("lf_naturalizer").style.zIndex = "0";
         */});
@@ -442,8 +442,8 @@
         audio_reqer.send();
         audio_reqer.onreadystatechange=function(){if(this.readyState==4&&this.status==200){document.getElementById("lf_audio_statics_place").innerHTML=this.response;
         }};
-        } if(document.querySelector("div#lf_faq")!=null){const lf_faq_head=document.querySelectorAll("div#lf_faq .lf_items > div h3");
-        const lf_item_faq=document.querySelectorAll("div#lf_faq .lf_items > div");
+        } if(document.querySelector("#lf_faq")!=null){const lf_faq_head=document.querySelectorAll("#lf_faq .lf_items > div h3");
+        const lf_item_faq=document.querySelectorAll("#lf_faq .lf_items > div");
         lf_item_faq[0].classList.add("lf_active");
         lf_item_faq.forEach(item=>{item.addEventListener("click",()=>{if(item.classList[1]=="lf_active"){item.classList.remove("lf_active");
         }else{for(i=0;

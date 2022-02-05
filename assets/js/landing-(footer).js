@@ -546,9 +546,9 @@ if(document.getElementById("lf_landing_main_audio_cover") != null) {
 
 
 // faq
-if(document.querySelector("div#lf_faq") != null) {
-    const lf_faq_head = document.querySelectorAll("div#lf_faq .lf_items > div h3");
-    const lf_item_faq = document.querySelectorAll("div#lf_faq .lf_items > div");
+if(document.querySelector("#lf_faq") != null) {
+    const lf_faq_head = document.querySelectorAll("#lf_faq .lf_items > div h3");
+    const lf_item_faq = document.querySelectorAll("#lf_faq .lf_items > div");
     lf_item_faq[0].classList.add("lf_active");
 
 
@@ -746,8 +746,8 @@ document.querySelectorAll("section#lf_comments ol.commentlist > li").forEach(ite
 
 ax_main[0].addEventListener("click", e=>{
     // e.preventDefault();
-    document.getElementById("ax_header_search_form").classList.remove("lf_active");
-    document.getElementById("lf_searchform_res_cover").style.display = "none";
+    document.getElementById("axg_searchform").classList.remove("lf_active");
+    document.getElementById("axg_searchform_res_cover").style.display = "none";
     // document.getElementById("lf_progressbar_num").style.opacity = 1;
 });
 

@@ -1,7 +1,7 @@
 body {
     background-image: linear-gradient(150deg, #b82020, #871010);
 }
-div#lf_404_content {
+#lf_404_content {
     font-family: system-ui;
     width: fit-content;
     margin: 10px auto 41px auto;
@@ -9,7 +9,7 @@ div#lf_404_content {
     place-items: center;
     height: 78vh;
 }
-div#lf_404_content p#lf_404 {
+#lf_404_content p#lf_404 {
     font-family: fantasy;
     font-size: 14rem;
     margin: 0;
@@ -17,10 +17,10 @@ div#lf_404_content p#lf_404 {
     color: #9f1515;
     text-shadow: 9px -11px 0px #000000;
 }
-div#lf_404_content #lf_back:hover {
+#lf_404_content #lf_back:hover {
     box-shadow: 0px 13px 20px -10px black;
 }
-div#lf_404_content #lf_back {
+#lf_404_content #lf_back {
     background-color: #ffffffc7;
     color: #000;
     border-radius: 4px;
@@ -36,7 +36,7 @@ div#lf_404_content #lf_back {
     place-content: center;
     box-shadow: 6px -8px 0px 0px black;
 }
-div#lf_404_content #lf_back span {
+#lf_404_content #lf_back span {
     background-color: #9e1414;
     width: 1px;
     height: 1px;
@@ -46,7 +46,7 @@ div#lf_404_content #lf_back span {
     place-content: center;
     color: #fff;
 }
-div#lf_404_content p#lf_txt {
+#lf_404_content p#lf_txt {
     color: #fff;
     text-shadow: 2px -2px 4px #000000;
 }
@@ -55,14 +55,14 @@ main {
     background-color: #0000!important;
 }
 @media (max-width: 600px) {
-    div#lf_404_content {
+    #lf_404_content {
         height: fit-content;
         margin: 30px auto;
     }
-    div#lf_404_content p#lf_txt {
+    #lf_404_content p#lf_txt {
         margin: 0;
     }
-    div#lf_404_content p#lf_404 {
+    #lf_404_content p#lf_404 {
         font-size: 9rem;
     }
 }

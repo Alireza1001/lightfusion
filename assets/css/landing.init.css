@@ -3,7 +3,7 @@
 
 
 
-div#header_print_new {
+#header_print_new {
     display: none;
 }
 
@@ -31,12 +31,12 @@ a:hover {
 /* main */
 
 /* main poster */
-div#lf_landing_main_poster {
+#lf_landing_main_poster {
     width: 93%;
     display: grid;
     margin: 0 auto;
 }
-div#lf_landing_main_poster img {
+#lf_landing_main_poster img {
     width: 100%;
     height: 250px;
 }
@@ -48,7 +48,7 @@ div#lf_landing_main_poster img {
 
 
 
-div#lf_landing_main_audio_cover .lf_landing_main_audio_cover_inner {
+#lf_landing_main_audio_cover .lf_landing_main_audio_cover_inner {
     width: 100%;
     position: relative;
 }
@@ -72,14 +72,14 @@ input#audio_wave_range::-webkit-slider-thumb {
     /* background-color: var(--ax_span_color); */
 }
 
-div#lf_landing_main_audio_cover {
+#lf_landing_main_audio_cover {
     display: grid;
     grid-auto-flow: row;
     place-items: end;
     margin-left: 3px;
     margin-top: 50px;
 }
-div#lf_landing_main_audio_btn_group .lf_left {
+#lf_landing_main_audio_btn_group .lf_left {
     display: grid;
     grid-auto-flow: column;
     direction: ltr;
@@ -88,7 +88,7 @@ div#lf_landing_main_audio_btn_group .lf_left {
     width: fit-content;
 }
 
-div#lf_landing_main_audio_btn_group {
+#lf_landing_main_audio_btn_group {
     display: grid;
     grid-auto-flow: column;
     direction: ltr;
@@ -96,7 +96,7 @@ div#lf_landing_main_audio_btn_group {
     position: relative;
     width: 100%;
 }
-div#lf_landing_main_audio_btn_group button {
+#lf_landing_main_audio_btn_group button {
     width: 26px;
     height: 26px;
     align-self: end;
@@ -105,14 +105,14 @@ div#lf_landing_main_audio_btn_group button {
     background-color: #464646;
     padding: 0;
 }
-div#lf_landing_main_audio_btn_group button svg {
+#lf_landing_main_audio_btn_group button svg {
     fill: #fff;
     width: 16px;
     height: auto;
     display: grid;
     margin: 0 auto;
 }
-div#lf_landing_main_audio_btn_group button input#lf_audio_volume_range {
+#lf_landing_main_audio_btn_group button input#lf_audio_volume_range {
     transform: translate(68px, 31px);
     position: absolute;
     width: 100px;
@@ -142,20 +142,20 @@ main#lf_landing #lf_landing_main_audio_cover #lf_landing_main_audio_btn_group p.
     height: 20px;
     transform: translateY(5px);
 }
-div#lf_landing_main_audio_btn_group button#lf_landing_main_audio_volume_btn {
+#lf_landing_main_audio_btn_group button#lf_landing_main_audio_volume_btn {
     background-color: #0000;
     display: grid;
     grid-auto-flow: column;
     width: unset;
 }
-div#lf_landing_main_audio_btn_group button#lf_landing_main_audio_volume_btn svg {
+#lf_landing_main_audio_btn_group button#lf_landing_main_audio_volume_btn svg {
     background-color: #464646;
     padding: 4px 6px;
     width: 14px;
     height: 18px;
     border-radius: 4px;
 }
-div#lf_audio_statics {
+#lf_audio_statics {
     display: grid;
     grid-auto-flow: column;
     transform: translateY(5px);
@@ -164,15 +164,15 @@ div#lf_audio_statics {
     place-self: flex-end;
     grid-column-gap: 7px;
 }
-div#lf_audio_statics > div {
+#lf_audio_statics > div {
     display: grid;
     grid-auto-flow: column;
     direction: rtl;
 }
-div#lf_audio_statics > div svg {
+#lf_audio_statics > div svg {
     display: none;
 }
-div#lf_audio_statics > div p {
+#lf_audio_statics > div p {
     margin: 0;
     font-family: sans-serif;
     font-size: 13px;
@@ -190,7 +190,7 @@ div#lf_audio_statics > div p {
 
 
 
-div#lf_audio_statics > div {
+#lf_audio_statics > div {
     grid-column-gap: 10px;
 }
 /* video */
@@ -369,7 +369,7 @@ input#lf_video_time_seeker::-webkit-slider-runnable-track {
 
 
 /* author */
-div#lf_landing_author_cover {
+#lf_landing_author_cover {
     display: grid;
     font-family: system-ui;
     text-align: right;
@@ -381,36 +381,36 @@ div#lf_landing_author_cover {
     transform: translateY(-43px);
     direction: rtl;
 }
-div#lf_landing_author_cover p span#lf_landing_author_date a, div#lf_landing_author_cover p span#lf_landing_author_date_update a {
+#lf_landing_author_cover p span#lf_landing_author_date a, #lf_landing_author_cover p span#lf_landing_author_date_update a {
     font-family: sans-serif;
 }
-div#lf_landing_author_cover p span a {
+#lf_landing_author_cover p span a {
     text-decoration: none;
     font-size: 13px;
     font-family: sans-serif;
 }
-div#lf_landing_author_cover .lf_landing_author_details p {
+#lf_landing_author_cover .lf_landing_author_details p {
     margin: 0;
     font-size: 13px;
 }
-div#lf_landing_author_cover .lf_landing_author_details {
+#lf_landing_author_cover .lf_landing_author_details {
     display: grid;
     place-content: center;
     grid-auto-flow: column;
     direction: ltr;
     place-self: end;
 }
-div#lf_landing_author_cover .lf_landing_author_details > p {
+#lf_landing_author_cover .lf_landing_author_details > p {
     place-self: center;
 }
-div#lf_landing_author_cover .lf_landing_author_details img#lf_landing_author_details_img {
+#lf_landing_author_cover .lf_landing_author_details img#lf_landing_author_details_img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     transform: translateY(-20px);
     margin-left: 13px;
 }
-div#lf_landing_author_cover > p {
+#lf_landing_author_cover > p {
     margin: 0;
     font-size: 13px;
     display: grid;
@@ -429,7 +429,7 @@ div#lf_landing_author_cover > p {
     display: grid;
     grid-auto-flow: column;
 }
-div#lf_landing_main_title_cover {
+#lf_landing_main_title_cover {
     font-family: system-ui;
     display: grid;
     grid-auto-flow: column;
@@ -440,7 +440,7 @@ div#lf_landing_main_title_cover {
     place-items: center;
 }
 
-div#lf_landing_main_title_cover #lf_landing_main_title {
+#lf_landing_main_title_cover #lf_landing_main_title {
     font-size: 35px;
     margin: 0;
     font-weight: 400;
@@ -449,7 +449,7 @@ div#lf_landing_main_title_cover #lf_landing_main_title {
     color: var(--txt1);
 }
 
-div#lf_landing_main_title_cover > p {
+#lf_landing_main_title_cover > p {
     font-family: system-ui;
     font-size: 14px;
     margin: 0;
@@ -457,13 +457,13 @@ div#lf_landing_main_title_cover > p {
     grid-auto-flow: row;
 }
 
-div#lf_landing_main_title_cover > p a {
+#lf_landing_main_title_cover > p a {
     font-family: sans-serif;
     text-decoration: none;
     color: var(--ax_span_color);
     font-size: 16px;
 }
-div#lf_landing_after_main_title {
+#lf_landing_after_main_title {
     display: grid;
     grid-auto-flow: column;
     grid-column-gap: 4%;
@@ -480,7 +480,7 @@ div#lf_landing_after_main_title {
 
 /* under main title */
 
-div#lf_landing_after_main_title > p {
+#lf_landing_after_main_title > p {
     font-family: system-ui;
     font-size: 16px;
     margin: 0;
@@ -525,18 +525,18 @@ div.gallery, div.gallery img {
 .lf_print_mode_side {
     display: none!important;
 }
-header#axon_header div.lf_print_mode_side {
+#axon_header div.lf_print_mode_side {
     display: none;
 }
 section#whole_page_wrapup.lf_print_mode_section {
     grid-template-columns: 100vw;
 }
-header#axon_header.lf_print_mode_section {
+#axon_header.lf_print_mode_section {
     grid-template-columns: unset;
     width: fit-content;
     left: 0;
 }
-header#axon_header .ax-menu-logo.lf_print_mode_section_head_logo {
+#axon_header .ax-menu-logo.lf_print_mode_section_head_logo {
     place-self: center;
     margin: 0 20px;
 }
@@ -544,7 +544,7 @@ header#axon_header .ax-menu-logo.lf_print_mode_section_head_logo {
     margin-top: -70px!important;
     padding-top: 90px!important;
 }
-div#lf_progressbar_num_cover {
+#lf_progressbar_num_cover {
     height: 0;
 }
 
@@ -563,30 +563,30 @@ div#lf_progressbar_num_cover {
 }
 @media (max-width: 1024px) {
     
-    div#lf_landing_main_poster img {
+    #lf_landing_main_poster img {
         width: 100%;
         height: 170px;
     }
-    div#lf_landing_author_cover .lf_landing_author_details img#lf_landing_author_details_img {
+    #lf_landing_author_cover .lf_landing_author_details img#lf_landing_author_details_img {
         width: 80px;
         height: 80px;
         transform: translateY(-12px);
     }
-    div#lf_landing_after_main_title {
+    #lf_landing_after_main_title {
         grid-auto-flow: row;
         grid-template-columns: unset;
         padding: 0;
         width: 93%;
         margin: 20px auto;
     }
-    div#lf_sharing ul.lf_share_btns img {
+    #lf_sharing ul.lf_share_btns img {
         width: 20px;
     }
-    div#lf_sharing ul.lf_share_btns {
+    #lf_sharing ul.lf_share_btns {
         grid-column-gap: 0px;
         grid-row-gap: 7px;
     }
-    div#lf_sharing ul.lf_share_status {
+    #lf_sharing ul.lf_share_status {
         grid-row-gap: 7px;
     }
 }
@@ -609,11 +609,11 @@ div#lf_progressbar_num_cover {
     }
     
     
-    div#lf_sharing ul.lf_share_btns {
+    #lf_sharing ul.lf_share_btns {
         grid-column-gap: 6px;
         grid-row-gap: 7px;
     }
-    div#lf_sharing {
+    #lf_sharing {
         place-items: baseline;
         padding-left: 9px;
     }
@@ -622,24 +622,24 @@ div#lf_progressbar_num_cover {
         margin-left: auto;
         transform: translateY(10px);
     } */
-    div#lf_landing_author_cover {
+    #lf_landing_author_cover {
         grid-auto-flow: row;
         grid-template-columns: unset;
     }
-    div#lf_landing_author_cover > p {
+    #lf_landing_author_cover > p {
         transform: translate(35px, 35px);
         grid-auto-flow: row;
     }
-    div#lf_landing_author_cover .lf_landing_author_details > p {
+    #lf_landing_author_cover .lf_landing_author_details > p {
         transform: translateY(7px);
     }
-    div#lf_landing_author_cover p span a {
+    #lf_landing_author_cover p span a {
         font-size: 12px;
     }
-    div#lf_landing_author_cover p span {
+    #lf_landing_author_cover p span {
         font-size: 12px;
     }
-    div#lf_landing_main_title_cover #lf_landing_main_title {
+    #lf_landing_main_title_cover #lf_landing_main_title {
         font-size: 30px;
         font-weight: 400;
         max-width: fit-content!important;
@@ -650,25 +650,25 @@ div#lf_progressbar_num_cover {
         margin-block-end: 0;
         height: fit-content;
     }
-    div#lf_landing_main_title_cover {
+    #lf_landing_main_title_cover {
         grid-row-gap: 0px;
     }
-    div#lf_landing_main_title_cover > p {
+    #lf_landing_main_title_cover > p {
         font-size: 12px;
     }
-    div#lf_landing_main_title_cover > p a {
+    #lf_landing_main_title_cover > p a {
         font-size: 14px;
     }
-    div#lf_landing_main_title_cover {
+    #lf_landing_main_title_cover {
         padding: 0 4%;
         grid-auto-flow: row;
         place-items: baseline;
         width: 92%;
     }
-    div#lf_landing_main_poster img {
+    #lf_landing_main_poster img {
         height: 170px;
     }
-    div#lf_landing_author_cover .lf_landing_author_details img#lf_landing_author_details_img {
+    #lf_landing_author_cover .lf_landing_author_details img#lf_landing_author_details_img {
         width: 70px;
         height: 70px;
         transform: translateY(-32px);
@@ -678,17 +678,17 @@ div#lf_progressbar_num_cover {
 
 @media (max-width: 600px) {
     
-    div#lf_landing_author_cover > p {
+    #lf_landing_author_cover > p {
         transform: translate(36px, 35px);
     }
     
     
-    div#lf_landing_main_title_cover #lf_landing_main_title {
+    #lf_landing_main_title_cover #lf_landing_main_title {
         font-size: 30px;
         height: fit-content;
         line-height: 1.2;
     }
-    div#lf_landing_main_title_cover {
+    #lf_landing_main_title_cover {
         grid-auto-flow: row;
         width: 92%;
     }
@@ -700,7 +700,7 @@ div#lf_progressbar_num_cover {
         grid-auto-flow: column;
         width: fit-content;
     }
-    div#lf_landing_main_poster img {
+    #lf_landing_main_poster img {
         height: 110px;
     }
     section#lf_landing_main_contexts .lf_track_title::before {

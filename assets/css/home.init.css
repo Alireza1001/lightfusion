@@ -1,7 +1,7 @@
 section#ax_hero_image .ax_tabs p#ax_services_ca {
     display: none;
 }
-div#lf_naturalizer {
+#lf_naturalizer {
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -31,7 +31,7 @@ section#ax_hero_image .ax_tabs p:nth-child(4):not(.ax_active):hover {
 .ax_paragraph {
     letter-spacing: 0px;
 }
-div#header_print_new {
+#header_print_new {
     display: none;
 }
 /* hero text + hero image */

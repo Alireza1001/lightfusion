@@ -119,7 +119,7 @@ section#lf_landing_exercise {
 section#lf_landing_exercise .lf_exercise_hint_txt {
     display: none;
 }
-div#lf_exer_hint {
+#lf_exer_hint {
     display: none;
     width: 90%;
     height: fit-content;
@@ -155,7 +155,7 @@ section#lf_landing_exercise .lf_item .lf_des {
     padding-left: 10px;
 }
 
-section#lf_landing_exercise div#lf_exer_ctrl {
+section#lf_landing_exercise #lf_exer_ctrl {
     width: 97%;
     margin: 0 auto;
 }
@@ -171,7 +171,7 @@ section#lf_landing_exercise button {
 section#lf_landing_exercise button:hover {
     box-shadow: 0px 5px 4px -3px #8c8c8c;
 }
-section#lf_landing_exercise div#lf_exer_ctrl button#lf_exercise_submit {
+section#lf_landing_exercise #lf_exer_ctrl button#lf_exercise_submit {
     background-color: #4caf50;
 }
 
@@ -287,7 +287,7 @@ main#lf_landing #lf_landing_main_video_cover .lf_landing_main_video_btn_group bu
 
 
 
-div#lf_landing_main_audio_btn_group button#lf_landing_main_audio_volume_btn:hover #lf_audio_volume_range {
+#lf_landing_main_audio_btn_group button#lf_landing_main_audio_volume_btn:hover #lf_audio_volume_range {
     max-width: 70px;
     opacity: 1;
 }
@@ -295,7 +295,7 @@ div#lf_landing_main_audio_btn_group button#lf_landing_main_audio_volume_btn:hove
 
 
 
-div#lf_audio_freq_fill {
+#lf_audio_freq_fill {
     width: 0px;
     height: 66px;
     position: absolute;
@@ -323,10 +323,10 @@ button#lf_landing_main_audio_play svg path{
 
 
 
-div#lf_landing_main_audio_btn_group button#lf_landing_main_audio_volume_btn svg.lf_vide_muted {
+#lf_landing_main_audio_btn_group button#lf_landing_main_audio_volume_btn svg.lf_vide_muted {
     fill: #d2d2d2;
 }
-div#lf_subpages {
+#lf_subpages {
     padding: 0 1% 1% 1%;
     margin: 0 2.5%;
     place-items: center;
@@ -334,14 +334,14 @@ div#lf_subpages {
     grid-auto-flow: row;
     margin-bottom: 50px;
 }
-div#lf_subpages .lf_items {
+#lf_subpages .lf_items {
     display: grid;
     place-items: center;
     grid-column-gap: 1%;
     width: 100%;
     grid-template-columns: auto auto auto;
 }
-div#lf_subpages .lf_items a {
+#lf_subpages .lf_items a {
     transition: all .3s;
     display: grid;
     place-items: center;
@@ -354,7 +354,7 @@ div#lf_subpages .lf_items a {
     position: relative;
     cursor: pointer;
 }
-div#lf_subpages .lf_items a img.lf_item_bg {
+#lf_subpages .lf_items a img.lf_item_bg {
     transition: all .3s;
     position: absolute;
     width: 100%;
@@ -362,7 +362,7 @@ div#lf_subpages .lf_items a img.lf_item_bg {
     z-index: 1;
     filter: brightness(0.5);
 }
-div#lf_subpages .lf_items a .lf_item_title {
+#lf_subpages .lf_items a .lf_item_title {
     transition: all .2s;
     margin: 0;
     font-weight: 100;
@@ -370,7 +370,7 @@ div#lf_subpages .lf_items a .lf_item_title {
     z-index: 9;
     color: #fff;
 }
-div#lf_subpages .lf_items a .lf_item_p {
+#lf_subpages .lf_items a .lf_item_p {
     transition: all .2s;
     margin: 7px 15px;
     font-size: 14px;
@@ -378,7 +378,7 @@ div#lf_subpages .lf_items a .lf_item_p {
     z-index: 9;
     color: #fff;
 }
-div#lf_subpages .lf_items a button.lf_item_btn {
+#lf_subpages .lf_items a button.lf_item_btn {
     transition: all .3s;
     z-index: 9;
     border: 2px solid #fff;
@@ -392,16 +392,16 @@ div#lf_subpages .lf_items a button.lf_item_btn {
     opacity: 0;
     cursor: pointer;
 }
-div#lf_subpages .lf_items a:hover button {
+#lf_subpages .lf_items a:hover button {
     opacity: 1;
 }
-div#lf_subpages .lf_items a:hover *:not(img):not(button) {
+#lf_subpages .lf_items a:hover *:not(img):not(button) {
     opacity: 0;
 }
-div#lf_subpages .lf_items a:hover img.lf_item_bg {
+#lf_subpages .lf_items a:hover img.lf_item_bg {
     filter: brightness(0.3);
 }
-div#lf_subpages .lf_subpages_title {
+#lf_subpages .lf_subpages_title {
     margin: 0 0 20px 0;
     font-family: "Inter", Arial, sans-serif;
     font-size: 20px;
@@ -419,12 +419,12 @@ main#lf_landing #lf_landing_main_video_cover #lf_video_statics button#lf_video_l
     border: none;
     cursor: pointer;
 }
-div#lf_audio_statics button svg {
+#lf_audio_statics button svg {
     fill: var(--txt1);
     width: 18px;
     cursor: pointer;
 }
-div#lf_audio_statics button {
+#lf_audio_statics button {
     background-color: #0000;
     transform: translateY(-7px);
 }
@@ -528,22 +528,22 @@ section#lf_landing_main_contexts ul li {
 /*    grid-auto-flow: column;*/
 /*    width: fit-content;*/
 /*}*/
-div#lf_faq {
+#lf_faq {
     display: grid;
     grid-template-columns: 49% 49%;
     grid-column-gap: 2%;
     margin-top: 70px;
 }
-div#lf_faq .lf_items {
+#lf_faq .lf_items {
     margin-top: 70px;
 }
-div#lf_faq .lf_items > div {
+#lf_faq .lf_items > div {
     max-height: 44px;
     overflow: hidden;
     transition: all .3s;
     color: var(--txt1);
 }
-div#lf_faq .lf_items > div p {
+#lf_faq .lf_items > div p {
     padding: 0 5%;
     font-size: 15px;
     color: var(--txt1);
@@ -553,7 +553,7 @@ div#lf_faq .lf_items > div p {
     text-align: justify;
 }
 
-div#lf_faq .lf_items > div h3 {
+#lf_faq .lf_items > div h3 {
     font-weight: 600;
     padding: 11px;
     font-size: 15px;
@@ -563,42 +563,42 @@ div#lf_faq .lf_items > div h3 {
     display: grid;
     grid-template-columns: 1fr 8%;
 }
-div#lf_faq .lf_items > div h3 .lf_plus {
+#lf_faq .lf_items > div h3 .lf_plus {
     justify-self: baseline;
     align-self: center;
 }
-div#lf_faq .lf_items > div h3 .lf_plus span:nth-child(1) {
+#lf_faq .lf_items > div h3 .lf_plus span:nth-child(1) {
     transform: translateY(1.6px);
 }
-div#lf_faq .lf_items > div h3 .lf_plus span {
+#lf_faq .lf_items > div h3 .lf_plus span {
     width: 12px;
     height: 2px;
     background-color: #4a4a4a;
     display: grid;
     border-radius: 2em;
 }
-div#lf_faq .lf_items_right p.lf_faq_intro_body {
+#lf_faq .lf_items_right p.lf_faq_intro_body {
     text-align: justify;
 }
-div#lf_faq .lf_items > div h3 p {
+#lf_faq .lf_items > div h3 p {
     margin: 0;
     font-weight: 600;
 }
-div#lf_faq .lf_items > div h3 .lf_plus span:nth-child(2) {
+#lf_faq .lf_items > div h3 .lf_plus span:nth-child(2) {
     transform: rotate(90deg);
     transition: all .3s;
 }
-div#lf_faq .lf_items > div.lf_active .lf_plus span:nth-child(2) {
+#lf_faq .lf_items > div.lf_active .lf_plus span:nth-child(2) {
     transform: rotate(0);
 }
-div#lf_faq .lf_items > div.lf_active {
+#lf_faq .lf_items > div.lf_active {
     max-height: 610px;
 }
-div#lf_faq h2 {
+#lf_faq h2 {
     font-weight: 500;
     color: var(--txt1);
 }
-div#lf_faq .lf_items_right p img {
+#lf_faq .lf_items_right p img {
     max-width: 100%;
     border-radius: 3px;
     height: 390px;
@@ -745,25 +745,25 @@ section#lf_comments > div {
 
 
 
-header#axon_header .ax-menu-logo.lf_print_mode_section_head_logo {
+#axon_header .ax-menu-logo.lf_print_mode_section_head_logo {
     width: 100vw;
     grid-template-columns: 22% 78%;
     grid-auto-flow: unset;
     margin: 0;
 }
-header#axon_header .ax-menu-logo.lf_print_mode_section_head_logo > a {
+#axon_header .ax-menu-logo.lf_print_mode_section_head_logo > a {
     margin: 0 27px;
 }
-header#axon_header .ax-menu-logo.lf_print_mode_section_head_logo img {
+#axon_header .ax-menu-logo.lf_print_mode_section_head_logo img {
     width: 137px;
 }
 
-.lf_print_mode_section_head_logo div#header_print_new {
+.lf_print_mode_section_head_logo #header_print_new {
     grid-auto-flow: column;
     font-family: "Inter", Arial, sans-serif;
     width: fit-content;
 }
-.lf_print_mode_section_head_logo div#header_print_new p {
+.lf_print_mode_section_head_logo #header_print_new p {
     display: grid;
     grid-auto-flow: row;
     font-size: 14px;
@@ -771,7 +771,7 @@ header#axon_header .ax-menu-logo.lf_print_mode_section_head_logo img {
     place-items: center;
     height: fit-content;
 }
-.lf_print_mode_section_head_logo div#header_print_new p.lf_print_add {
+.lf_print_mode_section_head_logo #header_print_new p.lf_print_add {
     grid-auto-flow: unset;
     grid-template-columns: auto auto;
     grid-column-gap: 11px;
@@ -779,7 +779,7 @@ header#axon_header .ax-menu-logo.lf_print_mode_section_head_logo img {
 #axon_header.lf_print_mode_section {
     height: unset;
 }
-.lf_print_mode_section_head_logo div#header_print_new p#waterfal {
+.lf_print_mode_section_head_logo #header_print_new p#waterfal {
     font-family: "Inter", Arial, sans-serif;
     font-size: 100px;
     font-weight: 900;
@@ -881,10 +881,10 @@ section#lf_popular_posts .lf_item:hover {
     section#lf_landing_gallery .lf_right img {
         width: 32%;
     }
-    div#lf_faq .lf_items {
+    #lf_faq .lf_items {
         transform: translateY(20px);
     }
-    div#lf_faq {
+    #lf_faq {
         grid-template-columns: unset;
         grid-auto-flow: row;
     }
@@ -899,7 +899,7 @@ section#lf_popular_posts .lf_item:hover {
 
 
 
-    div#lf_subpages .lf_items {
+    #lf_subpages .lf_items {
         grid-auto-flow: row;
         padding: 0px 4%;
         grid-template-columns: unset;
@@ -908,16 +908,16 @@ section#lf_popular_posts .lf_item:hover {
         grid-row-gap: 3%;
         height: 100%;
     }
-    div#lf_subpages .lf_items a {
+    #lf_subpages .lf_items a {
         grid-auto-flow: row;
         padding: 6% 10px;
         border-radius: 0;
         border: 2px solid #fff0;
     }
-    div#lf_subpages .lf_items a .lf_item_p {
+    #lf_subpages .lf_items a .lf_item_p {
         margin: 0;
     }
-    div#lf_subpages {
+    #lf_subpages {
         padding-bottom: 0;
     }
     #lf_landing_main_contexts h2 {
@@ -975,25 +975,25 @@ section#lf_popular_posts .lf_item:hover {
     main#lf_landing #lf_landing_main_video_cover .lf_landing_main_video_btn_group button#lf_landing_main_video_play2 svg {
         width: 19px!important;
     }
-    div#lf_landing_main_audio_btn_group button#lf_landing_main_audio_volume_btn svg {
+    #lf_landing_main_audio_btn_group button#lf_landing_main_audio_volume_btn svg {
         padding: 1.4px 3.5px;
     }
-    div#lf_audio_statics > div {
+    #lf_audio_statics > div {
         grid-auto-flow: row;
     }
-    div#lf_landing_main_audio_btn_group button {
+    #lf_landing_main_audio_btn_group button {
         align-self: flex-start;
     }
-    div#lf_audio_statics {
+    #lf_audio_statics {
         grid-auto-flow: row;
         place-items: center;
         grid-row-gap: 7px;
     }
-    div#lf_landing_main_audio_btn_group button {
+    #lf_landing_main_audio_btn_group button {
         width: 21px;
         height: 21px;
     }
-    div#lf_landing_main_audio_btn_group button svg {
+    #lf_landing_main_audio_btn_group button svg {
         width: 13px;
     }
     section#lf_popular_posts .lf_items {
@@ -1024,7 +1024,7 @@ section#lf_popular_posts .lf_item:hover {
     #lf_comments_list .lf_item_comment_body .lf_item_content .lf_item_content_top .lf_comment_username {
         font-size: 28px!important;
     }
-    form#commentform input#lf_comment_submit {
+    #commentform input#lf_comment_submit {
         font-size: 23px;
     }
     section#lf_comments .lf_item_e span {
@@ -1033,13 +1033,13 @@ section#lf_popular_posts .lf_item:hover {
     section#lf_comments .lf_item_e {
         font-size: 32px;
     }
-    form#commentform textarea {
+    #commentform textarea {
         height: 275px!important;
     }
-    form#commentform input {
+    #commentform input {
         height: 59px!important;
     }
-    form#commentform label {
+    #commentform label {
         font-size: 25px;
     }
     section#lf_popular_posts .lf_item_title {
@@ -1055,16 +1055,16 @@ section#lf_popular_posts .lf_item:hover {
     h2.lf_track_title.lf_gallery_h2 {
         font-size: 50px;
     }
-    div#lf_faq .lf_items > div {
+    #lf_faq .lf_items > div {
         max-height: 75px;
     }
-    div#lf_faq .lf_items > div h3 {
+    #lf_faq .lf_items > div h3 {
         font-size: 32px!important;
     }
     #lf_landing_main_contexts h2 {
         font-size: 50px!important;
     }
-    div#lf_subpages .lf_items a button.lf_item_btn {
+    #lf_subpages .lf_items a button.lf_item_btn {
         font-size: 25px!important;
     }
     main#lf_landing #lf_landing_main_video_cover .lf_landing_main_video_btn_group .lf_leftside p.lf_landing_main_video_timer {
@@ -1079,44 +1079,44 @@ section#lf_popular_posts .lf_item:hover {
     main#lf_landing #lf_landing_main_audio_cover #lf_landing_main_audio_btn_group p.lf_landing_main_audio_timer {
         font-size: var(--standard-text-fontSize);;
     }
-    div#lf_audio_statics > div p {
+    #lf_audio_statics > div p {
         font-size: 19px!important;
     }
-    div#lf_landing_main_audio_cover button {
+    #lf_landing_main_audio_cover button {
         width: 35px;
         height: 35px;
     }
-    div#lf_landing_main_audio_cover svg {
+    #lf_landing_main_audio_cover svg {
         width: 27px!important;
         padding: 3px!important;
     }
     
 
-    div#lf_sharing ul.lf_share_status li img {
+    #lf_sharing ul.lf_share_status li img {
         width: 29px;
     }
-    div#lf_sharing ul.lf_share_status li span {
+    #lf_sharing ul.lf_share_status li span {
         font-size: 23px;
         transform: translateY(-3px);
     }
     
-    div#lf_sharing ul.lf_share_btns > input {
+    #lf_sharing ul.lf_share_btns > input {
         font-size: 22px;
         height: 43px;
     }
-    div#lf_sharing ul.lf_share_btns > div {
+    #lf_sharing ul.lf_share_btns > div {
         grid-template-columns: auto auto auto auto auto auto auto;
         grid-row-gap: 11px;
         grid-column-gap: 15px;
     }
-    div#lf_sharing ul.lf_share_btns img {
+    #lf_sharing ul.lf_share_btns img {
         width: 34px;
     }
     
     main#lf_landing .lf_star_rating > p {
         font-size: 21px;
     }
-    main#lf_landing div#lf_article_head .lf_breadcrumb {
+    main#lf_landing #lf_article_head .lf_breadcrumb {
         font-size: 20px;
     }
     section#lf_landing_main_contexts ul li a {
@@ -1141,33 +1141,33 @@ section#lf_popular_posts .lf_item:hover {
         font-size: 30px!important;
         line-height: 1.3!important;
     }
-    div#lf_landing_main_poster img {
+    #lf_landing_main_poster img {
         /* height: 35vh; */
     }
-    div#lf_contact a span {
+    #lf_contact a span {
         font-size: 28px!important;
     }
     svg {
         width: 30px!important;
         height: auto!important;
     }
-    div#lf_contact {
+    #lf_contact {
         place-content: center;
     }
     /*section#lf_landing_main_contexts strong::before {*/
     /*    transform: translate(327%, 19px)!important;*/
     /*}*/
-    header#axon_header .ax-nav-card a svg {
+    #axon_header .ax-nav-card a svg {
         width: 39px!important;
     }
-    header#axon_header .ax-nav-left .ax-menu-btn .ax-menu-btn-line span {
+    #axon_header .ax-nav-left .ax-menu-btn .ax-menu-btn-line span {
         height: 3px;
     }
-    header#axon_header .ax-nav-left .ax-menu-btn {
+    #axon_header .ax-nav-left .ax-menu-btn {
         width: 50px;
     }
     
-    div#lf_landing_author_cover .lf_landing_author_details img#lf_landing_author_details_img {
+    #lf_landing_author_cover .lf_landing_author_details img#lf_landing_author_details_img {
         width: 140px;
     }
     button#lf_landing_main_video_play svg {

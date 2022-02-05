@@ -305,7 +305,7 @@ section#lf_about_joinus .lf_about_joinus_bg {
     right: 0px;
     z-index: -1;
 }
-section#lf_about_joinus form#lf_joinus_form input[type="submit"] {
+section#lf_about_joinus #lf_joinus_form input[type="submit"] {
     background-color: #c72127!important;
     border: none!important;
     color: #fff;
@@ -316,16 +316,16 @@ section#lf_about_joinus form#lf_joinus_form input[type="submit"] {
     border-radius: 4em!important;
     cursor: pointer;
 }
-section#lf_about_joinus form#lf_joinus_form input[type="file"] {
+section#lf_about_joinus #lf_joinus_form input[type="file"] {
     color: var(--txt1);
 }
-section#lf_about_joinus form#lf_joinus_form input, section#lf_about_joinus form#lf_joinus_form select {
+section#lf_about_joinus #lf_joinus_form input, section#lf_about_joinus #lf_joinus_form select {
     transition: all .3s;
 }
-section#lf_about_joinus form#lf_joinus_form input:not([type="submit"]):focus, section#lf_about_joinus form#lf_joinus_form select:focus {
+section#lf_about_joinus #lf_joinus_form input:not([type="submit"]):focus, section#lf_about_joinus #lf_joinus_form select:focus {
     background-color: #e8f0fe!important;
 }
-section#lf_about_joinus form#lf_joinus_form input[type="submit"]:hover {
+section#lf_about_joinus #lf_joinus_form input[type="submit"]:hover {
     box-shadow: 0 13px 13px -10px #b1b1b1;
     background-color: var(--ax_btn_bg)!important;
 }
@@ -333,7 +333,7 @@ section#lf_about_joinus .lf_section_head .lf_head_title, section#lf_about_joinus
     margin: 0;
     color: #191919;
 }
-section#lf_about_joinus form#lf_joinus_form label {
+section#lf_about_joinus #lf_joinus_form label {
     font-size: 13px;
     transform: translate(-2px, 10px);
     color: var(--txt2);
@@ -435,7 +435,7 @@ section#lf_about_joinus .lf_about_items form input[type="text"] {
     border-radius: 2em;
     text-align: left;
 }
-section#lf_about_joinus form#lf_joinus_form {
+section#lf_about_joinus #lf_joinus_form {
     display: grid;
     grid-row-gap: 10px;
     grid-column-gap: 4%;
@@ -448,10 +448,10 @@ section#lf_about_joinus form#lf_joinus_form {
     transform: translateY(-60px);
     transition: all .3s;
 }
-section#lf_about_joinus form#lf_joinus_form input#lf_joinus_form_tel, section#lf_about_joinus form#lf_joinus_form input#lf_joinus_form_email {
+section#lf_about_joinus #lf_joinus_form input#lf_joinus_form_tel, section#lf_about_joinus #lf_joinus_form input#lf_joinus_form_email {
     text-align: left;
 }
-section#lf_about_joinus form#lf_joinus_form input:not([type="file"]), section#lf_about_joinus form#lf_joinus_form select {
+section#lf_about_joinus #lf_joinus_form input:not([type="file"]), section#lf_about_joinus #lf_joinus_form select {
     border: 1px solid #b1b1b1;
     height: 30px;
     padding: 0 8px;
@@ -459,7 +459,7 @@ section#lf_about_joinus form#lf_joinus_form input:not([type="file"]), section#lf
     font-family:"Inter",Arial,sans-serif;
     background-color: var(--ax_confer_input);
 }
-section#lf_about_joinus form#lf_joinus_form input {
+section#lf_about_joinus #lf_joinus_form input {
     font-family:"Inter",Arial,sans-serif;
 }
 
@@ -489,7 +489,7 @@ section#lf_about_joinus form#lf_joinus_form input {
         grid-template-columns: unset!important;
         margin-top: 90px;
     }
-    section#lf_about_joinus form#lf_joinus_form {
+    section#lf_about_joinus #lf_joinus_form {
         transform: translateY(10px)!important;
     }
     section#lf_about_socialmedia .lf_about_items {

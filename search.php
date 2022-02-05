@@ -8,8 +8,8 @@
         <input id="axg_isearch" placeholder="search..." type="search" name="axg_isearch" pattern="[^'\x22]+"/>
     </form>
 
-    <div id="lf_searchform_res_cover">
-        <ul id="lf_searchform_res"></ul>
+    <div id="axg_searchform_res_cover">
+        <ul id="axg_searchform_res"></ul>
     </div>
 </div>
 

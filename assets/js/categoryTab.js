@@ -25,9 +25,9 @@ if(document.getElementById("ax_tabs_inside_cover")) {
     const hero_image = document.getElementById("ax_hero_img");
     var lf_items_of_services = document.querySelectorAll("section#ax_services .ax_items .ax_item");
     var lf_items_of_services_sub = document.querySelectorAll("#lf_cats_sub ul");
-    lf_home_slider(document.querySelectorAll("div#ax_tabs_inside_cover > p")[0]);
+    lf_home_slider(document.querySelectorAll("#ax_tabs_inside_cover > p")[0]);
 
-    document.querySelectorAll("div#ax_tabs_inside_cover > p").forEach(item=>{
+    document.querySelectorAll("#ax_tabs_inside_cover > p").forEach(item=>{
         item.addEventListener("click", ()=>{
             document.getElementById('lf_cats_sub').style.height = "0px";
             document.getElementById('lf_cats_sub').style.width = "0px";
@@ -161,7 +161,7 @@ if(document.getElementById("ax_tabs_inside_cover")) {
             });
         });
         var dom;
-        document.querySelectorAll('div#lf_cats_sub > div').forEach(item=>{
+        document.querySelectorAll('#lf_cats_sub > div').forEach(item=>{
             item.addEventListener("wheel", ()=>{mobile_course_sub_height(item)}, {passive: true});
             item.addEventListener("touchmove", ()=>{mobile_course_sub_height(item)}, {passive: true});
         });
@@ -170,7 +170,7 @@ if(document.getElementById("ax_tabs_inside_cover")) {
             console.log(item.scrollTop);
             if(item.scrollTop>20) dom.style.height="300px";
         }
-        document.querySelector("div#lf_cats_sub p#lf_close svg").addEventListener("click", ()=>{
+        document.querySelector("#lf_cats_sub p#lf_close svg").addEventListener("click", ()=>{
             document.getElementById('lf_cats_sub').style.height = "0px";
             document.getElementById('lf_cats_sub').style.width = "0px";
             document.getElementById("ax_services").classList.remove("lf_active");

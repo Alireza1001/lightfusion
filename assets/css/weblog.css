@@ -23,7 +23,7 @@ section#lf_blog_items .lf_items > p {
     font-size: var(--standard-text-fontSize);;
     margin: 110px 0;
 }
-div#lf_sharing ul.lf_share_btns li.lf_share_event.lf_media_rss {
+#lf_sharing ul.lf_share_btns li.lf_share_event.lf_media_rss {
     display: block!important;
 }
 section#lf_blog_items {
