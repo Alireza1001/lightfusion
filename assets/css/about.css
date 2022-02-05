@@ -262,12 +262,12 @@ section#lf_about_socialmedia .lf_about_items .lf_about_item img {
 section#lf_about_socialmedia .lf_about_items .lf_about_item a {
     text-decoration: none;
 }
-section#lf_about_socialmedia .lf_about_items .lf_about_item.lf_active img {
+section#lf_about_socialmedia .lf_about_items .lf_about_item.axg_active img {
     transform: translateY(-13px);
     max-width: 35px;
     width: 40px;
 }
-section#lf_about_socialmedia .lf_about_items .lf_about_item.lf_active .lf_p {
+section#lf_about_socialmedia .lf_about_items .lf_about_item.axg_active .lf_p {
     opacity: 1;
 }
 section#lf_about_socialmedia .lf_about_items .lf_about_item:hover img {

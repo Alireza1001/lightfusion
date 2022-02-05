@@ -34,7 +34,7 @@ lf_socialmedias.forEach(item=>{
             for(i=0; i<lf_socialmedias.length; i++) {
                 lf_socialmedias[i].style.maxWidth = "23px";
                 lf_socialmedias[i].style.width = "23px";
-                lf_socialmedias[i].classList.remove("lf_active");
+                lf_socialmedias[i].classList.remove("axg_active");
             }
             for(i=0; i<lf_socialmedias.length; i++) {
                 if(item.innerHTML == lf_socialmedias[i].innerHTML) {
@@ -57,7 +57,7 @@ lf_socialmedias.forEach(item=>{
                     if(lf_socialmedias[i] != null) {
                         lf_socialmedias[i].style.maxWidth = "43px";
                         lf_socialmedias[i].style.width = "43px";
-                        lf_socialmedias[i].classList.add("lf_active");
+                        lf_socialmedias[i].classList.add("axg_active");
                     }
                 }
             }
@@ -69,7 +69,7 @@ window.addEventListener("resize", ()=>{
         for(i=0; i<lf_socialmedias.length; i++) {
             lf_socialmedias[i].style.maxWidth = "33px";
             lf_socialmedias[i].style.width = "33px";
-            lf_socialmedias[i].classList.remove("lf_active");
+            lf_socialmedias[i].classList.remove("axg_active");
         }
     }
 });
@@ -78,7 +78,7 @@ window.addEventListener("load", ()=>{
         for(i=0; i<lf_socialmedias.length; i++) {
             lf_socialmedias[i].style.maxWidth = "33px";
             lf_socialmedias[i].style.width = "33px";
-            lf_socialmedias[i].classList.remove("lf_active");
+            lf_socialmedias[i].classList.remove("axg_active");
         }
     }
 });

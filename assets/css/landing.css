@@ -229,7 +229,7 @@ footer#ax_footer > .ax_items .ax_item.ax_follow .ax_items a img {
     width: 22px;
     height: auto;
 }
-img.lf_media_loading.lf_active {
+img.lf_media_loading.axg_active {
     transition: transform 12s;
     transform: rotate(2360deg);
 }
@@ -588,10 +588,10 @@ section#lf_landing_main_contexts ul li {
     transform: rotate(90deg);
     transition: all .3s;
 }
-#lf_faq .lf_items > div.lf_active .lf_plus span:nth-child(2) {
+#lf_faq .lf_items > div.axg_active .lf_plus span:nth-child(2) {
     transform: rotate(0);
 }
-#lf_faq .lf_items > div.lf_active {
+#lf_faq .lf_items > div.axg_active {
     max-height: 610px;
 }
 #lf_faq h2 {
@@ -652,7 +652,7 @@ section#lf_landing_gallery .lf_right img {
     border-radius: 7px;
     cursor: pointer;
 }
-section#lf_landing_gallery .lf_right img:not(.lf_active) {
+section#lf_landing_gallery .lf_right img:not(.axg_active) {
     padding:0!important;
 }
 section#lf_landing_gallery .lf_right img:hover {
@@ -702,7 +702,7 @@ section#lf_landing_gallery .lf_left button.lf_gallery_ctrl:hover {
     background-color: #0000002e;
 }
 
-section#lf_landing_gallery #lf_gallery_active.lf_active {
+section#lf_landing_gallery #lf_gallery_active.axg_active {
     position: absolute;
     top: 0;
     max-width: 98%;
@@ -875,7 +875,7 @@ section#lf_popular_posts .lf_item:hover {
     section#lf_landing_gallery .lf_left {
         height: 44vh;
     }
-    section#lf_landing_gallery #lf_gallery_active.lf_active {
+    section#lf_landing_gallery #lf_gallery_active.axg_active {
         max-height: 44vh;
     }
     section#lf_landing_gallery .lf_right img {
@@ -1049,7 +1049,7 @@ section#lf_popular_posts .lf_item:hover {
         font-size: 22px!important;
     }
     
-    section#lf_landing_gallery .lf_right img:not(.lf_active) {
+    section#lf_landing_gallery .lf_right img:not(.axg_active) {
         width: 18%;
     }
     h2.lf_track_title.lf_gallery_h2 {

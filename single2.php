@@ -70,7 +70,7 @@
         <section id="ax_hero_image">
             <div class="ax_tabs">
                 <div id="ax_tabs_inside_cover">
-                    <p class="ax_item ax_active" id="tab1">
+                    <p class="ax_item axg_active" id="tab1">
                         <span>Instruction</span>
                         <svg xmlns="http://www.w3.org/2000/svg"  width="20" data-name="Layer 2" viewBox="0 0 1600.26 1845.2"><path d="M1591.43,531.41V1626.65c0,121.7-98.65,220.35-220.35,220.35H586.35C464.65,1847,366,1748.35,366,1626.65V531.41c0-121.7,98.65-220.35,220.35-220.35H743v103.5h483V311.06h145.11C1492.78,311.06,1591.43,409.71,1591.43,531.41Z" transform="translate(-31.17 -41.8)" style="fill:#e2e0e0;stroke:#c00;stroke-miterlimit:10;stroke-width:80px"/><path d="M1262.87,182.7l.48,257.47-553,1.05-.48-257.47,177.65-.34c6,70.2,51.71,124.75,107.11,124.64s100.91-54.83,106.65-125Z" transform="translate(-31.17 -41.8)" style="fill:#333;stroke:#c00;stroke-miterlimit:10;stroke-width:31px"/><path d="M989.75,58.3c-66.27.13-119.89,59.2-119.75,132q0,7.32.74,14.43c6.68,65.95,57.68,117.19,119.51,117.07s112.64-51.54,119.06-117.52a143.19,143.19,0,0,0,.69-14.43C1109.87,117.05,1056,58.18,989.75,58.3Zm81.68,146c-6.2,43.14-40.2,76.15-81.26,76.22s-75.18-32.8-81.55-75.92a100.73,100.73,0,0,1-1.07-14.43c-.09-50,36.74-90.57,82.28-90.66s82.53,40.36,82.62,90.35A99.58,99.58,0,0,1,1071.43,204.31Z" transform="translate(-31.17 -41.8)" style="fill:#c00;stroke:#c00;stroke-miterlimit:10;stroke-width:33px"/><path d="M1067.1,192.76a85.45,85.45,0,0,1-1.11,13c-6.3,38.76-38.81,68.12-77.69,67.77s-70.86-30.29-76.46-69.16a85.78,85.78,0,0,1-.87-13c.41-45,35.68-81.14,78.8-80.75S1067.5,147.77,1067.1,192.76Z" transform="translate(-31.17 -41.8)" style="fill:#333;stroke:#c00;stroke-miterlimit:10"/><line x1="757.15" y1="758.03" x2="1380.73" y2="756.11" style="fill:none;stroke:#333;stroke-miterlimit:10;stroke-width:60px"/><line x1="757.15" y1="1123.48" x2="1380.73" y2="1121.57" style="fill:none;stroke:#333;stroke-miterlimit:10;stroke-width:60px"/><line x1="757.15" y1="1495.33" x2="1380.73" y2="1493.41" style="fill:none;stroke:#333;stroke-miterlimit:10;stroke-width:60px"/><text transform="translate(487.82 836.52)" style="font-size:345.01129150390625px;fill:#333;font-family:Calibri-Bold, Calibri;font-weight:700">1</text><text transform="translate(496.76 1213.48)" style="font-size:345.01129150390625px;fill:#333;font-family:Calibri-Bold, Calibri;font-weight:700">2</text><text transform="translate(500.6 1587.88)" style="font-size:345.01129150390625px;fill:#333;font-family:Calibri-Bold, Calibri;font-weight:700">3</text><text x="-31.17" y="-41.8"/></svg>
                     </p>
@@ -243,9 +243,9 @@
         item.addEventListener("click", ()=>{
             
             document.querySelectorAll("#ax_tabs_inside_cover > p").forEach(item3=>{
-                item3.classList.remove("ax_active");
+                item3.classList.remove("axg_active");
             });
-            item.classList.add("ax_active");
+            item.classList.add("axg_active");
             document.querySelectorAll(".tabsegmentscover").forEach(item2=>{
                 if(item.getAttribute("id") == item2.getAttribute("data-tab")) document.querySelector(".tabsegmentscover[data-tab='"+item.getAttribute("id")+"']").style.display = "block";
                 else item2.style.display = "none";

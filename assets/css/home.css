@@ -74,7 +74,7 @@ section#ax_services {
     display: grid;
     grid-template-columns: 0% 100%;
 }
-section#ax_services.lf_active {
+section#ax_services.axg_active {
     grid-template-columns: 24% 74%!important;
     column-gap: 2%;
 }
@@ -137,7 +137,7 @@ section#ax_services.lf_active {
         min-height: 0px;
         overflow-x: hidden!important;
     }
-    section#ax_services.lf_active {
+    section#ax_services.axg_active {
         grid-template-rows: auto auto!important;
         column-gap: unset;
         grid-template-columns: unset!important;
@@ -169,21 +169,21 @@ section#ax_services .ax_items .ax_item p.lf_item_help {
     font-size: 13px;
     place-self: center;
 }
-section#ax_services.lf_active > .ax_items {
+section#ax_services.axg_active > .ax_items {
     width: 90%;
 }
 #lf_cats_sub, #lf_cats_sub * {
     scroll-behavior: smooth;
 }
-section#ax_services .ax_items .ax_item.active a svg, section#ax_services .ax_items .ax_item.active a img {
+section#ax_services .ax_items .ax_item.axg_active a svg, section#ax_services .ax_items .ax_item.axg_active a img {
     box-shadow: inset 5px 8px 20px -11px #000000bd, inset -5px -5px 20px -16px #d7d7d7bd;
     background-color: #fff;
 }
 section#ax_services .ax_items .ax_item p.lf_item_help {
     display: none;
-}section#ax_services .ax_items .ax_item.active p.lf_item_help {
+}section#ax_services .ax_items .ax_item.axg_active p.lf_item_help {
     display: block;
-}section#ax_services .ax_items .ax_item.active .ax_title {
+}section#ax_services .ax_items .ax_item.axg_active .ax_title {
     display: none;
 }
 
@@ -200,7 +200,7 @@ section#ax_services .ax_items .ax_item {
     width: fit-content;
     z-index: 20;
 }
-section#ax_services .ax_items .ax_item.active svg, section#ax_services .ax_items .ax_item.active img {
+section#ax_services .ax_items .ax_item.axg_active svg, section#ax_services .ax_items .ax_item.axg_active img {
     box-shadow: none;
 }
 section#ax_services .ax_items .ax_item svg, section#ax_services .ax_items .ax_item img {

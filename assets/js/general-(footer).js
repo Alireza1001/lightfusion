@@ -414,13 +414,13 @@ lf_confer_inputs.forEach(item=>{
         if(item.value.length==0) {
             for(i=0; i<ax_confer_placeholder.length; i++) {
                 if(ax_confer_placeholder[i].classList[1] == the_input_count) {
-                    ax_confer_placeholder[i].classList.remove("lf_active");
+                    ax_confer_placeholder[i].classList.remove("axg_active");
                 }
             }
         }else{
             for(i=0; i<ax_confer_placeholder.length; i++) {
                 if(ax_confer_placeholder[i].classList[1] == the_input_count) {
-                    ax_confer_placeholder[i].classList.add("lf_active");
+                    ax_confer_placeholder[i].classList.add("axg_active");
                 }
             }
         }
@@ -497,13 +497,13 @@ document.querySelector("#lf_inpage_notification svg").addEventListener("click", 
 // searchbox handle
 if(document.getElementById("axg_searchform"))document.getElementById("axg_searchform").addEventListener("click", e=>{
     e.preventDefault(); 
-    document.getElementById("axg_searchform").classList.add("lf_active");
+    document.getElementById("axg_searchform").classList.add("axg_active");
     document.getElementById("axg_searchform_res_cover").style.display = "block";
     // if(document.getElementById("lf_progressbar_num"))
     //     document.getElementById("lf_progressbar_num").style.opacity = 0;
 });
 document.getElementById("lf_naturalizer").addEventListener("click", ()=>{
-    if(document.getElementById("axg_searchform"))document.getElementById("axg_searchform").classList.remove("lf_active");
+    if(document.getElementById("axg_searchform"))document.getElementById("axg_searchform").classList.remove("axg_active");
     document.getElementById("axg_searchform_res_cover").style.display = "none";
     // if(document.getElementById("lf_progressbar_num"))
     //     document.getElementById("lf_progressbar_num").style.opacity = 1;

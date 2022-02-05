@@ -19,7 +19,7 @@
             if ($category->category_parent == 0 && get_field('tap_head_item_activation', "category_$category->term_id")) {
                 $name = strtolower(str_replace(" ", "_", $category->cat_name));
                 $icon = get_field('tap_head_icon', "category_$category->term_id")['url'] || null;
-                $active = $count==0?" ax_active":"";
+                $active = $count==0?" axg_active":"";
                 $content .= "
                 <p data='' class='ax_item$active' id='$name-tap'>
                     <span>$category->cat_name</span>

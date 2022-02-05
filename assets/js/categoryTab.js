@@ -40,12 +40,12 @@ if(document.getElementById("ax_tabs_inside_cover")) {
         let scolldown_per = 1;
         for(i=0; i<categoryOrganizer.length; i++) {
             if(item.getAttribute("data") == categoryOrganizer[i].title.toLowerCase().replaceAll(' ', '_')) {
-                document.getElementById("ax_services").classList.remove("lf_active");
+                document.getElementById("ax_services").classList.remove("axg_active");
                 ax_services_sub.innerHTML = '<p id="lf_close"><span>scroll down for more</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"></path><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg></p>';
                 ax_services_item.innerHTML = "";
                 if(categoryOrganizer[i].content.length == 0) {
                     ax_services_item.innerHTML = '<p></p><p class="lf_soon">COMING SOON!</p><p></p>';
-                    document.getElementById("ax_services").classList.remove("lf_active");
+                    document.getElementById("ax_services").classList.remove("axg_active");
                 } else {
                     ax_services_item.innerHTML += '<p class="lf_help">*Click on courses to check the '+categoryOrganizer[i].title+' piloting lessons</p>';
                     var lf_available_course, lf_available_course_link;
@@ -95,8 +95,8 @@ if(document.getElementById("ax_tabs_inside_cover")) {
                     if(ax_theme_state == 1) hero_image.style.filter = "brightness(1)";
                     if(ax_theme_state == 0) hero_image.style.filter = "brightness(1)";
                 });
-                for(k=0; k<categoryOrganizer.length; k++) if(ax_tabs_item[k].classList.contains("ax_active") === true) ax_tabs_item[k].classList.remove("ax_active");
-                ax_tabs_item[i].classList.add("ax_active"); 
+                for(k=0; k<categoryOrganizer.length; k++) if(ax_tabs_item[k].classList.contains("axg_active") === true) ax_tabs_item[k].classList.remove("axg_active");
+                ax_tabs_item[i].classList.add("axg_active"); 
             }
         }
         round=1;
@@ -108,7 +108,7 @@ if(document.getElementById("ax_tabs_inside_cover")) {
             item.addEventListener("click", (e)=>{
                 document.getElementById('lf_cats_sub').style.height = null;
                 document.getElementById('lf_cats_sub').style.width = null;
-                document.getElementById("ax_services").classList.remove("lf_active");
+                document.getElementById("ax_services").classList.remove("axg_active");
                 item.classList.remove("active");
                 if(item.classList[1]){
                     item.classList.remove("active");
@@ -126,10 +126,10 @@ if(document.getElementById("ax_tabs_inside_cover")) {
                             // if(item2.getAttribute("data-status") == "none") {
                                 lf_items_of_services_sub.forEach(item3=>{if(item3.getAttribute("data-status") == "clicked") item3.setAttribute("data-status", "none");});
                                 item2.setAttribute("data-status", "clicked");
-                                document.getElementById("ax_services").classList.add("lf_active");
+                                document.getElementById("ax_services").classList.add("axg_active");
                             // }else if(item2.getAttribute("data-status") == "clicked"){
                             //     item2.setAttribute("data-status", "none");
-                            //     document.getElementById("ax_services").classList.remove("lf_active");
+                            //     document.getElementById("ax_services").classList.remove("axg_active");
                             // }
                         }
                     });
@@ -139,10 +139,10 @@ if(document.getElementById("ax_tabs_inside_cover")) {
         document.getElementById("lf_naturalizer").addEventListener("click", ()=>{
             document.getElementById('lf_cats_sub').style.height = "0px";
             document.getElementById('lf_cats_sub').style.width = "0px";
-            document.getElementById("ax_services").classList.remove("lf_active");
+            document.getElementById("ax_services").classList.remove("axg_active");
             for(i=0; i<lf_items_of_services.length; i++)
                 lf_items_of_services_sub[i].setAttribute("data-status", "none");
-            document.getElementById("ax_services").classList.remove("lf_active");
+            document.getElementById("ax_services").classList.remove("axg_active");
             for(i=0; i<lf_items_of_services.length; i++)
                 if(lf_items_of_services[i].classList[1])
                         lf_items_of_services[i].classList.remove("active");
@@ -152,10 +152,10 @@ if(document.getElementById("ax_tabs_inside_cover")) {
                     if(item2.getAttribute("data-status") == "none") {
                         lf_items_of_services_sub.forEach(item3=>{if(item3.getAttribute("data-status") == "clicked") item3.setAttribute("data-status", "none");});
                         item2.setAttribute("data-status", "clicked");
-                        document.getElementById("ax_services").classList.add("lf_active");
+                        document.getElementById("ax_services").classList.add("axg_active");
                     }else if(item2.getAttribute("data-status") == "clicked"){
                         item2.setAttribute("data-status", "none");
-                        document.getElementById("ax_services").classList.remove("lf_active");
+                        document.getElementById("ax_services").classList.remove("axg_active");
                     }
                 }
             });
@@ -173,7 +173,7 @@ if(document.getElementById("ax_tabs_inside_cover")) {
         document.querySelector("#lf_cats_sub p#lf_close svg").addEventListener("click", ()=>{
             document.getElementById('lf_cats_sub').style.height = "0px";
             document.getElementById('lf_cats_sub').style.width = "0px";
-            document.getElementById("ax_services").classList.remove("lf_active");
+            document.getElementById("ax_services").classList.remove("axg_active");
             lf_items_of_services.forEach(item=>{
                 item.classList.remove("active");
             });

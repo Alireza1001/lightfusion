@@ -50,28 +50,28 @@ function lf_country_ctrl(lf_n) {
             lf_n--;
             for(i=0; i<categoryOrganizer.length; i++) 
                 if(i != lf_n)
-                    if(lf_landing_country_triger[i].classList[1] == "lf_active") {
-                        lf_landing_country_triger[i].classList.remove("lf_active");
-                        lf_landing_country_submenu[i].classList.remove("lf_active");
+                    if(lf_landing_country_triger[i].classList[1] == "axg_active") {
+                        lf_landing_country_triger[i].classList.remove("axg_active");
+                        lf_landing_country_submenu[i].classList.remove("axg_active");
                         document.getElementById("lf_landing_left").style.maxWidth = "90vw";
                         lf_open_main_sidebar();
                     }
-            if (lf_landing_country_triger[lf_n].classList[1] != "lf_active") {
-                lf_landing_country_triger[lf_n].classList.add("lf_active");
-                lf_landing_country_submenu[lf_n].classList.add("lf_active");
+            if (lf_landing_country_triger[lf_n].classList[1] != "axg_active") {
+                lf_landing_country_triger[lf_n].classList.add("axg_active");
+                lf_landing_country_submenu[lf_n].classList.add("axg_active");
                 document.getElementById("lf_landing_left").style.maxWidth = "90vw";
                 lf_open_main_sidebar();
             }else{
-                lf_landing_country_submenu[lf_n].classList.remove("lf_active");
-                lf_landing_country_triger[lf_n].classList.remove("lf_active");
+                lf_landing_country_submenu[lf_n].classList.remove("axg_active");
+                lf_landing_country_triger[lf_n].classList.remove("axg_active");
                 document.getElementById("lf_landing_left").style.maxWidth = "90vw";
             }
         }
     } else {
         for(i=0; i<categoryOrganizer.length; i++) 
-            if(lf_landing_country_triger[i].classList[1] == "lf_active") {
-                lf_landing_country_triger[i].classList.remove("lf_active");
-                lf_landing_country_submenu[i].classList.remove("lf_active");
+            if(lf_landing_country_triger[i].classList[1] == "axg_active") {
+                lf_landing_country_triger[i].classList.remove("axg_active");
+                lf_landing_country_submenu[i].classList.remove("axg_active");
             }
         document.getElementById("lf_landing_left").style.maxWidth = "40px";
         lf_close_main_sidebar();
@@ -144,7 +144,7 @@ document.querySelectorAll("ul.lf_country_submenu").forEach(item=>{
 });
 document.querySelectorAll("ul.lf_country_submenu li").forEach(item=>{
     item.addEventListener("click", ()=>{
-        document.querySelector("ul.lf_country_submenu.lf_active").classList.add("lf_active");
+        document.querySelector("ul.lf_country_submenu.axg_active").classList.add("axg_active");
     });
 });
 
@@ -288,8 +288,8 @@ function lf_landing_starrating_ctrl(lf_n) {
             break;
     }
     inpage_notification(5000, lf_user_rate_dialog );
-    lf_landing_stars[4-lf_n].classList.add("lf_active");
-    lf_landing_stars[9-lf_n].classList.add("lf_active");
+    lf_landing_stars[4-lf_n].classList.add("axg_active");
+    lf_landing_stars[9-lf_n].classList.add("axg_active");
     rate_submite(lf_n);
 }
 

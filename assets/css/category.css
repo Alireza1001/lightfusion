@@ -21,7 +21,7 @@ section#lf_page_head img {
     position: absolute;
     height: 100%;
 }
-section#lf_page_head .lf_item.lf_active h1 {
+section#lf_page_head .lf_item.axg_active h1 {
     font-size: 80px;
     font-family: "Inter", Arial, sans-serif;
     color: #fff;
@@ -37,13 +37,13 @@ section#lf_page_head .lf_item.lf_active h1 {
 section#lf_form {
     margin-top: 20px;
 }
-section#lf_page_head .lf_item.lf_active {
+section#lf_page_head .lf_item.axg_active {
     position: relative;
     height: fit-content;
     display: grid;
     padding: 2% 0;
 }
-section#lf_page_head .lf_item.lf_active p span {
+section#lf_page_head .lf_item.axg_active p span {
     text-align: center;
     margin: 0 auto;
     padding: 3px 9px;
@@ -53,7 +53,7 @@ section#lf_page_head .lf_item.lf_active p span {
     letter-spacing: -1px;
     display: none;
 }
-section#lf_page_head .lf_item.lf_active p {
+section#lf_page_head .lf_item.axg_active p {
     width: 100%;
     font-family: "Inter", Arial, sans-serif;
     font-size: 18px;
@@ -200,7 +200,7 @@ section#lf_page_head > a:hover {
     }
 }
 
-section#lf_page_head .lf_items .lf_item.lf_active strong a {
+section#lf_page_head .lf_items .lf_item.axg_active strong a {
     font-size: 50px;
     font-weight: 900;
 }
@@ -238,12 +238,12 @@ section#lf_page_head .lf_items .lf_item.lf_active strong a {
         display: grid;
         place-items: center;
     }
-    section#lf_page_head .lf_item.lf_active h1 {
+    section#lf_page_head .lf_item.axg_active h1 {
         font-size: 40px;
         line-height: 56px;
         padding: 0;
     }
-    section#lf_page_head .lf_item.lf_active p {
+    section#lf_page_head .lf_item.axg_active p {
         font-size: 13px;
     }
     section#lf_page_head .lf_items .lf_item strong a {

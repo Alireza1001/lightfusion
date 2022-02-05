@@ -230,17 +230,17 @@ ul.lf_country_submenu {
     transform: translate(15vw, 0px);
     opacity: 0;
 }
-ul.lf_country_submenu.lf_active {
+ul.lf_country_submenu.axg_active {
     opacity: 1;
     max-width: 88vw;
     max-height: 101.4vh;
     background-color: #2e2e2eeb;
 }
-ul#lf_landing_services > li.lf_active {
+ul#lf_landing_services > li.axg_active {
     background-color: var(--lf_country_li_active);
     transition: all .3s;
 }
-ul#lf_landing_services > li.lf_active svg.arrow{
+ul#lf_landing_services > li.axg_active svg.arrow{
     transform: translateX(0px);
     transition: all .3s;
 }
@@ -845,10 +845,10 @@ main svg.lf_star_system polygon {
     opacity: 1;
     fill: #0000;
 }
-.lf_star_system.lf_active ~ svg g,.lf_star_system.lf_active ~ svg polygon, .lf_star_system.lf_active g, .lf_star_system.lf_active polygon {
+.lf_star_system.axg_active ~ svg g,.lf_star_system.axg_active ~ svg polygon, .lf_star_system.axg_active g, .lf_star_system.axg_active polygon {
     fill: #d56f0d!important;
 }
-.lf_star_system.lf_active ~ .lf_star_system_tooltip.lf_active {
+.lf_star_system.axg_active ~ .lf_star_system_tooltip.axg_active {
     display: block;
 }
 .lf_star_system0:hover ~ svg g,.lf_star_system0:hover ~ svg polygon, .lf_star_system0:hover g, .lf_star_system0:hover polygon {
@@ -965,7 +965,7 @@ section#lf_landing_feedback .lf_feedback_collapse {
     ul.lf_country_submenu .lf_country_submenu_sub > li > a > svg {
         width: 50px;
     }
-    ul.lf_country_submenu.lf_active {
+    ul.lf_country_submenu.axg_active {
         transform: translate(15.5vw, 0px);
         position: absolute;
         max-width: 123%;
@@ -1110,7 +1110,7 @@ section#lf_landing_feedback .lf_feedback_collapse {
         grid-template-columns: 40px 1fr;
         transform: translateY(0px);
     }
-    ul.lf_country_submenu.lf_active {
+    ul.lf_country_submenu.axg_active {
         transform: translate(42px, -133px);
         right: auto;
         left: 0;
@@ -1275,7 +1275,7 @@ aside#lf_landing_left .lf_landing_left_sub > hr {
         padding-left: 0;
     }
     
-    ul.lf_country_submenu.lf_active {
+    ul.lf_country_submenu.axg_active {
         transform: translate(42px, -4px);
     }
     ul.lf_country_submenu {

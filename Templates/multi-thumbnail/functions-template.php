@@ -15,14 +15,14 @@ function second_thumbnail_html( $post ) {
 			top: 0;
 			display: none;
 		}
-		.secondthumbnail_cover.active {
+		.secondthumbnail_cover.axg_active {
 			display: block;
 		}
 		.secondthumbnail_list li {
 			width: 13.66vw;
 			height: fit-content;
 		}
-		.secondthumbnail_list li.active img, .secondthumbnail_list li.active embed {
+		.secondthumbnail_list li.axg_active img, .secondthumbnail_list li.axg_active embed {
 			border-color: #1976d2;
 		}
 		.secondthumbnail_list li img, .secondthumbnail_list li embed {
@@ -42,7 +42,7 @@ function second_thumbnail_html( $post ) {
 			position: relative;
 			margin: 0px;
 		}
-		body.active {
+		body.axg_active {
 			overflow: hidden;
 		}
 		.secondthumbnail_head p {
@@ -226,7 +226,7 @@ function download_print_html( $post ) {
 			});
 			document.querySelector("#download_print_cover .secondthumbnail_submit").addEventListener("click", ()=>{
 				download_print_lastactiveid = [];
-				document.querySelectorAll("#download_print_cover .secondthumbnail_list .active").forEach(item=>{ download_print_lastactiveid.push(item.getAttribute("data-class")); });
+				document.querySelectorAll("#download_print_cover .secondthumbnail_list .axg_active").forEach(item=>{ download_print_lastactiveid.push(item.getAttribute("data-class")); });
 				document.querySelector('#download_print_cover .download_print_n').setAttribute("value", JSON.stringify(download_print_lastactiveid));
 				document.querySelector('#download_print_cover .download_print_n').value = JSON.stringify(download_print_lastactiveid);
 				download_print.classList.remove("active");
