@@ -81,7 +81,7 @@ function wordpressAXDropdownContent($data) {
 }
 
 function axg_dropdownsbody($menus) {
-  $content = '<ax-elements nomain="true">';
+  $content = '<section class="ax_elements" nomain="true">';
 
   foreach ( $menus as $menu ) {
     $menuData = wp_get_nav_menu_object($menu->name);
@@ -105,7 +105,7 @@ function axg_dropdownsbody($menus) {
       ";
     }
   }
-  $content .= '</ax-elements>';
+  $content .= '</section>';
   echo $content;
 }
 
