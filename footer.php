@@ -115,6 +115,7 @@
 <script src="https://axoncodes.com/libraries/registery.js"></script>
 <script src="https://axoncodes.com/libraries/dropdown/FuncLibrary.js"></script>
 <script src="https://axoncodes.com/libraries/activationHandler"></script>
+
 <?php wp_footer(); ?>
 
 </html>
