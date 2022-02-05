@@ -105,9 +105,6 @@
 #axg_isearch[type="search"]::placeholder {
   color:var(--ax_head_search_txt);
 }
-#axg_searchform_button:hover svg, #axg_isearch:hover svg {
-  transform:scale(1.4);
-}
 
 #axg_searchbar.axg_active {
   z-index: 2;
