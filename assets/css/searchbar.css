@@ -1,7 +1,7 @@
 #axg_searchbar {
   place-content: center;
   position: relative;
-  width: auto;
+  width: 100%;
 }
 
 #axg_searchbar label {
@@ -31,7 +31,7 @@
   color: var(--txt1);
   text-align: left;
   direction: ltr;
-  border-radius: 6em;
+  border-radius: 1.3em;
 }
 
 #axg_searchform_button {
@@ -122,6 +122,10 @@
 }
 
 @media(max-width: 600px) {
+  #axg_searchbar {
+    width: auto;
+  }
+
   #axg_searchbar.axg_active #axg_searchform_res_cover {
     width: 100vw;
     z-index: 9;
@@ -166,6 +170,7 @@
   #axg_searchbar.axg_active #axg_searchform_res_cover ul {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    box-shadow: 0px 4px 13px var(--ax_head_search_shadow);
   }
 
   #axg_searchform_button {
