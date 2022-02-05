@@ -153,14 +153,14 @@
         clearInterval(inpage_notif_inter_setting);
         });
 
-        if (document.getElementById("axg_searchform")) {
-					document.getElementById("axg_searchform").addEventListener("click", e => {
-						e.preventDefault();
-        		document.getElementById("axg_searchform_res_cover").style.display="block";
-						// if(document.getElementById("lf_progressbar_num")) document.getElementById("lf_progressbar_num").style.opacity=0;
-						activationHandler.start('axg_searchbar')
-        	});
-				}
+        // if (document.getElementById("axg_searchform")) {
+				// 	document.getElementById("axg_searchform").addEventListener("click", e => {
+				// 		e.preventDefault();
+        // 		document.getElementById("axg_searchform_res_cover").style.display="block";
+				// 		// if(document.getElementById("lf_progressbar_num")) document.getElementById("lf_progressbar_num").style.opacity=0;
+				// 		activationHandler.start('axg_searchbar')
+        // 	});
+				// }
         if(document.querySelector("section.lf_secret_deals")){document.querySelector("section.lf_secret_deals img.lf_secret_deals_close").addEventListener("click",()=>{document.querySelector("section.lf_secret_deals").classList.add("lf_closed");
         var seacretdeals_close_reqer=new XMLHttpRequest();
         seacretdeals_close_reqer.open("GET",wp_dir_url+'/form_ctrl/secretDeals_form.php?PageId='+post_id+'&Email=cancel',true);

@@ -40,8 +40,6 @@ function lf_add_style() {
 	wp_enqueue_style('lf_libcustom_style', get_template_directory_uri()."/assets/css/libcustom.css");
     // searchbar assets
 	wp_enqueue_style('lf_searchbar_style', get_template_directory_uri()."/assets/css/searchbar.css");
-    wp_register_script('lf_searchbar_script', get_template_directory_uri()."/inc/searchScripts/script.js", array(), true);
-    wp_enqueue_script('lf_searchbar_script');
 	global $post;
 	$parent_name = get_the_title($post->post_parent);
 	wp_localize_script( 'lf_category_script', 'parent_name', $parent_name );

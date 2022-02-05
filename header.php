@@ -54,6 +54,8 @@ if (!defined('ABSPATH')) exit;
     <link rel="stylesheet" href="https://axoncodes.com/libraries/assets/css/colorVars.css" />
     <!-- naturalizer -->
     <link rel="stylesheet" href="https://axoncodes.com/libraries/activationHandler/style.css" />
+    <!-- searchbar -->
+    <link rel="stylesheet" href="https://axoncodes.com/libraries/searchbar/template/style.css" />
 
     <!-- wp_head -->
     <?php wp_head(); ?>
