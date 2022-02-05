@@ -106,5 +106,3 @@ if (!defined('ABSPATH')) exit;
             <div id="side_nav"><div>
         </section>
     <?php } ?>
-    
-<div id="axg_naturalizer"></div>
