@@ -536,3 +536,5 @@
         }}}});
         }</script>
     <?php } ?>
+
+    <?php searchScript(); ?>
