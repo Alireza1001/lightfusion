@@ -1,0 +1,1 @@
+<ax-elements mode="searchbar" hideAtTop="<?php echo get_field('hide_at_top'); ?>"></ax-elements>
