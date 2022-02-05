@@ -69,6 +69,4 @@ if (!defined('ABSPATH')) exit;
         <?php generateMenuTemplates('header'); // header dropdown ?>
     </header>
 
-    <nav></nav>
-
     <?php axg_dropdownsbody(wp_get_nav_menus()); ?>
