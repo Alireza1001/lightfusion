@@ -27,11 +27,12 @@
   border: none;
   transition: all .3s;
   -webkit-transition: all .3s;
-  background-color: var(--bg2);
+  background-color: var(--ax_head_search_bg);
   color: var(--txt1);
   text-align: left;
   direction: ltr;
   border-radius: 1.3em;
+  outline: none;
 }
 
 #axg_searchform_button {
