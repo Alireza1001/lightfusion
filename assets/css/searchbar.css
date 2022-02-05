@@ -67,7 +67,9 @@
   transition: all .3s;
   height: 0;
   z-index: -1;
-  width: auto;
+  width: 100%;
+  position: absolute;
+  top: 0;
 }
 
 #axg_searchform_res_cover ul {
@@ -112,15 +114,12 @@
 
 #axg_searchbar.axg_active #axg_isearch {
   border-radius: 1.3em;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
 }
 
 #axg_searchbar.axg_active #axg_searchform_res_cover ul {
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
   width: unset;
   height: unset;
+  padding-top: 48px;
 }
 
 @media(max-width: 600px) {
@@ -177,6 +176,7 @@
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     box-shadow: 0px 4px 13px var(--ax_head_search_shadow);
+    padding-top: 70px;
   }
 
   #axg_searchform_button {
