@@ -90,7 +90,7 @@
   text-decoration: none;
 }
 #axg_searchform_res_cover ul li {
-  padding: 6px 3vw;
+  padding: 8px 3vw;
 }
 #axg_searchform_res_cover ul li:hover{
   background-color:var(--search_hover)
