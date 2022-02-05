@@ -76,6 +76,7 @@
   margin: 0;
   background-color: var(--ax_head_search_bg);
   border-radius: 1.3em;
+  width: 0;
   height: 0;
   overflow: hidden;
 }
@@ -118,6 +119,7 @@
 #axg_searchbar.axg_active #axg_searchform_res_cover ul {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
+  width: unset;
   height: unset;
 }
 
