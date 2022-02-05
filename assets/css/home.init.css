@@ -1,12 +1,6 @@
 section#ax_hero_image .ax_tabs p#ax_services_ca {
     display: none;
 }
-#axg_naturalizer {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    z-index: 20;
-}
 section#ax_hero_image .ax_tabs p:nth-child(1):not(.axg_active):hover {
     border-bottom: 2px solid #be0f0f;
     box-shadow: inset 0px -9px 15px -14px #be0f0f,

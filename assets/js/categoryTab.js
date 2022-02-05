@@ -136,30 +136,30 @@ if(document.getElementById("ax_tabs_inside_cover")) {
                 }
             });
         });
-        document.getElementById("axg_naturalizer").addEventListener("click", ()=>{
-            document.getElementById('lf_cats_sub').style.height = "0px";
-            document.getElementById('lf_cats_sub').style.width = "0px";
-            document.getElementById("ax_services").classList.remove("axg_active");
-            for(i=0; i<lf_items_of_services.length; i++)
-                lf_items_of_services_sub[i].setAttribute("data-status", "none");
-            document.getElementById("ax_services").classList.remove("axg_active");
-            for(i=0; i<lf_items_of_services.length; i++)
-                if(lf_items_of_services[i].classList[1])
-                        lf_items_of_services[i].classList.remove("active");
-            var lf_selected_item = item.getAttribute("data");
-            lf_items_of_services_sub.forEach(item2=>{
-                if(item2.getAttribute("data") == lf_selected_item) {
-                    if(item2.getAttribute("data-status") == "none") {
-                        lf_items_of_services_sub.forEach(item3=>{if(item3.getAttribute("data-status") == "clicked") item3.setAttribute("data-status", "none");});
-                        item2.setAttribute("data-status", "clicked");
-                        document.getElementById("ax_services").classList.add("axg_active");
-                    }else if(item2.getAttribute("data-status") == "clicked"){
-                        item2.setAttribute("data-status", "none");
-                        document.getElementById("ax_services").classList.remove("axg_active");
-                    }
-                }
-            });
-        });
+        // document.getElementById("axg_naturalizer").addEventListener("click", ()=>{
+        //     document.getElementById('lf_cats_sub').style.height = "0px";
+        //     document.getElementById('lf_cats_sub').style.width = "0px";
+        //     document.getElementById("ax_services").classList.remove("axg_active");
+        //     for(i=0; i<lf_items_of_services.length; i++)
+        //         lf_items_of_services_sub[i].setAttribute("data-status", "none");
+        //     document.getElementById("ax_services").classList.remove("axg_active");
+        //     for(i=0; i<lf_items_of_services.length; i++)
+        //         if(lf_items_of_services[i].classList[1])
+        //                 lf_items_of_services[i].classList.remove("active");
+        //     var lf_selected_item = item.getAttribute("data");
+        //     lf_items_of_services_sub.forEach(item2=>{
+        //         if(item2.getAttribute("data") == lf_selected_item) {
+        //             if(item2.getAttribute("data-status") == "none") {
+        //                 lf_items_of_services_sub.forEach(item3=>{if(item3.getAttribute("data-status") == "clicked") item3.setAttribute("data-status", "none");});
+        //                 item2.setAttribute("data-status", "clicked");
+        //                 document.getElementById("ax_services").classList.add("axg_active");
+        //             }else if(item2.getAttribute("data-status") == "clicked"){
+        //                 item2.setAttribute("data-status", "none");
+        //                 document.getElementById("ax_services").classList.remove("axg_active");
+        //             }
+        //         }
+        //     });
+        // });
         var dom;
         document.querySelectorAll('#lf_cats_sub > div').forEach(item=>{
             item.addEventListener("wheel", ()=>{mobile_course_sub_height(item)}, {passive: true});
