@@ -64,9 +64,11 @@ if (!defined('ABSPATH')) exit;
 </head>
 <body class="home" id="axoncodes" <?php body_class(); ?>>
     <header>
-        <?php axg_headerLogo(get_theme_mod( 'custom_logo' )); // logo ?>
-        <ax-elements mode="searchbar"></ax-elements>
-        <?php generateMenuTemplates('header'); // header dropdown ?>
+        <?php
+            axg_headerLogo(get_theme_mod( 'custom_logo' )); // logo
+            get_template_part( 'search' );
+            generateMenuTemplates('header'); // header dropdown
+        ?>
     </header>
 
     <?php axg_dropdownsbody(wp_get_nav_menus()); ?>
