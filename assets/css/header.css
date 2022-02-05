@@ -1,11 +1,15 @@
 header {
     display: flex;
     align-items: center;
-    padding: 0 6%;
+    padding: 0 4%;
     position: sticky;
     top: 0;
     height: auto;
     z-index: 999999;
     background-color: var(--bg3);
-    justify-content: space-between;
+    justify-content: flex-start;
 }
+
+header > * {
+    margin: 0 1%;
+  }
