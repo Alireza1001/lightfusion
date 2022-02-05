@@ -124,6 +124,10 @@
 }
 
 @media(max-width: 600px) {
+  #axg_searchbar.axg_active #axg_searchform_button {
+    transform: translate(8px, 0px);
+  }
+
   #axg_searchbar {
     width: auto;
   }
@@ -145,7 +149,7 @@
   #axg_searchbar.axg_active #axg_isearch {
     max-width: 100vw;
     width: 100vw;
-    padding: 8px 5px 8px 37px;
+    padding: 8px 15px 8px 55px;
     border-radius: 0!important;
     border-top-left-radius: 0!important;
     border-top-right-radius: 0!important;
