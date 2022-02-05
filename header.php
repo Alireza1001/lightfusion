@@ -50,12 +50,9 @@ if (!defined('ABSPATH')) exit;
     <link rel="stylesheet" href="https://axoncodes.com/libraries/scrolldownAnimation/assets/css/style.css" />
     <!-- fontVars -->
     <link rel="stylesheet" href="https://axoncodes.com/libraries/assets/css/fontVars.css" />
+    <!-- colorVars -->
+    <link rel="stylesheet" href="https://axoncodes.com/libraries/assets/css/colorVars.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
     <!-- wp_head -->
     <?php wp_head(); ?>
 
