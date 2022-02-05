@@ -326,11 +326,16 @@
             }
         }
         
-        if(document.getElementById("ax_theme_switch")) document.getElementById("ax_theme_switch").addEventListener("click",lf_switch_darkmode_on);
+        // if(document.getElementById("ax_theme_switch")) document.getElementById("ax_theme_switch").addEventListener("click",lf_switch_darkmode_on);
         
-        if(sessionStorage.getItem("darkmode_on") == null)sessionStorage.setItem("darkmode_on", 0);
-        else{if(sessionStorage.getItem("darkmode_on") == 1) {lf_switch_darkmode_on();
-        }}if(window.matchMedia('(prefers-color-scheme: dark)').matches==true)if(sessionStorage.getItem("darkmode_on")==0)lf_switch_darkmode_on();
+        // if(sessionStorage.getItem("darkmode_on") == null)sessionStorage.setItem("darkmode_on", 0);
+        // else{
+        //   if(sessionStorage.getItem("darkmode_on") == 1) {
+        //     lf_switch_darkmode_on();
+        //   }
+        // }
+
+        // if(window.matchMedia('(prefers-color-scheme: dark)').matches==true)if(sessionStorage.getItem("darkmode_on")==0)lf_switch_darkmode_on();
         </script>
     <?php if(is_single() || is_page()) { ?>
         <script type="text/javascript">var page_href_link=window.location.href.slice(0,window.location.href.indexOf('#'));
