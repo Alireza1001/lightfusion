@@ -1,13 +1,13 @@
 header {
     display: flex;
     align-items: center;
-    padding: 0 4%;
+    padding: 0 7%;
     position: sticky;
     top: 0;
     height: auto;
     z-index: 999999;
     background-color: var(--bg3);
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 
 header > * {
