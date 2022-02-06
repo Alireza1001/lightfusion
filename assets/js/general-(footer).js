@@ -435,9 +435,9 @@ var axsubs_actionPath="";
 var axsubs_formData = null;
 axsubs.addEventListener("submit", (e)=>{
     e.preventDefault();
-    inpage_notification(5000, " شما با موفقیت به لیست مشتریان ما اضافه شدید" );
+    inpage_notification(5000, "Submited" );
     axsubs_formData = new FormData(axsubs);
-    axsubs_actionPath = wp_dir_url+"/form_ctrl/subscribe_form.php";
+    axsubs_actionPath = pluginDir+"/axgWp/form_ctrl/subscribe_form.php";
     xhttp.open("POST", axsubs_actionPath);
     xhttp.send(axsubs_formData);
 },false);
@@ -449,9 +449,9 @@ if(document.getElementById("ax_conferform")) {
     axconfer.addEventListener("submit", (e)=>{
         e.preventDefault();
         if(axconfer.checkValidity()) {
-            inpage_notification(5000, "درخواست شما با موفقیت ثبت گردید." );
+            inpage_notification(5000, "submited" );
             axconfer_formData = new FormData(axconfer);
-            axconfer_actionPath = wp_dir_url+"/form_ctrl/confer_form.php";
+            axconfer_actionPath = pluginDir+"/axgWp/form_ctrl/confer_form.php";
             xhttp.open("POST", axconfer_actionPath);
             xhttp.send(axconfer_formData);
         }
@@ -515,7 +515,7 @@ if(document.querySelector("section.lf_secret_deals")) {
     document.querySelector("section.lf_secret_deals img.lf_secret_deals_close").addEventListener("click", ()=>{
         document.querySelector("section.lf_secret_deals").classList.add("lf_closed");
         var xhttp_seacretdeals_close = new XMLHttpRequest();
-        xhttp_seacretdeals_close.open("GET", wp_dir_url+'/form_ctrl/secretDeals_form.php?PageId='+post_id+'&Email=cancel', true);
+        xhttp_seacretdeals_close.open("GET", pluginDir+'/axgWp/form_ctrl/secretDeals_form.php?PageId='+post_id+'&Email=cancel', true);
         xhttp_seacretdeals_close.send();
     });
     document.querySelector("section.lf_secret_deals .lf_content form").addEventListener("submit", (e)=>{
@@ -523,9 +523,9 @@ if(document.querySelector("section.lf_secret_deals")) {
         if(document.querySelector("section.lf_secret_deals .lf_content form").checkValidity()) {
             document.querySelector("section.lf_secret_deals").classList.add("lf_closed");
             var xhttp_seacretdeals = new XMLHttpRequest();
-            xhttp_seacretdeals.open("GET", wp_dir_url+'/form_ctrl/secretDeals_form.php?PageId='+post_id+'&Email='+document.querySelector("section.lf_secret_deals .lf_content form input").value+'', true);
+            xhttp_seacretdeals.open("GET", pluginDir+'/axgWp/form_ctrl/secretDeals_form.php?PageId='+post_id+'&Email='+document.querySelector("section.lf_secret_deals .lf_content form input").value+'', true);
             xhttp_seacretdeals.send();
-            inpage_notification(7000, "با تشکر از ثبت نام شما" );
+            inpage_notification(7000, "Submited" );
         }
     });
 }

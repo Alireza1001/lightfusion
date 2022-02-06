@@ -32,6 +32,7 @@ if (!defined('ABSPATH')) exit;
         $users_list = get_users();
         $get_comments_number = get_comments_number();
         $translation_array = get_template_directory_uri();
+        $pluginDir = WP_PLUGIN_DIR;
     ?>
 
 
@@ -39,6 +40,7 @@ if (!defined('ABSPATH')) exit;
         const userslist = <?php echo json_encode($users_list); ?>;
         const wp_dir_url = "<?php echo $translation_array; ?>";
         const wp_comment_count = "<?php echo $get_comments_number; ?>";
+        const pluginDir = "<?php echo $pluginDir; ?>";
     </script>
     
     <!-- AXONGLITCH LIBRARY -->

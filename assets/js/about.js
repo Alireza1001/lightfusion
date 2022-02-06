@@ -103,11 +103,11 @@ lf_share_event2.forEach(item=>{
 // document.getElementById("lf_joinus_form").addEventListener("submit", e=>{
 //     e.preventDefault();
 //     if(lf_joinus_form.checkValidity()) {
-//         inpage_notification(5000, "درخواست شما با موفقیت ثبت گردید." );
+//         inpage_notification(5000, "submited" );
 //         var xhttp_joinus = new XMLHttpRequest();
 //         lf_joinus_form_data = new FormData(lf_joinus_form);
 //         lf_joinus_form_data.append('clientFile', lf_joinus_form_file.files[0]);
-//         lf_joinus_form_path = wp_dir_url+"/form_ctrl/joinus_form.php";
+//         lf_joinus_form_path = pluginDir+"/axgWp/form_ctrl/joinus_form.php";
 //         xhttp_joinus.open("POST", lf_joinus_form_path, true);
 //         xhttp_joinus.send(lf_joinus_form_data);
 //     }
