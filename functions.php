@@ -38,8 +38,6 @@ function lf_add_style() {
 	wp_enqueue_style('lf_shortcodes_style', get_template_directory_uri()."/assets/css/shortcodes.css");
 	wp_enqueue_style('lf_header_style', get_template_directory_uri()."/assets/css/header.css");
 	wp_enqueue_style('lf_libcustom_style', get_template_directory_uri()."/assets/css/libcustom.css");
-    // searchbar assets
-	wp_enqueue_style('lf_searchbar_style', get_template_directory_uri()."/assets/css/searchbar.css");
 	global $post;
 	$parent_name = get_the_title($post->post_parent);
 	wp_localize_script( 'lf_category_script', 'parent_name', $parent_name );

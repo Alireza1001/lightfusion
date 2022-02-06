@@ -12,4 +12,10 @@ header {
 
 header > * {
     margin: 0 1%;
-  }
+}
+
+@media(max-width: 600px) {
+    header > * {
+        margin: 0;
+    }
+}
