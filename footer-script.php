@@ -6,7 +6,7 @@
          ?>",
                     text: "<?php get_the_excerpt();
          ?>",
-                    url: "<?php get_the_permalink();
+                    url: "<?php getTheLink($post);
          ?>",
                 }
                 

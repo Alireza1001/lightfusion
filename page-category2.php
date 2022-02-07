@@ -133,7 +133,7 @@
                                 <p><span>Type:</span><?php echo $categories[0]; ?></p>
                                 <p><span>Difficulity:</span><?php echo $categories[1]; ?></p>
                             </div>
-                            <a href="<?php the_permalink(); ?>" class="lf_item_button">Build it Now</a>
+                            <a href="<?php getTheLink($post); ?>" class="lf_item_button">Build it Now</a>
                         </div>
 
                     <?php endwhile; wp_reset_postdata(); endif; ?>

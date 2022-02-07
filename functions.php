@@ -118,8 +118,8 @@ function get_post_breadcrumb_blog2() {
 		$lf_cat_link_addup = str_replace(" ","-",$lf_cat_link_addup);
 		echo ' > <a '.$lf_cat_link_addup.'">'.$item.'</a> ';
 	}
-    if(!is_single()) echo ' > <a href="'.get_the_permalink().'">'.get_the_title().'</a> ';
-	else echo ' > <a href="'.get_the_permalink().'">Current post</a> ';
+    if(!is_single()) echo ' > <a href="'.getTheLink($post).'">'.get_the_title().'</a> ';
+	else echo ' > <a href="'.getTheLink($post).'">Current post</a> ';
 }
 
 
@@ -271,7 +271,7 @@ function ax_get_child_pages($currentid) {
 		while ( $parent->have_posts() ) : $parent->the_post(); 
 			?>
 			<li>
-				<a aria-label="<?php the_permalink(); ?>" class="lf_item" href="<?php the_permalink(); ?>">
+				<a aria-label="<?php echo getTheLink($post); ?>" class="lf_item" href="<?php echo getTheLink($post); ?>">
 					<img alt="test" class="lf_item_bg" src="<?php echo get_the_post_thumbnail_url(); ?>" loading="lazy"/>
 					<bold class="lf_item_title"><?php echo get_the_title(); ?></bold>
 					<p class="lf_item_p"><?php echo get_the_excerpt(); ?></p>

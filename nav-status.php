@@ -2,22 +2,22 @@
 <!-- <ul class="lf_head_share_btns">
     <ul class="lf_share_status2"></ul>
     <li class="lf_share_event lf_media_whatsapp">
-        <a aria-label="test" target="_blank" rel="noopener noreferrer" href="https://wa.me/?text=<?php echo get_the_permalink(); ?>">
+        <a aria-label="test" target="_blank" rel="noopener noreferrer" href="https://wa.me/?text=<?php echo getTheLink($post); ?>">
         <img alt="test" width="20px" height="20px" src="<?php echo get_template_directory_uri(); ?>/assets/icons/whatsapp.svg" />
         </a>
     </li>
     <li class="lf_share_event lf_media_telegram">
-        <a aria-label="test" target="_blank" rel="noopener noreferrer" href="https://telegram.me/share/url?url=<?php echo get_the_permalink(); ?>&text=<?php echo get_the_title(); ?>">
+        <a aria-label="test" target="_blank" rel="noopener noreferrer" href="https://telegram.me/share/url?url=<?php echo getTheLink($post); ?>&text=<?php echo get_the_title(); ?>">
         <img alt="test" width="20px" height="20px" src="<?php echo get_template_directory_uri(); ?>/assets/icons/telegram.svg" />
         </a>
     </li>
     <li class="lf_share_event lf_media_twitter">
-        <a aria-label="test" target="_blank" rel="noopener noreferrer" href="https://twitter.com/intent/tweet?url=<?php echo get_the_permalink(); ?>&text=<?php echo get_the_title(); ?>">
+        <a aria-label="test" target="_blank" rel="noopener noreferrer" href="https://twitter.com/intent/tweet?url=<?php echo getTheLink($post); ?>&text=<?php echo get_the_title(); ?>">
         <img alt="test" width="20px" height="20px" src="<?php echo get_template_directory_uri(); ?>/assets/icons/twitter.svg" />
         </a>
     </li>
     <li class="lf_share_event lf_media_facebook">
-        <a aria-label="test" target="_blank" rel="noopener noreferrer" href="https://facebook.com/sharer.php?u=<?php echo get_the_permalink(); ?>&t=<?php echo get_the_title(); ?>">
+        <a aria-label="test" target="_blank" rel="noopener noreferrer" href="https://facebook.com/sharer.php?u=<?php echo getTheLink($post); ?>&t=<?php echo get_the_title(); ?>">
         <img alt="test" width="20px" height="20px" src="<?php echo get_template_directory_uri(); ?>/assets/icons/facebook.svg" />
         </a>
     </li>
@@ -44,7 +44,7 @@
         <?php } else if(is_archive()) { ?>
             <p><?php echo "<a href='/'>Home</a>"." > ".get_the_title(); ?></p>
         <?php } else if(get_the_title($post->post_parent)!=get_the_title()){ ?>
-            <p><?php echo "<a href='/'>Home</a>"." > <a href='".get_the_permalink($post->post_parent)."'>".get_the_title($post->post_parent)."</a> > <a href='".get_the_permalink()."'>".get_the_title()."</a>" ?></p>
+            <p><?php echo "<a href='/'>Home</a>"." > <a href='".get_the_permalink($post->post_parent)."'>".get_the_title($post->post_parent)."</a> > <a href='".getTheLink($post)."'>".get_the_title()."</a>" ?></p>
         <?php }else { ?>
             <p><?php get_post_breadcrumb_blog2(); ?></p>
         <?php } ?>

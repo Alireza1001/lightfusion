@@ -19,7 +19,7 @@
                 if ( $arr_posts->have_posts() ) :
                     while ( $arr_posts->have_posts() ) :
                         $arr_posts->the_post();
-                        ?><li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li><?php
+                        ?><li><a href="<?php getTheLink($post); ?>"><?php the_title(); ?></a></li><?php
                     endwhile;
                     wp_reset_postdata();
                 endif;
