@@ -28,7 +28,7 @@
                     while ( $lf_latest_posts_footer->have_posts() ) : $lf_latest_posts_footer->the_post();
                     ?>
                     <div class="lf_item">
-                        <a href="<?php the_permalink(); ?>">
+                        <a href="<?php echo getTheLink($post); ?>">
                             <div class="lf_poster">
                                 
                                 <?php echo wordpressAXCustomImage(

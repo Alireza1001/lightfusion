@@ -9,7 +9,7 @@
         <div>
         <?php
             $title= urlencode(get_the_title());
-            $url= urlencode(get_the_permalink());
+            $url= urlencode(getTheLink($post));
             $homeurl= urlencode(get_bloginfo('url'));
             $desc = urlencode(get_the_excerpt());  
             $postthumburi = urlencode(get_the_post_thumbnail_url());  

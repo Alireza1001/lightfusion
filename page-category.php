@@ -58,7 +58,7 @@
                         $user_id = get_the_author_meta( 'ID' ); ?>
 
                         <div class="lf_item">
-                            <a href="<?php the_permalink(); ?>">
+                            <a href="<?php getTheLink($post); ?>">
                                 <?php 
                                     echo wordpressAXCustomImage(
                                         get_the_post_thumbnail_url(),
@@ -77,14 +77,14 @@
                                 <p><?php echo get_the_date(); ?></p>
                             </div>
                             <div class="lf_item_content">
-                                <h2><a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a></h2>
+                                <h2><a href="<?php getTheLink($post); ?>"><?php echo get_the_title(); ?></a></h2>
                                 <div class="lf_item_cat">
                                     <?php foreach((get_the_category()) as $category){echo "<a> <span>|</span> ".$category->name."</a>";} ?>
                                 </div>
                                 <p><?php echo get_the_excerpt(); ?></p>
                             </div>
                             <div class="lf_item_bottom">
-                                <a href="<?php the_permalink(); ?>">read this article</a>
+                                <a href="<?php getTheLink($post); ?>">read this article</a>
                                 <p><img src="/wp-content/themes/lightfusion/assets/icons/comment-dark.svg" /><?php echo get_comments_number(); ?></p>
                             </div>
                         </div>

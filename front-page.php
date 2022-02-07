@@ -62,7 +62,7 @@
                 while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post();
                 ?>
                     <div class="ax_item">
-                        <a href="<?php the_permalink(); ?>" target="_blank">
+                        <a href="<?php echo getTheLink($post) ?>" target="_blank">
                             <div class="ax_poster">
                                 <?php echo wordpressAXCustomImage(
                                     get_the_post_thumbnail_url(), 
@@ -129,7 +129,7 @@
                         while($the_query->have_posts()):
                             $the_query->the_post();
                             $populars_title[$i] = get_the_title();
-                            $populars_link[$i] = get_the_permalink();
+                            $populars_link[$i] = getTheLink($post);
                             $populars_comments[$i] = get_comments_number();
                             $i++;
                         endwhile;
