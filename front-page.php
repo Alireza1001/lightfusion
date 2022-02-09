@@ -2,22 +2,6 @@
 <main id="lf_home">
     <?php echo categorySlider(); ?>
 
-    <?php $mainIntro=get_field('main_intro'); if( $mainIntro ): ?>
-        <div id="ax_headings">
-            <div class="lf_txt">
-                <h1 class="ax_heading"><?php echo strtoupper($mainIntro['main_title']); ?></h1>
-                <p class="ax_heading_p"><?php echo $mainIntro['short_description']; ?></p>
-            </div>
-        </div>
-    <?php endif; ?>
-
-    <?php if($categoryOrganizerActivation): ?>
-        <section id="ax_services" home="<?php echo is_front_page(); ?>">
-            <div id="lf_cats_sub"></div>
-            <div class="ax_items"></div> 
-        </section>
-    <?php endif; ?>
-
     <?php 
         $wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>3));
         if ( $wpb_all_query->have_posts() ) :
@@ -33,7 +17,7 @@
                     <div class="ax_item">
                         <a href="<?php echo getTheLink($post) ?>" target="_blank">
                             <div class="ax_poster">
-                                <?php axgImgen(
+                                <?php echo axgImgen(
                                     get_the_post_thumbnail_url(), 
                                     get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE), 
                                     "", "", "lazy", "300", "86",

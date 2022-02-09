@@ -11,7 +11,7 @@
         <?php if(get_the_title($post->post_parent)==get_the_title()) { ?>
         <section id="ax_hero_image">
             
-            <?php axgImgen(
+            <?php echo axgImgen(
                 get_the_post_thumbnail_url(),
                 get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE),
                 "ax_hero_img",
@@ -60,7 +60,7 @@
                         <div class="lf_item">
                             <a href="<?php getTheLink($post); ?>">
                                 <?php 
-                                    axgImgen(
+                                    echo axgImgen(
                                         get_the_post_thumbnail_url(),
                                         get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE),
                                         "",
