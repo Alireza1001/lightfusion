@@ -1,37 +1,6 @@
 <?php get_header(); ?>
 <main id="lf_home">
-    <section id="ax_hero_image">
-
-        <?php
-            $categoryOrganizerActivation = get_field('frontpage_category_section');
-            if($categoryOrganizerActivation) {
-                $categoryOrganizer = getCategoriesJson();
-                axgImgen(
-                    $categoryOrganizer[0]->image,
-                    get_field('main_intro')['main_title']?get_field('main_intro')['main_title']:"hero image",
-                    "ax_hero_img",
-                    "", "auto", "", "",
-                    ["small", "medium", "large"]
-                );
-            } else {
-                axgImgen(
-                    get_the_post_thumbnail_url(),
-                    get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE),
-                    "ax_hero_img",
-                    "", "auto", "", "",
-                    ["small", "medium", "large"]
-                );
-            }
-
-        ?>
-
-        <?php if($categoryOrganizerActivation): ?>
-            <div class="ax_tabs" home="<?php echo is_front_page(); ?>">
-                <div id="ax_tabs_inside_cover"><?php echo getHeadTabItemsHtml(); ?></div>
-            </div>
-        <?php endif; ?>
-
-    </section>
+    <?php echo categorySlider(); ?>
 
     <?php $mainIntro=get_field('main_intro'); if( $mainIntro ): ?>
         <div id="ax_headings">
