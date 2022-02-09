@@ -31,7 +31,7 @@
                         <a href="<?php echo getTheLink($post); ?>">
                             <div class="lf_poster">
                                 
-                                <?php echo wordpressAXCustomImage(
+                                <?php axgImgen(
                                     get_the_post_thumbnail_url(), 
                                     get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE), 
                                     "", "", "lazy", "", "", 
@@ -111,16 +111,8 @@
 
 <?php require_once('footer-script.php'); ?>
 
-<!-- AXONGLITCH LIBRARY -->
-<script src="https://axoncodes.com/libraries/registery.js"></script>
-<script src="https://axoncodes.com/libraries/dropdown/FuncLibrary.js"></script>
-<script src="https://axoncodes.com/libraries/activationHandler"></script>
-<!-- searchbar -->
-<script src="https://axoncodes.com/libraries/searchbar/script/script.js"></script>
-<script src="https://axoncodes.com/libraries/searchbar/template/main.js"></script>
+<?php wp_footer(); ?>
 <script>
     activationHandler.init();
 </script>
-<?php wp_footer(); ?>
-
 </html>
