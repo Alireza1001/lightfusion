@@ -70,16 +70,8 @@
 
 <?php require_once('footer-script.php'); ?>
 
-<!-- AXONGLITCH LIBRARY -->
-<script src="https://axoncodes.com/libraries/registery.js"></script>
-<script src="https://axoncodes.com/libraries/dropdown/FuncLibrary.js"></script>
-<script src="https://axoncodes.com/libraries/activationHandler"></script>
-<!-- searchbar -->
-<script src="https://axoncodes.com/libraries/searchbar/script/script.js"></script>
-<script src="https://axoncodes.com/libraries/searchbar/template/main.js"></script>
+<?php wp_footer(); ?>
 <script>
     activationHandler.init();
 </script>
-<?php wp_footer(); ?>
-
 </html>
