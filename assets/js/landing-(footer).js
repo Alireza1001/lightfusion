@@ -744,13 +744,3 @@ document.querySelectorAll("section#lf_comments ol.commentlist > li").forEach(ite
 
 
 
-ax_main[0].addEventListener("click", e=>{
-    // e.preventDefault();
-    document.getElementById("axg_searchform").classList.remove("axg_active");
-    document.getElementById("axg_searchform_res_cover").style.display = "none";
-    // document.getElementById("lf_progressbar_num").style.opacity = 1;
-});
-
-
-
-

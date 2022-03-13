@@ -494,20 +494,7 @@ document.querySelector("#lf_inpage_notification svg").addEventListener("click", 
 
 
 
-// searchbox handle
-if(document.getElementById("axg_searchform"))document.getElementById("axg_searchform").addEventListener("click", e=>{
-    e.preventDefault(); 
-    document.getElementById("axg_searchform").classList.add("axg_active");
-    document.getElementById("axg_searchform_res_cover").style.display = "block";
-    // if(document.getElementById("lf_progressbar_num"))
-    //     document.getElementById("lf_progressbar_num").style.opacity = 0;
-});
-// document.getElementById("axg_naturalizer").addEventListener("click", ()=>{
-//     if(document.getElementById("axg_searchform"))document.getElementById("axg_searchform").classList.remove("axg_active");
-//     document.getElementById("axg_searchform_res_cover").style.display = "none";
-//     // if(document.getElementById("lf_progressbar_num"))
-//     //     document.getElementById("lf_progressbar_num").style.opacity = 1;
-// });
+
 
 
 // secret deals ctrl
