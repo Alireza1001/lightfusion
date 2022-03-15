@@ -219,6 +219,13 @@ function wordpressAXCustomImage($src, $alt, $id, $class, $loading, $width, $heig
         />";
 }
 
+// text limiter
+function textlimit($content, $limit) {
+	$content_arr = explode(' ', $content);
+	for ($i=0; $i < $limit; $i++) echo $content_arr[$i].' ';
+	if (count($content_arr) > $limit) echo '...';
+}
+
 // next/prev post link
 function nextPrev() {
 	global $post;
