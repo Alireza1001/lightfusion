@@ -33,6 +33,14 @@ function lf_add_style() {
 	wp_enqueue_style('lf_shortcodes_style', get_template_directory_uri()."/assets/css/shortcodes.css");
 	wp_enqueue_style('lf_header_style', get_template_directory_uri()."/assets/css/header.css");
 	wp_enqueue_style('lf_libcustom_style', get_template_directory_uri()."/assets/css/libcustom.css");
+
+	wp_enqueue_style('lf_dropdown_style', 'https://api.axoncodes.com/libraries/dropdown/assets/css/style.css');
+	wp_enqueue_style('lf_logo_style', 'https://api.axoncodes.com/libraries/logo/assets/css/style.css');
+	wp_enqueue_style('lf_scrolldownAnimation_style', 'https://api.axoncodes.com/libraries/scrolldownAnimation/assets/css/style.css');
+	wp_enqueue_style('lf_fontVars_style', 'https://api.axoncodes.com/libraries/assets/css/fontVars.css');
+	wp_enqueue_style('lf_colorVars_style', 'https://api.axoncodes.com/libraries/assets/css/colorVars.css');
+	wp_enqueue_style('lf_activationHandler_style', 'https://api.axoncodes.com/libraries/activationHandler/style.css');
+	wp_enqueue_style('lf_searchbar_style', 'https://api.axoncodes.com/libraries/searchbar/template/style.css');
 	global $post;
 	$parent_name = get_the_title($post->post_parent);
 	wp_localize_script( 'lf_category_script', 'parent_name', $parent_name );

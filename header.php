@@ -42,22 +42,6 @@ if (!defined('ABSPATH')) exit;
         const wp_comment_count = "<?php echo $get_comments_number; ?>";
         const pluginDir = "<?php echo $pluginDir; ?>";
     </script>
-    
-    <!-- AXONGLITCH LIBRARY -->
-    <!-- dropdown -->
-    <link rel="stylesheet" href="https://api.axoncodes.com/libraries/dropdown/assets/css/style.css" />
-    <!-- logo -->
-    <link rel="stylesheet" href="https://api.axoncodes.com/libraries/logo/assets/css/style.css" />
-    <!-- scrolldownAnimation -->
-    <link rel="stylesheet" href="https://api.axoncodes.com/libraries/scrolldownAnimation/assets/css/style.css" />
-    <!-- fontVars -->
-    <link rel="stylesheet" href="https://api.axoncodes.com/libraries/assets/css/fontVars.css" />
-    <!-- colorVars -->
-    <link rel="stylesheet" href="https://api.axoncodes.com/libraries/assets/css/colorVars.css" />
-    <!-- naturalizer -->
-    <link rel="stylesheet" href="https://api.axoncodes.com/libraries/activationHandler/style.css" />
-    <!-- searchbar -->
-    <link rel="stylesheet" href="https://api.axoncodes.com/libraries/searchbar/template/style.css" />
 
     <!-- wp_head -->
     <?php wp_head(); ?>
