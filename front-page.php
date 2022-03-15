@@ -68,7 +68,7 @@
                                     get_the_post_thumbnail_url(), 
                                     get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE), 
                                     "", "", "lazy", "300", "86",
-                                    ["small", "medium", "large"]
+                                    ["small"]
                                 ); ?>
                             </div>
                             <div class="ax_context">
