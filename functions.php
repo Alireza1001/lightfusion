@@ -214,6 +214,8 @@ function wordpressAXCustomImage($src, $alt, $id, $class, $loading, $width, $heig
             alt='$alt'
             class='$class'
             srcset='$imgsrcsetqueue'
+						width='$width'
+						height='$height'
         />";
 }
 
