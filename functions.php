@@ -33,6 +33,14 @@ function lf_add_style() {
 	wp_enqueue_style('lf_shortcodes_style', get_template_directory_uri()."/assets/css/shortcodes.css");
 	wp_enqueue_style('lf_header_style', get_template_directory_uri()."/assets/css/header.css");
 	wp_enqueue_style('lf_libcustom_style', get_template_directory_uri()."/assets/css/libcustom.css");
+
+	wp_enqueue_style('lf_dropdown_style', 'https://api.axoncodes.com/libraries/dropdown/assets/css/style.css');
+	wp_enqueue_style('lf_logo_style', 'https://api.axoncodes.com/libraries/logo/assets/css/style.css');
+	wp_enqueue_style('lf_scrolldownAnimation_style', 'https://api.axoncodes.com/libraries/scrolldownAnimation/assets/css/style.css');
+	wp_enqueue_style('lf_fontVars_style', 'https://api.axoncodes.com/libraries/assets/css/fontVars.css');
+	wp_enqueue_style('lf_colorVars_style', 'https://api.axoncodes.com/libraries/assets/css/colorVars.css');
+	wp_enqueue_style('lf_activationHandler_style', 'https://api.axoncodes.com/libraries/activationHandler/style.css');
+	wp_enqueue_style('lf_searchbar_style', 'https://api.axoncodes.com/libraries/searchbar/template/style.css');
 	global $post;
 	$parent_name = get_the_title($post->post_parent);
 	wp_localize_script( 'lf_category_script', 'parent_name', $parent_name );
@@ -155,33 +163,69 @@ function add_responsive_class($content){
 }add_filter('the_content', 'add_responsive_class');
 
 
-// #### NOT SURE IF IT'S BEING USED IN THE THEME
-// // img srcset thumbnail
-// function modify_post_thumbnail_html($html, $post_id, $post_thumbnail_id, $size, $attr) {
-// 	if(strlen($html) > 0) {
-// 		$id = get_post_thumbnail_id();
-// 		$src = wp_get_attachment_image_src($id, $size);
-// 		$alt = get_the_title($id);
-// 		$class = "";
-// 		$useragentos = $_SERVER["HTTP_USER_AGENT"];
-// 		$generalimgexe=".jpg";
-// 		$imgmainsrc = $src[0];
-// 		$baseimgsrc = substr($imgmainsrc, 0, strripos($imgmainsrc, '.'));
-// 		$exeimgsrc = substr($imgmainsrc, strripos($imgmainsrc, '.'));
-// 		$generalimgexe = $exeimgsrc;
-// 		$newimgsrcset = $baseimgsrc.$exeimgsrc;
-// 		$newimgsrcset1 = $baseimgsrc."-small".$generalimgexe;
-// 		$newimgsrcset2 = $baseimgsrc."-medium".$generalimgexe;
-// 		$newimgsrcset3 = $baseimgsrc."-large".$generalimgexe;
-// 		$id = is_front_page()?"ax_hero_img":"";
-// 		$loading = is_front_page()?"eager":"lazy";
-// 		$imgsrcsetqueue = "$newimgsrcset1 300w, $newimgsrcset2 900w, $newimgsrcset3 1500w";
-// 		$html = '<img loading='.$loading.' id='.$id.' src="' . $src[0] . '" alt="' . $alt . '" class="' . $class . '" srcset="'.$imgsrcsetqueue.'"/>';
-// 	}
-// 	return $html;
-// }
-// add_filter('post_thumbnail_html', 'modify_post_thumbnail_html', 99, 5);
+// img srcset thumbnail
+function modify_post_thumbnail_html($html, $post_id, $post_thumbnail_id, $size, $attr) {
+	if(strlen($html) > 0) {
+		$id = get_post_thumbnail_id();
+		$src = wp_get_attachment_image_src($id, $size);
+		$alt = get_the_title($id);
+		$class = "";
+		$useragentos = $_SERVER["HTTP_USER_AGENT"];
+		$generalimgexe=".jpg";
+		$imgmainsrc = $src[0];
+		$baseimgsrc = substr($imgmainsrc, 0, strripos($imgmainsrc, '.'));
+		$exeimgsrc = substr($imgmainsrc, strripos($imgmainsrc, '.'));
+		$generalimgexe = $exeimgsrc;
+		$newimgsrcset = $baseimgsrc.$exeimgsrc;
+		$newimgsrcset1 = $baseimgsrc."-small".$generalimgexe;
+		$newimgsrcset2 = $baseimgsrc."-medium".$generalimgexe;
+		$newimgsrcset3 = $baseimgsrc."-large".$generalimgexe;
+		$id = is_front_page()?"ax_hero_img":"";
+		$loading = is_front_page()?"eager":"lazy";
+		$imgsrcsetqueue = "$newimgsrcset1 300w, $newimgsrcset2 900w, $newimgsrcset3 1500w";
+		$html = '<img loading='.$loading.' id='.$id.' src="' . $src[0] . '" alt="' . $alt . '" class="' . $class . '" srcset="'.$imgsrcsetqueue.'"/>';
+	}
+	return $html;
+}
+add_filter('post_thumbnail_html', 'modify_post_thumbnail_html', 99, 5);
 
+
+// custom image tag
+function wordpressAXCustomImage($src, $alt, $id, $class, $loading, $width, $height, $sizes) {
+    $useragentos = $_SERVER["HTTP_USER_AGENT"];
+    $generalimgexe=".jpg";
+    $imgmainsrc = $src;
+    $baseimgsrc = substr($imgmainsrc, 0, strripos($imgmainsrc, '.'));
+    $exeimgsrc = substr($imgmainsrc, strripos($imgmainsrc, '.'));
+    $generalimgexe = $exeimgsrc;
+    $newimgsrcset = $baseimgsrc.$exeimgsrc;
+    $imgsrcsetqueue = "";
+    foreach ($sizes as $size) {
+        if($size == "thumbnail") $src= "$baseimgsrc-$size$generalimgexe";
+        elseif($size == "small") $imgsrcsetqueue.= "$baseimgsrc-$size$generalimgexe 300w,";
+        elseif($size == "medium") $imgsrcsetqueue.= "$baseimgsrc-$size$generalimgexe 900w,";
+        elseif($size == "large") $imgsrcsetqueue.= "$baseimgsrc-$size$generalimgexe 1500w,";
+    }
+    return 
+        "<img 
+            loading='$loading'
+            id='$id' 
+            src='$src'
+            alt='$alt'
+            class='$class'
+            srcset='$imgsrcsetqueue'
+						width='$width'
+						height='$height'
+        />";
+}
+
+
+// text limiter
+function textlimit($content, $limit) {
+	$content_arr = explode(' ', $content);
+	for ($i=0; $i < $limit; $i++) echo $content_arr[$i].' ';
+	if (count($content_arr) > $limit) echo '...';
+}
 
 // next/prev post link
 function nextPrev() {
