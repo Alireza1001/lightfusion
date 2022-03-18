@@ -177,7 +177,7 @@
                 <a href="<?php the_permalink($the_starrate_arr[$i][0]); ?>" target="_blank">
                     <div class="ax_poster">
                         <?php
-                            echo wordpressAXCustomImage(
+                            axgImgen(
                                 get_the_post_thumbnail_url($the_starrate_arr[$i][0]), 
                                 get_the_title($the_starrate_arr[$i][0]), 
                                 "", "", "lazy", "300", "86",

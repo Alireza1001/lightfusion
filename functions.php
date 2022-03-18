@@ -219,6 +219,7 @@ function wordpressAXCustomImage($src, $alt, $id, $class, $loading, $width, $heig
         />";
 }
 
+
 // text limiter
 function textlimit($content, $limit) {
 	$content_arr = explode(' ', $content);
@@ -299,11 +300,6 @@ function ax_get_child_pages($currentid) {
 	endif; wp_reset_postdata();
 }
 
-// disable srcset on frontend
-function disable_wp_responsive_images(){return 1;}
-add_filter('max_srcset_image_width', 'disable_wp_responsive_images');
- 
- 
 // change wp-login logo
 function my_login_logo() { ?>
     <style type="text/css">
@@ -541,13 +537,6 @@ function wporg_save_postdata( $post_id ) {
 }
 add_action( 'save_post', 'wporg_save_postdata' );
 add_action( 'add_meta_boxes', 'wporg_add_custom_box' );
-
-
-add_filter( 'big_image_size_threshold', '__return_false' );
-
-
-
-
 
 // Allow SVG
 add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mimes) {

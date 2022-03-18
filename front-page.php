@@ -6,7 +6,7 @@
             $categoryOrganizerActivation = get_field('frontpage_category_section');
             if($categoryOrganizerActivation) {
                 $categoryOrganizer = getCategoriesJson();
-                echo wordpressAXCustomImage(
+                axgImgen(
                     $categoryOrganizer[0]->image,
                     get_field('main_intro')['main_title']?get_field('main_intro')['main_title']:"hero image",
                     "ax_hero_img",
@@ -14,7 +14,7 @@
                     ["small", "medium", "large"]
                 );
             } else {
-                echo wordpressAXCustomImage(
+                axgImgen(
                     get_the_post_thumbnail_url(),
                     get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE),
                     "ax_hero_img",
@@ -64,7 +64,7 @@
                     <div class="ax_item">
                         <a href="<?php echo getTheLink($post) ?>" target="_blank">
                             <div class="ax_poster">
-                                <?php echo wordpressAXCustomImage(
+                                <?php axgImgen(
                                     get_the_post_thumbnail_url(), 
                                     get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE), 
                                     "", "", "lazy", "300", "86",
