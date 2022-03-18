@@ -33,6 +33,14 @@ function lf_add_style() {
 	wp_enqueue_style('lf_shortcodes_style', get_template_directory_uri()."/assets/css/shortcodes.css");
 	wp_enqueue_style('lf_header_style', get_template_directory_uri()."/assets/css/header.css");
 	wp_enqueue_style('lf_libcustom_style', get_template_directory_uri()."/assets/css/libcustom.css");
+
+	wp_enqueue_style('lf_dropdown_style', 'https://api.axoncodes.com/libraries/dropdown/assets/css/style.css');
+	wp_enqueue_style('lf_logo_style', 'https://api.axoncodes.com/libraries/logo/assets/css/style.css');
+	wp_enqueue_style('lf_scrolldownAnimation_style', 'https://api.axoncodes.com/libraries/scrolldownAnimation/assets/css/style.css');
+	wp_enqueue_style('lf_fontVars_style', 'https://api.axoncodes.com/libraries/assets/css/fontVars.css');
+	wp_enqueue_style('lf_colorVars_style', 'https://api.axoncodes.com/libraries/assets/css/colorVars.css');
+	wp_enqueue_style('lf_activationHandler_style', 'https://api.axoncodes.com/libraries/activationHandler/style.css');
+	wp_enqueue_style('lf_searchbar_style', 'https://api.axoncodes.com/libraries/searchbar/template/style.css');
 	global $post;
 	$parent_name = get_the_title($post->post_parent);
 	wp_localize_script( 'lf_category_script', 'parent_name', $parent_name );
@@ -206,7 +214,17 @@ function wordpressAXCustomImage($src, $alt, $id, $class, $loading, $width, $heig
             alt='$alt'
             class='$class'
             srcset='$imgsrcsetqueue'
+						width='$width'
+						height='$height'
         />";
+}
+
+
+// text limiter
+function textlimit($content, $limit) {
+	$content_arr = explode(' ', $content);
+	for ($i=0; $i < $limit; $i++) echo $content_arr[$i].' ';
+	if (count($content_arr) > $limit) echo '...';
 }
 
 // next/prev post link
@@ -282,11 +300,6 @@ function ax_get_child_pages($currentid) {
 	endif; wp_reset_postdata();
 }
 
-// disable srcset on frontend
-function disable_wp_responsive_images(){return 1;}
-add_filter('max_srcset_image_width', 'disable_wp_responsive_images');
- 
- 
 // change wp-login logo
 function my_login_logo() { ?>
     <style type="text/css">
@@ -524,13 +537,6 @@ function wporg_save_postdata( $post_id ) {
 }
 add_action( 'save_post', 'wporg_save_postdata' );
 add_action( 'add_meta_boxes', 'wporg_add_custom_box' );
-
-
-add_filter( 'big_image_size_threshold', '__return_false' );
-
-
-
-
 
 // Allow SVG
 add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mimes) {

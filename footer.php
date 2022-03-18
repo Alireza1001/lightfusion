@@ -31,7 +31,7 @@
                         <a href="<?php echo getTheLink($post); ?>">
                             <div class="lf_poster">
                                 
-                                <?php echo wordpressAXCustomImage(
+                                <?php axgImgen(
                                     get_the_post_thumbnail_url(), 
                                     get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE), 
                                     "", "", "lazy", "", "", 
@@ -40,7 +40,7 @@
 
                             </div>
                             <div class="lf_context">
-                                <p class="lf_title"><?php echo get_the_title(); ?></p>
+                                <p class="lf_title"><?php textlimit(get_the_title(), 5) ?></p>
                                 <div class="lf_meta">
                                     <p class="lf_meta_item"><img alt="comment" width="17" height="17" src="/wp-content/themes/lightfusion/assets/icons/comment-dark.svg"><span><?php echo get_comments_number(); ?></span></p>
                                     <p class="lf_meta_item"><img alt="calendar" width="17" height="17" src="/wp-content/themes/lightfusion/assets/icons/calendar-dark.svg"><span><?php echo get_the_date(); ?></span></p>
@@ -55,10 +55,6 @@
                 </div>
                 <?php endif; ?>
             </div>
-            <!-- <div class="ax_items">
-                <img alt="test" src="<?php //echo get_template_directory_uri(); ?>/assets/images/enamad.png">
-                <img alt="test" src="<?php //echo get_template_directory_uri(); ?>/assets/images/enamad.png">
-            </div> -->
         </div>
     </div>
     <div class="ax_items">
@@ -118,9 +114,9 @@
 <!-- searchbar -->
 <script src="https://api.axoncodes.com/libraries/searchbar/script/script.js"></script>
 <script src="https://api.axoncodes.com/libraries/searchbar/template/main.js"></script>
+
+<?php wp_footer(); ?>
 <script>
     activationHandler.init();
 </script>
-<?php wp_footer(); ?>
-
 </html>

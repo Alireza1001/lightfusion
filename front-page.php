@@ -6,7 +6,7 @@
             $categoryOrganizerActivation = get_field('frontpage_category_section');
             if($categoryOrganizerActivation) {
                 $categoryOrganizer = getCategoriesJson();
-                echo wordpressAXCustomImage(
+                axgImgen(
                     $categoryOrganizer[0]->image,
                     get_field('main_intro')['main_title']?get_field('main_intro')['main_title']:"hero image",
                     "ax_hero_img",
@@ -14,7 +14,7 @@
                     ["small", "medium", "large"]
                 );
             } else {
-                echo wordpressAXCustomImage(
+                axgImgen(
                     get_the_post_thumbnail_url(),
                     get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE),
                     "ax_hero_img",
@@ -64,11 +64,11 @@
                     <div class="ax_item">
                         <a href="<?php echo getTheLink($post) ?>" target="_blank">
                             <div class="ax_poster">
-                                <?php echo wordpressAXCustomImage(
+                                <?php axgImgen(
                                     get_the_post_thumbnail_url(), 
                                     get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE), 
                                     "", "", "lazy", "300", "86",
-                                    ["small", "medium", "large"]
+                                    ["small"]
                                 ); ?>
                             </div>
                             <div class="ax_context">
@@ -81,19 +81,7 @@
                                     </div>
                                 </div>
                                 <p class="ax_paragraph">
-                                <?php 
-                                    $lf_iexcept = get_the_excerpt();
-                                    $lf_iexcept_length = strlen($lf_iexcept);
-                                    $i=0;
-                                    while($lf_iexcept_limit < 24) {
-                                        if($i <= $lf_iexcept_length) { 
-                                            echo $lf_iexcept[$i];
-                                            $i++;
-                                            if($lf_iexcept[$i] == " ") $lf_iexcept_limit++;
-                                        }else break;
-                                    }
-                                    $lf_iexcept_limit=0;
-                                ?>
+                                <?php textlimit(get_the_excerpt(), 20) ?>
                                 </p>
                             </div>
                             <button name="test" alt="test" class="ax_button">
