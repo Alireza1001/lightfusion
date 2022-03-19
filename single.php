@@ -8,7 +8,11 @@
         <?php get_template_part( 'nav-status' ); ?>
         <div id="lf_landing_main_poster">
             <?php 
+<<<<<<< HEAD
                 axgImgen(
+=======
+                echo axgImgen(
+>>>>>>> featuresExtract
                     get_the_post_thumbnail_url(), 
                     get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE),
                     "", "", "eager", "", "",
@@ -44,7 +48,7 @@
             <p><?php echo get_the_excerpt(); ?></p>
             
             <?php 
-                require (WP_PLUGIN_DIR."/axgWp/form_ctrl/config.php");
+                require (WP_PLUGIN_DIR."/axonglitch-wp/form_ctrl/config.php");
                 $mediaVideo = get_post_meta( $post->ID, '_mediaVideo', true );
                 $mediaAudio = get_post_meta( $post->ID, '_mediaAudio', true );
                 if(strlen($mediaVideo) > 0 || strlen($mediaAudio) > 0 ) {

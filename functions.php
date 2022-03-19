@@ -6,8 +6,6 @@ function lf_add_style() {
 	if(is_front_page()) {
 		wp_enqueue_style('lf_home_init_style', get_template_directory_uri()."/assets/css/home.init.css");
 		wp_enqueue_style('lf_home_style', get_template_directory_uri()."/assets/css/home.css");
-		wp_register_script('lf_home_script', get_template_directory_uri()."/assets/js/categoryTab.js", array(), true);
-		wp_enqueue_script('lf_home_script');
 	}else if(is_page_template( 'page-about.php' ) || is_page_template( 'page-contact.php' )) {
 		wp_enqueue_style('lf_about_style', get_template_directory_uri()."/assets/css/about.css");
 		wp_register_script('lf_about_script', get_template_directory_uri()."/assets/js/about.js", array(), true);
@@ -16,8 +14,6 @@ function lf_add_style() {
 	    wp_enqueue_style('lf_home_init_style', get_template_directory_uri()."/assets/css/home.init.css");
 		wp_enqueue_style('lf_home_style', get_template_directory_uri()."/assets/css/home.css");
 		wp_enqueue_style('lf_category_style', get_template_directory_uri()."/assets/css/category.css");
-		wp_register_script('lf_category_script', get_template_directory_uri()."/assets/js/categoryTab.js", array(), true);
-		wp_enqueue_script('lf_category_script');
 		wp_enqueue_style('lf_weblog_style', get_template_directory_uri()."/assets/css/weblog.css");
 	}else if(is_home() || is_archive() || is_page_template( 'page-category2.php' )) {
 		wp_enqueue_style('lf_weblog_style', get_template_directory_uri()."/assets/css/weblog.css");
@@ -163,6 +159,7 @@ function add_responsive_class($content){
 }add_filter('the_content', 'add_responsive_class');
 
 
+<<<<<<< HEAD
 // img srcset thumbnail
 function modify_post_thumbnail_html($html, $post_id, $post_thumbnail_id, $size, $attr) {
 	if(strlen($html) > 0) {
@@ -218,6 +215,35 @@ function wordpressAXCustomImage($src, $alt, $id, $class, $loading, $width, $heig
 						height='$height'
         />";
 }
+=======
+// #### NOT SURE IF IT'S BEING USED IN THE THEME
+// // img srcset thumbnail
+// function modify_post_thumbnail_html($html, $post_id, $post_thumbnail_id, $size, $attr) {
+// 	if(strlen($html) > 0) {
+// 		$id = get_post_thumbnail_id();
+// 		$src = wp_get_attachment_image_src($id, $size);
+// 		$alt = get_the_title($id);
+// 		$class = "";
+// 		$useragentos = $_SERVER["HTTP_USER_AGENT"];
+// 		$generalimgexe=".jpg";
+// 		$imgmainsrc = $src[0];
+// 		$baseimgsrc = substr($imgmainsrc, 0, strripos($imgmainsrc, '.'));
+// 		$exeimgsrc = substr($imgmainsrc, strripos($imgmainsrc, '.'));
+// 		$generalimgexe = $exeimgsrc;
+// 		$newimgsrcset = $baseimgsrc.$exeimgsrc;
+// 		$newimgsrcset1 = $baseimgsrc."-small".$generalimgexe;
+// 		$newimgsrcset2 = $baseimgsrc."-medium".$generalimgexe;
+// 		$newimgsrcset3 = $baseimgsrc."-large".$generalimgexe;
+// 		$id = is_front_page()?"ax_hero_img":"";
+// 		$loading = is_front_page()?"eager":"lazy";
+// 		$imgsrcsetqueue = "$newimgsrcset1 300w, $newimgsrcset2 900w, $newimgsrcset3 1500w";
+// 		$html = '<img loading='.$loading.' id='.$id.' src="' . $src[0] . '" alt="' . $alt . '" class="' . $class . '" srcset="'.$imgsrcsetqueue.'"/>';
+// 	}
+// 	return $html;
+// }
+// add_filter('post_thumbnail_html', 'modify_post_thumbnail_html', 99, 5);
+
+>>>>>>> featuresExtract
 
 
 // text limiter

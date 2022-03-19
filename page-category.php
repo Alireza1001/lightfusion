@@ -8,6 +8,7 @@
         <?php get_template_part( 'nav-status' ); ?>
         <?php $post_slug = $post->post_name; ?>
         <script> var page_slug = "<?php echo $post_slug; ?>"; </script>
+<<<<<<< HEAD
         <?php if(get_the_title($post->post_parent)==get_the_title()) { ?>
         <section id="ax_hero_image">
             
@@ -40,6 +41,14 @@
                 $post_slug = $post->post_name;
             ?>
         <?php }else{ ?>
+=======
+        <?php
+        if (get_the_title($post->post_parent)==get_the_title()) {
+            echo categorySlider();
+            global $post;
+            $post_slug = $post->post_name;
+        } else { ?>
+>>>>>>> featuresExtract
             <?php $intro=get_field('blog_intro', get_option( 'page_on_front' )); if( $intro ): ?>
                 <section id="lf_weblog_intro">
                     <h1><?php echo get_the_title(); ?></h1>
@@ -60,7 +69,11 @@
                         <div class="lf_item">
                             <a href="<?php getTheLink($post); ?>">
                                 <?php 
+<<<<<<< HEAD
                                     axgImgen(
+=======
+                                    echo axgImgen(
+>>>>>>> featuresExtract
                                         get_the_post_thumbnail_url(),
                                         get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE),
                                         "",

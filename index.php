@@ -51,7 +51,11 @@
                         foreach((get_the_category()) as $category) $theget_the_categorypost .= '<a> <span>|</span> '. $category->name .'</a>';
                         echo '<div class="lf_item '.str_replace(" ", "", get_the_category()[0]->name).' '.str_replace(" ", "", get_the_category()[1]->name).'">
                             <a href="'.get_the_permalink().'">';
+<<<<<<< HEAD
                         axgImgen(
+=======
+                        echo axgImgen(
+>>>>>>> featuresExtract
                             get_the_post_thumbnail_url(), 
                             get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE), 
                             "", "", "lazy", "300", "86",

@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 <main id="lf_home">
+<<<<<<< HEAD
     <section id="ax_hero_image">
 
         <?php
@@ -48,6 +49,9 @@
             <div class="ax_items"></div> 
         </section>
     <?php endif; ?>
+=======
+    <?php echo categorySlider(); ?>
+>>>>>>> featuresExtract
 
     <?php 
         $wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>3));
@@ -64,7 +68,11 @@
                     <div class="ax_item">
                         <a href="<?php echo getTheLink($post) ?>" target="_blank">
                             <div class="ax_poster">
+<<<<<<< HEAD
                                 <?php axgImgen(
+=======
+                                <?php echo axgImgen(
+>>>>>>> featuresExtract
                                     get_the_post_thumbnail_url(), 
                                     get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE), 
                                     "", "", "lazy", "300", "86",
