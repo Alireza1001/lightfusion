@@ -70,17 +70,6 @@
 
 <?php require_once('footer-script.php'); ?>
 
-<<<<<<< HEAD
-<!-- AXONGLITCH LIBRARY -->
-<script src="https://api.axoncodes.com/libraries/registery.js"></script>
-<script src="https://api.axoncodes.com/libraries/dropdown/FuncLibrary.js"></script>
-<script src="https://api.axoncodes.com/libraries/activationHandler"></script>
-<!-- searchbar -->
-<script src="https://api.axoncodes.com/libraries/searchbar/script/script.js"></script>
-<script src="https://api.axoncodes.com/libraries/searchbar/template/main.js"></script>
-
-=======
->>>>>>> featuresExtract
 <?php wp_footer(); ?>
 <script>
     activationHandler.init();

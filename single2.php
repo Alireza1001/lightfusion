@@ -14,11 +14,7 @@
         <?php get_template_part( 'nav-status' ); ?>
         <div id="lf_landing_main_poster">
             <?php 
-<<<<<<< HEAD
-                axgImgen(
-=======
                 echo axgImgen(
->>>>>>> featuresExtract
                     get_the_post_thumbnail_url(), 
                     get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE),
                     "", "", "eager", "", "",
