@@ -1,57 +1,6 @@
 <?php get_header(); ?>
 <main id="lf_home">
-<<<<<<< HEAD
-    <section id="ax_hero_image">
-
-        <?php
-            $categoryOrganizerActivation = get_field('frontpage_category_section');
-            if($categoryOrganizerActivation) {
-                $categoryOrganizer = getCategoriesJson();
-                axgImgen(
-                    $categoryOrganizer[0]->image,
-                    get_field('main_intro')['main_title']?get_field('main_intro')['main_title']:"hero image",
-                    "ax_hero_img",
-                    "", "auto", "", "",
-                    ["small", "medium", "large"]
-                );
-            } else {
-                axgImgen(
-                    get_the_post_thumbnail_url(),
-                    get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE),
-                    "ax_hero_img",
-                    "", "auto", "", "",
-                    ["small", "medium", "large"]
-                );
-            }
-
-        ?>
-
-        <?php if($categoryOrganizerActivation): ?>
-            <div class="ax_tabs" home="<?php echo is_front_page(); ?>">
-                <div id="ax_tabs_inside_cover"><?php echo getHeadTabItemsHtml(); ?></div>
-            </div>
-        <?php endif; ?>
-
-    </section>
-
-    <?php $mainIntro=get_field('main_intro'); if( $mainIntro ): ?>
-        <div id="ax_headings">
-            <div class="lf_txt">
-                <h1 class="ax_heading"><?php echo strtoupper($mainIntro['main_title']); ?></h1>
-                <p class="ax_heading_p"><?php echo $mainIntro['short_description']; ?></p>
-            </div>
-        </div>
-    <?php endif; ?>
-
-    <?php if($categoryOrganizerActivation): ?>
-        <section id="ax_services" home="<?php echo is_front_page(); ?>">
-            <div id="lf_cats_sub"></div>
-            <div class="ax_items"></div> 
-        </section>
-    <?php endif; ?>
-=======
     <?php echo categorySlider(); ?>
->>>>>>> featuresExtract
 
     <?php 
         $wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>3));
@@ -68,11 +17,7 @@
                     <div class="ax_item">
                         <a href="<?php echo getTheLink($post) ?>" target="_blank">
                             <div class="ax_poster">
-<<<<<<< HEAD
-                                <?php axgImgen(
-=======
                                 <?php echo axgImgen(
->>>>>>> featuresExtract
                                     get_the_post_thumbnail_url(), 
                                     get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', TRUE), 
                                     "", "", "lazy", "300", "86",
