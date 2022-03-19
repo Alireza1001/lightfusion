@@ -269,7 +269,7 @@ if(document.getElementById("lf_landing_main_video_cover") != null) {
 
     // video status receive
     var xhttp_video = new XMLHttpRequest();
-    xhttp_video.open("GET", pluginDir+'/axgWp/form_ctrl/videostatus_inpage.php?req_page='+post_id+'', true);
+    xhttp_video.open("GET", '../../../../plugins/axonglitch-wp/form_ctrl/videostatus_inpage.php?req_page='+post_id+'', true);
     xhttp_video.send();
     xhttp_video.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -532,7 +532,7 @@ if(document.getElementById("lf_landing_main_audio_cover") != null) {
 
     // audio status receive
     var xhttp_audio = new XMLHttpRequest();
-    xhttp_audio.open("GET", pluginDir+'/axgWp/form_ctrl/audiostatus_inpage.php?req_page='+post_id+'', true);
+    xhttp_audio.open("GET", '../../../../plugins/axonglitch-wp/form_ctrl/audiostatus_inpage.php?req_page='+post_id+'', true);
     xhttp_audio.send();
     xhttp_audio.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {

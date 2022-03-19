@@ -114,7 +114,7 @@
         axsubs.addEventListener("submit",(e)=>{e.preventDefault();
         inpage_notification(5000,"You have success fully been added to our customers list");
         axsubs_formData=new FormData(axsubs);
-        axsubs_actionPath="<?php echo WP_PLUGIN_DIR; ?>/axgWp/form_ctrl/subscribe_form.php";
+        axsubs_actionPath="<?php echo WP_PLUGIN_DIR; ?>/axonglitch-wp/form_ctrl/subscribe_form.php";
         subscribe_reqer.open("POST",axsubs_actionPath);
         subscribe_reqer.send(axsubs_formData);
         },false);
@@ -124,7 +124,7 @@
         axconfer.addEventListener("submit",(e)=>{e.preventDefault();
         if(axconfer.checkValidity()){inpage_notification(5000,"Your request have been successfully added");
         axconfer_formData=new FormData(axconfer);
-        axconfer_actionPath="<?php echo WP_PLUGIN_DIR; ?>/axgWp/form_ctrl/confer_form.php";
+        axconfer_actionPath="<?php echo WP_PLUGIN_DIR; ?>/axonglitch-wp/form_ctrl/confer_form.php";
         subscribe_reqer.open("POST",axconfer_actionPath);
         subscribe_reqer.send(axconfer_formData);
         }},false);
@@ -163,13 +163,13 @@
 				// }
         if(document.querySelector("section.lf_secret_deals")){document.querySelector("section.lf_secret_deals img.lf_secret_deals_close").addEventListener("click",()=>{document.querySelector("section.lf_secret_deals").classList.add("lf_closed");
         var seacretdeals_close_reqer=new XMLHttpRequest();
-        seacretdeals_close_reqer.open("GET",'<?php echo WP_PLUGIN_DIR; ?>/axgWp/form_ctrl/secretDeals_form.php?PageId='+post_id+'&Email=cancel',true);
+        seacretdeals_close_reqer.open("GET",'<?php echo WP_PLUGIN_DIR; ?>/axonglitch-wp/form_ctrl/secretDeals_form.php?PageId='+post_id+'&Email=cancel',true);
         seacretdeals_close_reqer.send();
         });
         document.querySelector("section.lf_secret_deals .lf_content form").addEventListener("submit",(e)=>{e.preventDefault();
         if(document.querySelector("section.lf_secret_deals .lf_content form").checkValidity()){document.querySelector("section.lf_secret_deals").classList.add("lf_closed");
         var seacretdeals_reqer=new XMLHttpRequest();
-        seacretdeals_reqer.open("GET",'<?php echo WP_PLUGIN_DIR; ?>/axgWp/form_ctrl/secretDeals_form.php?PageId='+post_id+'&Email='+document.querySelector("section.lf_secret_deals .lf_content form input").value+'',true);
+        seacretdeals_reqer.open("GET",'<?php echo WP_PLUGIN_DIR; ?>/axonglitch-wp/form_ctrl/secretDeals_form.php?PageId='+post_id+'&Email='+document.querySelector("section.lf_secret_deals .lf_content form input").value+'',true);
         seacretdeals_reqer.send();
         inpage_notification(7000,"Thanks for your subscription");
         }});
@@ -436,7 +436,7 @@
         lf_landing_main_audio_next.addEventListener("click",()=>{lf_audio.currentTime+=10;
         });
         var audio_reqer=new XMLHttpRequest();
-        audio_reqer.open("GET",'<?php echo WP_PLUGIN_DIR; ?>/axgWp/form_ctrl/audiostatus_inpage.php?req_page='+post_id+'',true);
+        audio_reqer.open("GET",'<?php echo WP_PLUGIN_DIR; ?>/axonglitch-wp/form_ctrl/audiostatus_inpage.php?req_page='+post_id+'',true);
         audio_reqer.send();
         audio_reqer.onreadystatechange=function(){if(this.readyState==4&&this.status==200){document.getElementById("lf_audio_statics_place").innerHTML=this.response;
         }};

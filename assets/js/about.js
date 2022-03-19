@@ -107,7 +107,7 @@ lf_share_event2.forEach(item=>{
 //         var xhttp_joinus = new XMLHttpRequest();
 //         lf_joinus_form_data = new FormData(lf_joinus_form);
 //         lf_joinus_form_data.append('clientFile', lf_joinus_form_file.files[0]);
-//         lf_joinus_form_path = pluginDir+"/axgWp/form_ctrl/joinus_form.php";
+//         lf_joinus_form_path = "../../../../plugins/axonglitch-wp/form_ctrl/joinus_form.php";
 //         xhttp_joinus.open("POST", lf_joinus_form_path, true);
 //         xhttp_joinus.send(lf_joinus_form_data);
 //     }

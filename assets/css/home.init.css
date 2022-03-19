@@ -1,26 +1,3 @@
-section#ax_hero_image .ax_tabs p#ax_services_ca {
-    display: none;
-}
-section#ax_hero_image .ax_tabs p:nth-child(1):not(.axg_active):hover {
-    border-bottom: 2px solid #be0f0f;
-    box-shadow: inset 0px -9px 15px -14px #be0f0f,
-        0px 9px 15px -14px #be0f0f;
-}
-section#ax_hero_image .ax_tabs p:nth-child(2):not(.axg_active):hover {
-    border-bottom: 2px solid #be0f0f;
-    box-shadow: inset 0px -9px 15px -14px #be0f0f,
-        0px 9px 15px -14px #be0f0f;
-}
-section#ax_hero_image .ax_tabs p:nth-child(3):not(.axg_active):hover {
-    border-bottom: 2px solid #cc0539;
-    box-shadow: inset 0px -9px 15px -14px #cc0539,
-        0px 9px 15px -14px #cc0539;
-}
-section#ax_hero_image .ax_tabs p:nth-child(4):not(.axg_active):hover {
-    border-bottom: 2px solid #20448e;
-    box-shadow: inset 0px -9px 15px -14px #20448e,
-        0px 9px 15px -14px #20448e;
-}
 /* paragraph */
 .ax_paragraph {
     letter-spacing: 0px;
@@ -47,18 +24,7 @@ section#ax_hero_image .ax_tabs p:nth-child(4):not(.axg_active):hover {
     background-color: #fbfbfb;
     color: #0b650f;
 }
-#ax_hero_image {
-    width: 100%;
-    height: 31vw;
-    margin-top: 0px;
-    display: grid;
-}
-#ax_hero_image img {
-    width: 100%;
-    transition: all .2s;
-    position: absolute;
-    height: inherit;
-}
+
 #ax_headings {
     padding-left: 8%;
     font-family: system-ui;
@@ -89,51 +55,6 @@ section#ax_hero_image .ax_tabs p:nth-child(4):not(.axg_active):hover {
     width: 100%;
 }
 
-/* tabs */
-section#ax_hero_image .ax_tabs #ax_tabs_inside_cover {
-    display: grid;
-    grid-auto-flow: column;
-    margin: 0 auto;
-    width: 70%;
-}
-section#ax_hero_image .ax_tabs {
-    padding: 0px 6.5vw;
-    width: 70.1vw;
-    margin: 0 auto;
-    background-image: linear-gradient(90deg, #0000, var(--ax_service_tab_bg), var(--ax_service_tab_bg), var(--ax_service_tab_bg), var(--ax_service_tab_bg), var(--ax_service_tab_bg), #0000);
-    box-shadow: inset 0px -13px 20px -14px #0000005e;
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
-    position: relative;
-    place-self: end;
-    margin-bottom: 0;
-    transition: all .3s;
-    z-index: 20;
-}
-section#ax_hero_image .ax_tabs p.ax_item.axg_active {
-    border-top: 3px solid #c72127;
-    background-color: var(--bg2);
-    width: 100%;
-}
-
-section#ax_hero_image .ax_tabs p svg, section#ax_hero_image .ax_tabs p img {
-    width: 48px;
-    transition: all .3s;
-    -webkit-transition: all .3s;
-    place-self: center;
-    height: auto;
-    max-height: 28px;
-    position: relative;
-}
-section#ax_hero_image .ax_tabs p.ax_item.axg_active span {
-    display: none;
-}
-section#ax_hero_image .ax_tabs p.ax_item.axg_active .head_tap_icon{
-    transform: scale(1.3);
-    padding: 0;
-    place-self: center;
-}
-
 @media (max-width: 768px) and (min-width: 426px) {
     #ax_headings {
         transform: translateY(-149px);
@@ -146,25 +67,8 @@ section#ax_hero_image .ax_tabs p.ax_item.axg_active .head_tap_icon{
         font-size: 15px;
     }
 }
-/* hero text + image*/
-@media (max-width: 600px) {
-    section#ax_hero_image .ax_tabs p svg, section#ax_hero_image .ax_tabs p img {
-        width: 52px;
-    }
-    section#ax_hero_image .ax_tabs p.ax_item.axg_active .head_tap_icon {
-        transform: scale(1)!important;
-        padding: 0;
-    }
-}
 @media (max-width: 425px) {
-    section#ax_services .ax_heading {
-        font-size: 22px;
-        width: 80%;
-        font-weight: 500;
-    }
-    section#ax_services .ax_heading {
-        font-size: 7vw;
-    }
+
     section#ax_form {
         padding-top: 20vw!important;
         padding-bottom: 0vw!important;
@@ -194,72 +98,8 @@ section#ax_hero_image .ax_tabs p.ax_item.axg_active .head_tap_icon{
     #ax_headings .ax_heading_p {
         margin: 0;
     }
-    section#ax_services .ax_items {
-        width: 94%!important;
-    }
-    section#ax_services .ax_items .ax_item .ax_title {
-        margin-top: 10px;
-    }
 }
-/* services */
-@media (max-width: 768px) {
-    section#ax_hero_image .ax_tabs .ax_item:not(.axg_active) .head_tap_icon {
-        display: none;
-    }
-    section#ax_hero_image .ax_tabs .ax_item .head_tap_icon {
-        padding: 5px 0;
-    }
-    section#ax_hero_image .ax_tabs p.ax_item:not(.axg_active) span {
-        place-self: center;
-    }
-}
-@media (max-width: 425px) {
-    section#ax_hero_image .ax_tabs {
-        padding: 0;
-        width: 100%;
-    }
-    section#ax_hero_image .ax_tabs p {
-        width: 66px;
-        padding: 5px 0;
-        font-size: 16px;
-        font-weight: 400;
-        color: var(--txt1);
-        background-color: #0000;
-        place-content: center;
-        grid-auto-flow: row;
-    }
-    section#ax_hero_image .ax_tabs p svg, section#ax_hero_image .ax_tabs p img {
-        margin: 0 auto;
-    }
-    
-    section#ax_services .ax_items .ax_item {
-        padding: 0;
-        margin: 0;
-    }
-    section#ax_services .ax_items .ax_item .ax_title span {
-        border-radius: 1em!important;
-        padding: 0 2vw!important;
-        padding-bottom: 3px!important;
-    }
-    section#ax_services .ax_items .ax_item svg, section#ax_services .ax_items .ax_item img {
-        width: 19vw!important;
-        height: 13vw!important;
-        padding: 15px!important;
-    }
-    section#ax_services .ax_items .ax_item .ax_title {
-        font-size: 16px!important;
-        place-self: center!important;
-        margin-top: 6px!important;
-    }
-}
-@media (max-width: 768px) and (min-width: 426px) {
-    section#ax_services .ax_heading_p {
-        font-size: 16px;
-    }
-    section#ax_services .ax_heading {
-        font-size: 22px;
-    }
-}
+
 @media (max-width: 1024px) and (min-width: 769px) {
     section#ax_form > .ax_item .ax_heading {
         font-size: 30px;
@@ -270,5 +110,3 @@ section#ax_hero_image .ax_tabs p.ax_item.axg_active .head_tap_icon{
         font-size: 15px!important;
     }
 }
-
-

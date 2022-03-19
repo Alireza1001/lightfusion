@@ -186,8 +186,8 @@ share_icons.forEach(item=>{
                 var lf_sharemedia_var = item.classList[1];
                 var lf_media = lf_sharemedia_var.slice(lf_sharemedia_var.lastIndexOf("_")+1, lf_sharemedia_var.length);
                 var share_reqer = new XMLHttpRequest();
-                share_reqer.open("GET", pluginDir+'/axgWp/form_ctrl/share_form.php?req_page='+post_id+'&media='+lf_media+'', true);
-                share_reqer.send(); 
+                share_reqer.open("GET", '../../form_ctrl/share_form.php?req_page='+post_id+'&media='+lf_media+'', true);
+                share_reqer.send();
                 // *****video script here
                 if(document.getElementById("lf_landing_main_audio_cover") != null) {
                     if(audio_play_db_state==1) {
@@ -204,7 +204,7 @@ share_icons.forEach(item=>{
 // recieve
 var comment_reqer = new XMLHttpRequest();
 const comment_list = document.getElementById("lf_share_count");
-comment_reqer.open("GET", pluginDir+'/axgWp/form_ctrl/share_inpage.php?req_page='+post_id+'&comment_count='+wp_comment_count+'', true);
+comment_reqer.open("GET", '../../form_ctrl/share_inpage.php?req_page='+post_id+'&comment_count='+wp_comment_count+'', true);
 comment_reqer.send();
 comment_reqer.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -302,7 +302,7 @@ function lf_rate_store_avg(lf_n) {
 var lf_final_user_rate = 0;
 function rate_submite(lf_n) {
     lf_n++;
-    feedback_reqer.open("POST", pluginDir+'/axgWp/form_ctrl/starrating_form.php?rate='+lf_n+'&page_id='+post_id+'', true);
+    feedback_reqer.open("POST", '../../form_ctrl/starrating_form.php?rate='+lf_n+'&page_id='+post_id+'', true);
     feedback_reqer.send();
 }
 
@@ -386,7 +386,7 @@ lf_feedback_yesno.forEach(item=>{
 q_set2_qs.forEach(item=>{
     item.addEventListener("click", ()=>{
         set2_ans=  item.classList[1].slice(-1);
-        feedback_reqer.open("POST", pluginDir+'/axgWp/form_ctrl/feedback_form.php?q1='+yesno_ans+'&q2='+set2_ans+'&page_id='+post_id+'', true);
+        feedback_reqer.open("POST", '../../form_ctrl/feedback_form.php?q1='+yesno_ans+'&q2='+set2_ans+'&page_id='+post_id+'', true);
         feedback_reqer.send();
     });
 });

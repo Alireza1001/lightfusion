@@ -94,7 +94,7 @@
                 <div id="lf_landing_after_main_title">
                     <p><?php echo get_the_excerpt(); ?></p>
                     <?php 
-                        require WP_PLUGIN_DIR."/axgWp/form_ctrl/config.php";
+                        require WP_PLUGIN_DIR."/axonglitch-wp/form_ctrl/config.php";
                         $mediaVideo = get_post_meta( $post->ID, '_mediaVideo', true );
                         $mediaAudio = get_post_meta( $post->ID, '_mediaAudio', true );
                         if(strlen($mediaVideo) > 0 || strlen($mediaAudio) > 0 ) {
