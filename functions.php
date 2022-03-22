@@ -77,7 +77,7 @@ function post_id_access() {	?>
 
 
 // menu
-function register_my_menus() {
+function lightfusionMenu() {
   register_nav_menus(
     array(
       'header-menu' => __( 'Header Menu' ),
@@ -85,7 +85,7 @@ function register_my_menus() {
     )
   );
 }
-add_action( 'init', 'register_my_menus' );
+add_action( 'init', 'lightfusionMenu' );
 
 
 // (AXONCODES) breadcrumb_category_blog
@@ -150,36 +150,6 @@ function add_responsive_class($content){
 		return $html;
 	}else return $content;
 }add_filter('the_content', 'add_responsive_class');
-
-
-// #### NOT SURE IF IT'S BEING USED IN THE THEME
-// // img srcset thumbnail
-// function modify_post_thumbnail_html($html, $post_id, $post_thumbnail_id, $size, $attr) {
-// 	if(strlen($html) > 0) {
-// 		$id = get_post_thumbnail_id();
-// 		$src = wp_get_attachment_image_src($id, $size);
-// 		$alt = get_the_title($id);
-// 		$class = "";
-// 		$useragentos = $_SERVER["HTTP_USER_AGENT"];
-// 		$generalimgexe=".jpg";
-// 		$imgmainsrc = $src[0];
-// 		$baseimgsrc = substr($imgmainsrc, 0, strripos($imgmainsrc, '.'));
-// 		$exeimgsrc = substr($imgmainsrc, strripos($imgmainsrc, '.'));
-// 		$generalimgexe = $exeimgsrc;
-// 		$newimgsrcset = $baseimgsrc.$exeimgsrc;
-// 		$newimgsrcset1 = $baseimgsrc."-small".$generalimgexe;
-// 		$newimgsrcset2 = $baseimgsrc."-medium".$generalimgexe;
-// 		$newimgsrcset3 = $baseimgsrc."-large".$generalimgexe;
-// 		$id = is_front_page()?"ax_hero_img":"";
-// 		$loading = is_front_page()?"eager":"lazy";
-// 		$imgsrcsetqueue = "$newimgsrcset1 300w, $newimgsrcset2 900w, $newimgsrcset3 1500w";
-// 		$html = '<img loading='.$loading.' id='.$id.' src="' . $src[0] . '" alt="' . $alt . '" class="' . $class . '" srcset="'.$imgsrcsetqueue.'"/>';
-// 	}
-// 	return $html;
-// }
-// add_filter('post_thumbnail_html', 'modify_post_thumbnail_html', 99, 5);
-
-
 
 // text limiter
 function textlimit($content, $limit) {
