@@ -11,7 +11,7 @@ if (!defined('ABSPATH')) exit;
 ?>
 
 <!DOCTYPE html>
-<html id="AX_HP" lang="en" dir="ltr">
+<html id="AX_HP" lang="en" dir="<?php echo get_field('direction'); ?>">
 <head <?php language_attributes(); ?>>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
