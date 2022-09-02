@@ -7,7 +7,7 @@
  */
 
 if (!defined('ABSPATH')) exit;
-	
+
 ?>
 
 <!DOCTYPE html>
@@ -51,4 +51,14 @@ if (!defined('ABSPATH')) exit;
 			generateMenuTemplates('header'); // header dropdown
 		?>
 	</header>
+
+	<!-- <axg-element
+		mode="header"
+		logosrc="<?php echo esc_url( wp_get_attachment_image_src(  get_theme_mod( 'custom_logo' ) , 'full' )[0] ); ?>"
+		logolink="/"
+		searchplaceholder="Search to Learn..."
+	>
+		<?php generateMenuTemplates('header'); ?>
+	</axg-element> -->
+
 	<?php axg_dropdownsbody(wp_get_nav_menus()); ?>

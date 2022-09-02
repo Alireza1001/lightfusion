@@ -6,10 +6,11 @@ main {
 section#lf_about_page_intro {
     height: 280px;
     position: relative;
+    overflow: hidden;
 }
 section#lf_about_page_intro img {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     position: absolute;
     filter: drop-shadow(2px 4px 6px #0008);
 }
@@ -193,91 +194,6 @@ section#lf_about_quick_address .lf_p {
 
 
 
-
-
-/* socialmedia */
-section#lf_about_socialmedia .lf_head_p {
-    text-align: center;
-    transform: translateY(-6px);
-    width: 37%;
-    margin: 0 auto;
-    line-height: 1.3;
-    font-size: 15px;
-    color: var(--txt1);
-    margin-bottom: 9px;
-}
-section#lf_about_socialmedia .lf_head_title {
-    margin: 0;
-    text-align: center;
-    color: var(--txt1);
-}
-section#lf_about_socialmedia {
-    display: grid;
-    grid-auto-flow: row;
-    font-family:"Inter",Arial,sans-serif;
-    margin-top: 30px;
-    margin-bottom: 40px;
-}
-section#lf_about_socialmedia .lf_about_items .lf_about_item a {
-    display: grid;
-    grid-auto-flow: row;
-    place-items: center;
-}
-section#lf_about_socialmedia .lf_about_items .lf_about_item {
-    place-items: center;
-    display: grid;
-    width: fit-content;
-    padding: 0 1.1%;
-    position: relative;
-    transition: all .3s;
-    max-width: 30px;
-}
-section#lf_about_socialmedia .lf_about_items {
-    display: flex;
-    flex-flow: wrap;
-    width: 100%;
-    margin: 0 auto;
-    /* background-color: var(--fulwidth_sections_bg); */
-    place-content: center;
-    transition: all .3s;
-    height: 70px;
-    position: relative;
-}
-section#lf_about_socialmedia .lf_about_items .lf_about_item .lf_p {
-    margin: 0;
-    opacity: 0;
-    transition: all .3s;
-    position: absolute;
-    transform: translateY(18px);
-    font-size: 14px;
-    color: var(--txt1);
-}
-section#lf_about_socialmedia .lf_about_items .lf_about_item img {
-    transform: translateY(3px);
-    transition: all .3s;
-    width: 80%;
-    max-width: 80%;
-    height: auto;
-}
-section#lf_about_socialmedia .lf_about_items .lf_about_item a {
-    text-decoration: none;
-}
-section#lf_about_socialmedia .lf_about_items .lf_about_item.axg_active img {
-    transform: translateY(-13px);
-    max-width: 35px;
-    width: 40px;
-}
-section#lf_about_socialmedia .lf_about_items .lf_about_item.axg_active .lf_p {
-    opacity: 1;
-}
-section#lf_about_socialmedia .lf_about_items .lf_about_item:hover img {
-    transform: translateY(-13px);
-    max-width: 35px;
-    width: 40px;
-}
-section#lf_about_socialmedia .lf_about_items .lf_about_item:hover .lf_p {
-    opacity: 1;
-}
 
 
 
@@ -492,16 +408,6 @@ section#lf_about_joinus #lf_joinus_form input {
     section#lf_about_joinus #lf_joinus_form {
         transform: translateY(10px)!important;
     }
-    section#lf_about_socialmedia .lf_about_items {
-        display: grid!important;
-        grid-template-columns: auto auto auto auto auto;
-        grid-column-gap: 2%;
-        grid-row-gap: 10%;
-    }
-    section#lf_about_socialmedia .lf_about_items .lf_about_item {
-        max-width: 33px!important;
-        width: 33px!important;
-    }
     section#lf_about_page_intro h1 {
         font-size: 37px;
         top: 33%;
@@ -509,10 +415,7 @@ section#lf_about_joinus #lf_joinus_form input {
     section#lf_about_page_intro {
         height: 220px;
     }
-    section#lf_about_wwd .lf_head_p, section#lf_about_socialmedia .lf_head_p {
+    section#lf_about_wwd .lf_head_p{
         width: 90%!important;
-    }
-    section#lf_about_socialmedia {
-        margin-top: 70px!important;
     }
 }

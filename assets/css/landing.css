@@ -225,10 +225,6 @@ h2.lf_track_title.lf_gallery_h2 img {
 footer#ax_footer a:hover {
     color: var(--links_colors)!important;
 }
-footer#ax_footer > .ax_items .ax_item.ax_follow .ax_items a img {
-    width: 22px;
-    height: auto;
-}
 img.lf_media_loading.axg_active {
     transition: transform 12s;
     transform: rotate(2360deg);

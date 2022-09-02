@@ -2,7 +2,7 @@
 
 // assets
 function lf_add_style() {
-	wp_enqueue_style('lf_AXGCSS', get_template_directory_uri()."/assets/css/AXGCustom.css");
+	wp_enqueue_style('lf_axgCSS', get_template_directory_uri()."/assets/css/AXGCustom.css");
 	if(is_front_page()) {
 		wp_enqueue_style('lf_home_init_style', get_template_directory_uri()."/assets/css/home.init.css");
 		wp_enqueue_style('lf_home_style', get_template_directory_uri()."/assets/css/home.css");

@@ -350,11 +350,6 @@ section#ax_special .ax_items .ax_item:hover img {
     }
 }
 /* home blog */
-@media (max-width: 860px) {
-    footer#ax_footer .ax_item.ax_follow .ax_items {
-    grid-template-columns: auto auto;
-}
-}
 @media (max-width: 1024px) and (min-width: 769px) {
     section#ax_special .ax_items {
         width: 70.3%!important;
