@@ -52,4 +52,4 @@ if (!defined('ABSPATH')) exit;
 		?>
 	</header>
 
-	<?php axg_dropdownsbody(wp_get_nav_menus()); ?>
+	<?php axg_dropdownsbody(fetchHeaderMenus()) ?>
