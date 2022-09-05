@@ -1,28 +1,28 @@
 <?php
 
-// assets
+add_action( 'wp_enqueue_scripts', 'lf_add_style' );
 function lf_add_style() {
 	wp_enqueue_style('lf_axgCSS', get_template_directory_uri()."/assets/css/AXGCustom.css");
-	if(is_front_page()) {
+	if (is_front_page()) {
 		wp_enqueue_style('lf_home_init_style', get_template_directory_uri()."/assets/css/home.init.css");
 		wp_enqueue_style('lf_home_style', get_template_directory_uri()."/assets/css/home.css");
-	}else if(is_page_template( 'page-about.php' ) || is_page_template( 'page-contact.php' )) {
+	} else if (is_page_template( 'page-about.php' ) || is_page_template( 'page-contact.php' )) {
 		wp_enqueue_style('lf_about_style', get_template_directory_uri()."/assets/css/about.css");
 		wp_register_script('lf_about_script', get_template_directory_uri()."/assets/js/about.js", array(), true);
 		wp_enqueue_script('lf_about_script');
-	}else if(is_page_template( 'page-category.php' )) {
+	} else if (is_page_template( 'page-category.php' )) {
 	    wp_enqueue_style('lf_home_init_style', get_template_directory_uri()."/assets/css/home.init.css");
 		wp_enqueue_style('lf_home_style', get_template_directory_uri()."/assets/css/home.css");
 		wp_enqueue_style('lf_category_style', get_template_directory_uri()."/assets/css/category.css");
 		wp_enqueue_style('lf_weblog_style', get_template_directory_uri()."/assets/css/weblog.css");
-	}else if(is_home() || is_archive() || is_page_template( 'page-category2.php' )) {
+	} else if (is_home() || is_archive() || is_page_template( 'page-category2.php' )) {
 		wp_enqueue_style('lf_weblog_style', get_template_directory_uri()."/assets/css/weblog.css");
 		wp_register_script('lf_weblog_script', get_template_directory_uri()."/assets/js/weblog.js", array(), true);
 		wp_enqueue_script('lf_weblog_script');
-	}else if(is_archive()) wp_enqueue_style('lf_weblog_style', get_template_directory_uri()."/assets/css/weblog.css");
-	else if(is_404()) wp_enqueue_style('lf_404_style', get_template_directory_uri()."/assets/css/404.css");
-	else if(is_single() || is_page()) wp_enqueue_style('lf_landing_style', get_template_directory_uri()."/assets/css/landing.css");
-	if(!is_front_page() && !is_page_template( 'page-about.php' ) && !is_page_template( 'page-contact.php' )) {
+	} else if (is_archive()) wp_enqueue_style('lf_weblog_style', get_template_directory_uri()."/assets/css/weblog.css");
+	else if (is_404()) wp_enqueue_style('lf_404_style', get_template_directory_uri()."/assets/css/404.css");
+	else if (is_single() || is_page()) wp_enqueue_style('lf_landing_style', get_template_directory_uri()."/assets/css/landing.css");
+	if (!is_front_page() && !is_page_template( 'page-about.php' ) && !is_page_template( 'page-contact.php' )) {
 		wp_register_script('lf_sidebar_script', get_template_directory_uri()."/assets/js/sidebar.js", array(), true);
 		wp_enqueue_script('lf_sidebar_script');
 	}
@@ -33,36 +33,27 @@ function lf_add_style() {
 	global $post;
 	$parent_name = get_the_title($post->post_parent);
 	wp_localize_script( 'lf_category_script', 'parent_name', $parent_name );
-}add_action( 'wp_enqueue_scripts', 'lf_add_style' );
-
+}
 
 
 
 // script tag modification
 add_filter('script_loader_tag', 'script_modify', 10, 3);
 function script_modify($tag, $handle, $src) {
-	if(strpos($handle, "lf") !== false || strpos($handle, "axg") !== false) return '<script defer id="'.$handle.'-js" src="'.$src.'"></script>';
-	else if(strpos($handle, "lf_about_script") !== false || strpos($handle, "lf_contact_script") !== false || strpos($handle, "lf_home_script") !== false) return '<script async id="'.$handle.'-js" src="'.$src.'"></script>';
+	$module = '';
+	if (strpos($handle, "-module") !== false) $module = 'type="module"';
+	if (strpos($handle, "lf") !== false || strpos($handle, "axg") !== false) return "<script defer id='$handle-js' src='$src' $module></script>";
+	else if (strpos($handle, "lf_about_script") !== false || strpos($handle, "lf_contact_script") !== false || strpos($handle, "lf_home_script") !== false) return '<script async id="'.$handle.'-js" src="'.$src.'"></script>';
 	else return $tag;
 }
 
 // style tag modification
 add_filter( 'style_loader_tag',  'style_modify', 10, 4 );
 function style_modify( $html, $handle, $href, $media ){
-	if($handle == "dashicons" || $handle == "wp-block-library" ) return "";
-	else if(strpos($handle, "lf") !== false || strpos($handle, "axg") !== false ) return '<link id="'.$handle.'-css" rel="preload" href="'.$href.'" as="style" onload="this.onload=null;this.rel=\'stylesheet\'"> <noscript><link rel="stylesheet" href="'.$href.'"></noscript>';
+	if ($handle == "dashicons" || $handle == "wp-block-library" ) return "";
+	else if (strpos($handle, "lf") !== false || strpos($handle, "axg") !== false ) return '<link id="'.$handle.'-css" rel="preload" href="'.$href.'" as="style" onload="this.onload=null;this.rel=\'stylesheet\'"> <noscript><link rel="stylesheet" href="'.$href.'"></noscript>';
 	else return $html;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -72,7 +63,6 @@ function post_id_access() {	?>
 		var post_id = '<?php global $post; echo $post->ID; ?>';
 	</script>
 <?php } add_action('wp_head','post_id_access');
-
 
 
 
@@ -97,32 +87,32 @@ function get_post_breadcrumb_blog2() {
 	$lf_cat_link_addup = 'href="/';
 
 
-	if(is_page_template( 'single2.php' )) {
+	if (is_page_template( 'single2.php' )) {
 
 		$categories = [];
 		$themaincatparent = 0;
 		$themaincatparentslug = "";
-		foreach(get_the_category() as $item) if($item->parent == 0) {$themaincatparent = $item->term_id;$themaincatparentslug = $item->slug;echo ' > <a href="/'.$item->slug.'/">'.$item->name.'</a> ';}
-		foreach(get_the_category() as $item) if($item->parent == $themaincatparent) echo ' > <a href="/'.$themaincatparentslug.'/'.strtolower(str_replace(" ", "-", $item->name)).'/">'.$item->name.'</a> ';
+		foreach(get_the_category() as $item) if ($item->parent == 0) {$themaincatparent = $item->term_id;$themaincatparentslug = $item->slug;echo ' > <a href="/'.$item->slug.'/">'.$item->name.'</a> ';}
+		foreach(get_the_category() as $item) if ($item->parent == $themaincatparent) echo ' > <a href="/'.$themaincatparentslug.'/'.strtolower(str_replace(" ", "-", $item->name)).'/">'.$item->name.'</a> ';
 	
-	}else foreach(get_the_category() as $category) array_push($breadcrumb, $category->name);
+	} else foreach(get_the_category() as $category) array_push($breadcrumb, $category->name);
 
 
 	$counts=0;
-	foreach($breadcrumb as $item) {
+	foreach ($breadcrumb as $item) {
 		$lf_cat_link_addup = $lf_cat_link_addup.$item.'/';
 		$lf_cat_link_addup = strtolower($lf_cat_link_addup);
 		$lf_cat_link_addup = str_replace(" ","-",$lf_cat_link_addup);
 		echo ' > <a '.$lf_cat_link_addup.'">'.$item.'</a> ';
 	}
-    if(!is_single()) echo ' > <a href="'.getTheLink($post).'">'.get_the_title().'</a> ';
+    if (!is_single()) echo ' > <a href="'.getTheLink($post).'">'.get_the_title().'</a> ';
 	else echo ' > <a href="'.getTheLink($post).'">Current post</a> ';
 }
 
 
 // img srcset content
 function add_responsive_class($content){
-	if(strlen($content) > 0) {
+	if (strlen($content) > 0) {
 		$useragentos = $_SERVER["HTTP_USER_AGENT"];
 		$generalimgexe=".jpg";
 		$content = mb_convert_encoding($content, 'HTML-ENTITIES', "UTF-8");
@@ -148,8 +138,8 @@ function add_responsive_class($content){
 		}
 		$html = $document->saveHTML();
 		return $html;
-	}else return $content;
-}add_filter('the_content', 'add_responsive_class');
+	} else return $content;
+} add_filter('the_content', 'add_responsive_class');
 
 // text limiter
 function textlimit($content, $limit) {
@@ -162,33 +152,33 @@ function textlimit($content, $limit) {
 function nextPrev() {
 	global $post;
 	$nextprev_value = get_post_meta( $post->ID, '_nextprev', true );
-	if(strlen($nextprev_value) > 0) {
+	if (strlen($nextprev_value) > 0) {
 		$thecategories = get_the_category();
 		$thecurrentposttitle = get_the_title();
-		if(count($thecategories) == 2) {
+		if (count($thecategories) == 2) {
 			
 			$category1 = $thecategories[0]->name;
 			$category2 = $thecategories[1]->name;
 			$query = new WP_Query( array( 'category_name' => $category1.'+'.$category2 ) );
-			if($query->have_posts()):
+			if ($query->have_posts()):
 				?>
 				<section id="lf_nextprev">
 				<?php
 				echo '<p>'.$nextprev_value.'</p>';
 				$theturn = 0;
 				foreach($query->posts as $item) {
-					if($thecurrentposttitle == $item->post_title) break;
+					if ($thecurrentposttitle == $item->post_title) break;
 					$theturn++;
 				}
 				echo '<div>';
 				$category1 = strtolower($category1);
-				if($theturn+1 < count($query->posts)) {
+				if ($theturn+1 < count($query->posts)) {
 					$theturnhere = $theturn+1;
 					$link = $query->posts[$theturnhere]->post_name;
 					$link = "/$category1/$link";
 					echo '<a id="lf_prev_btn" href="'.$link.'">❮ Previous</a>';
 				}
-				if($theturn>0) {
+				if ($theturn>0) {
 					$theturnhere = $theturn-1;
 					$link = $query->posts[$theturnhere]->post_name;
 					$link = "/$category1/$link";
@@ -207,7 +197,7 @@ function nextPrev() {
 
 // (AXONCODES) get all child pages
 function ax_get_child_pages($currentid) {
-    if(strlen($currentid)<=0) $currentid = $post->ID;
+    if (strlen($currentid)<=0) $currentid = $post->ID;
 	$args = array(
 		'post_type'      => 'page',
 		'posts_per_page' => -1,
@@ -485,7 +475,7 @@ add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mime
 function cc_mime_types( $mimes ){
 	$mimes['svg'] = 'image/svg+xml';
 	return $mimes;
-}add_filter( 'upload_mimes', 'cc_mime_types' );
+} add_filter( 'upload_mimes', 'cc_mime_types' );
 
 function fix_svg() {
 echo '<style type="text/css">
