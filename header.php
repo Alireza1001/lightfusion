@@ -21,7 +21,7 @@ if (!defined('ABSPATH')) exit;
 	
 	<!-- categories -->
 	<script type="text/javascript" async> 
-			const categoryOrganizer = <?php echo json_encode(getCategoriesJson()); ?>;
+		const categoryOrganizer = <?php echo json_encode(getCategoriesJson()); ?>;
 	</script>
 
 	<?php 
