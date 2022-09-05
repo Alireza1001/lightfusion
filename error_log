@@ -1,0 +1,36 @@
+[21-Apr-2022 15:04:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/axoncodes/public_html/wordpress/wp-content/themes/lightfusion/404.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/axoncodes/public_html/wordpress/wp-content/themes/lightfusion/404.php on line 1
+[22-Apr-2022 18:06:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/axoncodes/public_html/wordpress/wp-content/themes/lightfusion/404.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/axoncodes/public_html/wordpress/wp-content/themes/lightfusion/404.php on line 1
+[30-Apr-2022 14:25:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/axoncodes/public_html/wordpress/wp-content/themes/lightfusion/index.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/axoncodes/public_html/wordpress/wp-content/themes/lightfusion/index.php on line 2
+[08-May-2022 11:58:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/axoncodes/public_html/wordpress/wp-content/themes/lightfusion/index.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/axoncodes/public_html/wordpress/wp-content/themes/lightfusion/index.php on line 2
+[09-Jul-2022 14:23:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/axoncodes/public_html/wordpress/wp-content/themes/lightfusion/404.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/axoncodes/public_html/wordpress/wp-content/themes/lightfusion/404.php on line 1
+[28-Jul-2022 20:09:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/axoncodes/public_html/wordpress/wp-content/themes/lightfusion/index.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/axoncodes/public_html/wordpress/wp-content/themes/lightfusion/index.php on line 2
+[14-Aug-2022 20:29:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/axoncodes/public_html/wordpress/wp-content/themes/lightfusion/index.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/axoncodes/public_html/wordpress/wp-content/themes/lightfusion/index.php on line 2
+[04-Sep-2022 00:25:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/axoncodes/public_html/wordpress/wp-content/themes/lightfusion/index.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/axoncodes/public_html/wordpress/wp-content/themes/lightfusion/index.php on line 2
+[04-Sep-2022 00:25:30 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/axoncodes/public_html/wordpress/wp-content/themes/lightfusion/index.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/axoncodes/public_html/wordpress/wp-content/themes/lightfusion/index.php on line 2
