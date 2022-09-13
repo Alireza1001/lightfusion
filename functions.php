@@ -40,9 +40,11 @@ function lf_add_style() {
 // script tag modification
 add_filter('script_loader_tag', 'script_modify', 10, 3);
 function script_modify($tag, $handle, $src) {
+	$asyncDiffer = 'differ';
+	if (strpos($handle, "-async") !== false) $asyncDiffer = 'async';
 	$module = '';
 	if (strpos($handle, "-module") !== false) $module = 'type="module"';
-	if (strpos($handle, "lf") !== false || strpos($handle, "axg") !== false) return "<script defer id='$handle-js' src='$src' $module></script>";
+	if (strpos($handle, "lf") !== false || strpos($handle, "axg") !== false) return "<script $asyncDiffer id='$handle-js' src='$src' $module></script>";
 	else if (strpos($handle, "lf_about_script") !== false || strpos($handle, "lf_contact_script") !== false || strpos($handle, "lf_home_script") !== false) return '<script async id="'.$handle.'-js" src="'.$src.'"></script>';
 	else return $tag;
 }
