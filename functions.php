@@ -451,20 +451,28 @@ function wporg_add_custom_box() {
         );
 
 		// multi thumbnail
-        add_meta_box(
-            'second_thumbnail',
-            'second_thumbnail',
-            'second_thumbnail_html',
-            $screen
-        );
+        // add_meta_box(
+        //     'second_thumbnail',
+        //     'second_thumbnail',
+        //     'second_thumbnail_html',
+        //     $screen
+        // );
 
 		// download_print
-        add_meta_box(
-            'download_print',
-            'download_print',
-            'download_print_html',
-            $screen
-        );
+        // add_meta_box(
+        //     'download_print',
+        //     'download_print',
+        //     'download_print_html',
+        //     $screen
+        // );
+
+		// download_printtext
+        // add_meta_box(
+        //     'download_print_text',
+        //     'download_print_text',
+        //     'download_print_text_html',
+        //     $screen
+        // );
         
     }
 }
@@ -507,7 +515,7 @@ function starrate_html( $post ) {
 <?php }
 
 
-require_once('Templates/multi-thumbnail/functions-template.php');
+// require_once('Templates/multi-thumbnail/functions-template.php');
 
 
 function wporg_save_postdata( $post_id ) {
@@ -582,22 +590,32 @@ function wporg_save_postdata( $post_id ) {
     // }
 
 	// second_thumbnail
-    if ( array_key_exists( 'second_thumbnail_n', $_POST ) ) {
-        update_post_meta(
-            $post_id,
-            '_second_thumbnail',
-            $_POST['second_thumbnail_n']
-        );
-    }
+    // if ( array_key_exists( 'second_thumbnail_n', $_POST ) ) {
+    //     update_post_meta(
+    //         $post_id,
+    //         '_second_thumbnail',
+    //         $_POST['second_thumbnail_n']
+    //     );
+    // }
 
 	// download_print
-    if ( array_key_exists( 'download_print_n', $_POST ) ) {
-        update_post_meta(
-            $post_id,
-            '_download_print',
-            $_POST['download_print_n']
-        );
-    }
+    // if ( array_key_exists( 'download_print_n', $_POST ) ) {
+    //     update_post_meta(
+    //         $post_id,
+    //         '_download_print',
+    //         $_POST['download_print_n']
+    //     );
+    // }
+
+
+	// download_print text
+    // if ( array_key_exists( 'download_print_text_n', $_POST ) ) {
+    //     update_post_meta(
+    //         $post_id,
+    //         '_download_print_text',
+    //         $_POST['download_print_text_n']
+    //     );
+    // }
 
     
 }
