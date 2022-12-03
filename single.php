@@ -108,7 +108,7 @@
                 </div>
             <?php } ?>
         </div>
-        <axg-element mode="scrolldownAnimation"></axg-element>
+        <axg-element mode="scrolldownanimation_v1"></axg-element>
         <section id="lf_landing_main_contexts" class="lf_contentVisCtrl">
             <?php the_content(); ?>
         </section>
