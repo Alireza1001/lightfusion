@@ -114,6 +114,6 @@
 
 <?php wp_footer(); ?>
 <script>
-    activationHandler.init();
+    // activationHandler.init();
 </script>
 </html>
