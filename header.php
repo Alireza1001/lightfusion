@@ -36,6 +36,7 @@ if (!defined('ABSPATH')) exit;
 		const wp_dir_url = "<?php echo $translation_array; ?>";
 		const wp_comment_count = "<?php echo $get_comments_number; ?>";
 		const pluginDir = "<?php echo $pluginDir; ?>";
+		var searchQueries = {}
 	</script>
 
 	<!-- wp_head -->
